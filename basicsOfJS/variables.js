@@ -16,3 +16,4 @@ console.log(name); // Output: Jane
 age = 31; // Updating variable
 console.log(age); // Output: 31
 // country = "Canada"; // This will throw an error because const cannot be updated
+   
