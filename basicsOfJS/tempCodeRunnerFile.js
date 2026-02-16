@@ -1,0 +1,1 @@
+greet2(); // This will throw a TypeError because greet2 is not hoisted and is not defined at the time of the call.

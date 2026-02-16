@@ -9,3 +9,4 @@ console.log(name); // Output: John, because name is now declared and can be acce
 
 console.log(age); // this will not throw any error because age is declared using var and it is hoisted to the top of the scope, but it will output undefined because it is not initialized yet.
 var age = 30;
+   
