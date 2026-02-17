@@ -13,3 +13,4 @@ console.log(a || b); // Output: true, because the OR operator returns true if at
 // 3. NOT (!): This operator returns true if the operand is false, and false if the operand is true. For example:
 console.log(!a); // Output: false, because the NOT operator negates the value of a, which is true, resulting in false.
 console.log(!b); // Output: true, because the NOT operator negates the value of b, which is false, resulting in true.
+

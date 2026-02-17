@@ -18,6 +18,11 @@ console.log(f); // Output: false, because the logical NOT operator negates the v
 let g = 5;
 g++;
 console.log(g); // Output: 6, because the increment operator increments the value of g by 1, resulting in 6.
+
+let  x = 5;
+let y =x++;
+console.log(x,y); // Output: 6, 5, because the postfix increment operator returns the value of x before incrementing it, so y is assigned the value of 5, and then x is incremented to 6.
+
 // 5. Decrement (--): This operator is used to decrement a value by 1. For example:
 let h = 5;
 h--;
