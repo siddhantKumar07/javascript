@@ -14,9 +14,12 @@ else if(grade>=60&&grade<70){
 else if(grade>=33&&grade<60){
     return "D"
 }
-else{
+else if(grade>=0&&grade<33){
     return "fail"
+}
+else{
+    return "invalid number"
 }
 }
 
-console.log(Result(70))
+console.log(Result(700))
