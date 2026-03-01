@@ -18,3 +18,4 @@ let greaterAge =details.filter((user)=>{
 })
 
 console.log(greaterAge)
+
