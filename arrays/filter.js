@@ -6,3 +6,15 @@ let even =numbers.filter((val)=>{
     return val%2==0;
 })
 console.log(even)
+
+// let try it with object and arrays
+let details =[
+    {name:"siddhant",age:21},
+    {name:"someone",age:22},
+    {name:"anyone  ",age:20}
+];
+let greaterAge =details.filter((user)=>{
+        return user.age>=21;
+})
+
+console.log(greaterAge)
