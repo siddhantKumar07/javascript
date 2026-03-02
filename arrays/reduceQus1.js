@@ -3,5 +3,5 @@
 let arr =[2,5,4,8,6,3];
 let sum =arr.reduce((ac,cur)=>{
     return ac+cur;
-})
+},0)
 console.log(sum);
