@@ -3,4 +3,4 @@ let arr=[1,2,3,14,15,12,12,11]
 let filterred = arr.filter((valu)=>{
     return valu >10;
 })
-console.log(filterred)
+console.log(filterred);
