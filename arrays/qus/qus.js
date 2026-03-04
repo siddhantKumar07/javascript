@@ -14,3 +14,8 @@ let larger =array.reduce((acc ,cur)=>{
     return acc<cur? cur:acc
 },0)
 console.log(larger)
+
+// using math.max
+
+let largests= Math.max(...array)
+console.log(`the larget is ${largests}`)
