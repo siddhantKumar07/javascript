@@ -3,6 +3,6 @@
 // It returns true or false.
 let nums=[20,45,77,85,65,25]
 let gretnum=nums.some((val)=>{
-    return val>55;//
+    return val>55;// this will return true if any value of the array has greater than 55;
 })
 console.log(gretnum)
