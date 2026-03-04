@@ -7,3 +7,10 @@ largest =array[i]
 }
 }
 console.log(largest)
+
+// using the reduece function 
+
+let larger =array.reduce((acc ,cur)=>{
+    return acc<cur? cur:acc
+},0)
+console.log(larger)
