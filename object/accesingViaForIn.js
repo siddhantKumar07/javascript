@@ -4,6 +4,6 @@ let obj ={
     email:"siddhantk999@gmail.com"
 }
 for (const key in obj) {
-   console.log(`${key} =`)
+   console.log(`${key} = ${obj[key]}`)
 
 }
