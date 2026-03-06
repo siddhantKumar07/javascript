@@ -14,3 +14,5 @@ let user={
 // accesing the nested object 
 console.log(user.address.city)// here i access the city of the user
 console.log(user.name)// here i access the name of the user
+console.log(user.address.location.latitude)// here i acees the attitude via goingn to the deep of the nested object
+console.log(user.address.location.longitude)
