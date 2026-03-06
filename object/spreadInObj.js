@@ -23,3 +23,18 @@ obj2.name = "Amit";
 
 console.log(obj1.name); // Rahul
 console.log(obj2.name); // Amit
+
+// this is the exmaple of the nested object
+const obj3 = {
+  name: "Rahul",
+  address: {
+    city: "Lucknow"
+  }
+};
+
+const obj4 = { ...obj3 };
+
+obj4.address.city = "Delhi";// it changes the value of obj3 also because nested obj is refering to the same memory space in the memory;
+obj4.name="kaho";// it does not affect the name of obj3
+console.log(obj3.name)
+console.log(obj3.address.city); // Delhi
