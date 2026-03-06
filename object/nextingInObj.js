@@ -1,5 +1,5 @@
 
-let details={
+let user={
     name:"siddhant",
     age:22,
     address:{
@@ -11,3 +11,6 @@ let details={
         }
     }
 }
+// accesing the nested object 
+console.log(user.address.city)// here i access the city of the user
+console.log(user.name)// here i access the name of the user
