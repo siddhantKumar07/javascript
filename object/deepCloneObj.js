@@ -22,3 +22,8 @@ const object = {
 const objs = JSON.parse(JSON.stringify(object));// it create a fully new object 
 objs.address.city = "Delhi";//it does not modify the old one 
 console.log(object.address.city);
+
+let copied =JSON.parse(JSON.stringify(object))
+copied.address.city="gkp"
+console.log(object.address.city)
+console.log(copied.address.city)
