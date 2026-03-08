@@ -6,21 +6,17 @@
 /*
 1. How the DOM Works
 
-When a web page loads in the browser:
+=>When a web page loads in the browser:
 
-The browser reads the HTML document.
+=> The browser reads the HTML document.
 
-It converts the HTML into a tree-like structure of objects.
+=> It converts the HTML into a tree-like structure of objects.
 
-Each HTML element becomes a node (object) in the DOM tree.
+=>Each HTML element becomes a node (object) in the DOM tree.
 
 JavaScript can then use the DOM to:
-
 Change text
-
 Modify styles
-
 Add or remove elements
-
 Handle events (clicks, typing, etc.)
 */
