@@ -20,3 +20,46 @@ Modify styles
 Add or remove elements
 Handle events (clicks, typing, etc.)
 */
+
+/**
+ * 2. DOM Tree Structure
+
+  The DOM represents HTML as a hierarchical tree.
+
+Example HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+</head>
+<body>
+  <h1>Hello</h1>
+  <p>This is a paragraph</p>
+</body>
+</html>
+ 
+DOM Tree Representation:
+
+Document
+   |
+   html
+   |
+  ------
+  |    |
+ head  body
+  |     |
+ title  ------
+         |   |
+        h1   p
+ * 
+Explanation:
+
+Document → root of the DOM
+
+html → root element
+
+head and body → child nodes
+
+h1 and p → element nodes inside body
+ */
