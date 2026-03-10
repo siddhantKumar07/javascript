@@ -58,6 +58,7 @@ Explanation:
 Document → root of the DOM
 
 html → root element
+// 
 
 head and body → child nodes
 
