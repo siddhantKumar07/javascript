@@ -1,1 +1,10 @@
 //An attribute is a property of an HTML element that provides additional information about the element. Attributes are written inside the opening tag of an HTML element
+
+/*
+<img src="image.jpg" alt="nature" width="200">
+
+Here:
+1. src
+2. alt
+3. width
+*/
