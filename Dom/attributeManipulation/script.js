@@ -19,3 +19,17 @@ Attribute manipulation means getting, setting, changing, or removing attributes 
 
 JavaScript provides several DOM methods for this.
 */
+
+/*
+. getAttribute()
+
+Used to get the value of an attribute.
+
+let value = element.getAttribute("src");
+
+Example:
+
+let img = document.querySelector("img");
+console.log(img.getAttribute("src"));
+
+*/
