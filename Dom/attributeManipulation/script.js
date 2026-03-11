@@ -1,0 +1,1 @@
+//An attribute is a property of an HTML element that provides additional information about the element. Attributes are written inside the opening tag of an HTML element
