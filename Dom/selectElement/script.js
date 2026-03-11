@@ -17,3 +17,4 @@ console.dir(h1)//console.dir() is a JavaScript console method used to display an
 
 // there is another one which is used to select the tag which is querySlectorAll;
 // it selects all the tags which matched to the id or class or tagName
+
