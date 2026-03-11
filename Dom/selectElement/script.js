@@ -13,6 +13,7 @@ head.textContent="its updated by js dom and it is h2"
 // qurey selector is used to select first matched tag 
 let h1 =document.querySelector('h1')
 h1.innerText="this is slected by the query slector"
+console.dir(h1)//console.dir() is a JavaScript console method used to display an interactive list of the properties of a specified JavaScript object in the browser console.
 
 // there is another one which is used to select the tag which is querySlectorAll;
 // it selects all the tags which matched to the id or class or tagName
