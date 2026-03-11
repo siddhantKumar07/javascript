@@ -46,6 +46,10 @@ It considers CSS styling and layout.
 Example
 
 element.innerText = "Hello";
-
-
  */
+
+let h1 = document.querySelector("h1")
+// h1.textContent="kaisan bada ho "
+
+h1.innerHTML="<i>kaisan bada ho<i>"
+console.dir(h1)
