@@ -7,4 +7,15 @@ Here:
 1. src
 2. alt
 3. width
+are attributes.
+
+They describe the element and control its behavior or appearance.
+*/
+
+/*
+2. Attribute Manipulation in JavaScript DOM
+
+Attribute manipulation means getting, setting, changing, or removing attributes of HTML elements using JavaScript.
+
+JavaScript provides several DOM methods for this.
 */
