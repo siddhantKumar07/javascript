@@ -36,5 +36,8 @@ console.log(img.getAttribute("src"));
 
 let anchor =document.querySelector("a")
 console.dir(anchor)
-anchor.href="https://www.google.com"
+// anchor.href="https://www.google.com"
 anchor.target ="_blank" // this is used to open the link into the new tab 
+
+// second way to manipulate the attribute
+anchor.setAttribute("href","https://www.google.com")
