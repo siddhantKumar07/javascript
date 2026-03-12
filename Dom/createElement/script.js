@@ -15,3 +15,7 @@ example of how booth works
     <h1>helloooooo</h1>
 
 */
+
+// for removing the element or tag 
+let para = document.querySelector("p")
+para.remove(); // this will remove the paragraph 
