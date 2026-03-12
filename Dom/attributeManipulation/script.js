@@ -33,3 +33,6 @@ let img = document.querySelector("img");
 console.log(img.getAttribute("src"));
 
 */
+
+let anchor =document.querySelector("a")
+console.dir(anchor)
