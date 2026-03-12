@@ -41,3 +41,6 @@ anchor.target ="_blank" // this is used to open the link into the new tab
 
 // second way to manipulate the attribute
 anchor.setAttribute("href","https://www.google.com")
+
+let img =document.querySelector("img")
+img.setAttribute("src","https://th.bing.com/th/id/OIP.rLDfFtdchMBl8vdopoYc_wHaEW?w=263&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3")
