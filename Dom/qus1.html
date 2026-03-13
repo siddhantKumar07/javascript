@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="lists">hello 1</li>
+        <li class="lists">hello 2</li>
+        <li class="lists">hello 3</li>
+        <li class="lists">hello 4</li>
+    </ul>
+
+    <script>
+       
+         let lists =document.querySelectorAll(".lists");// this will returns a htmlCollection which is similar to the array 
+         console.log(lists)
+       for (const key in lists) {
+        console.log(lists[key].textContent)
+        
+       }
+    </script>
+</body>
+</html>
