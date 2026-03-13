@@ -12,3 +12,11 @@ div.style.border="2px solid black"
 div.style.backgroundColor="lightblue"
 console.dir(para)
 console.dir(div)
+
+
+// how to add a class to a particular tag 
+
+let h1 = document.querySelector("h1")
+h1.classList.add("hey")
+
+console.dir(h1)
