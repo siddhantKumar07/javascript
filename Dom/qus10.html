@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- add a class(highlight) to every even items of the list -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+    <script>
+        let ul = document.querySelector("ul");
+        let lists =document.querySelectorAll("li");// IT CREats a noodelist which is similar to the array 
+        for(let i=0;i<lists.length;i++){
+            if(i%2!=0){
+                lists[i].setAttribute("class","highlight")
+            }
+        }
+    </script>
+</body>
+</html>
