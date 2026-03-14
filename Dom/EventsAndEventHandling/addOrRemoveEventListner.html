@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button> hello ji!!</button> 
+   <script>
+      let btn = document.querySelector("button");
+      let head = document.createElement("h1");
+      head.textContent = "clicked on button";
+      function func(){
+        if (!document.body.contains(head)) {
+          document.body.prepend(head);
+          document.body.removeChild(head);
+        }
+      }
+      btn.addEventListener("dblclick", func);// this is the way to add event listner
+       btn.removeEventListener('dblclick', func)// this is used to remove event listner
+    </script>
+</body>
+</html>

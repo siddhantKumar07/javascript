@@ -7,18 +7,18 @@
   </head>
   <body>
     <button>click me!</button>
-    <script>
-      let btn = document.querySelector("button");
-      let head = document.createElement("h1");
-      head.textContent = "clicked on button";
+        <script>
+        let btn = document.querySelector("button");
+        let head = document.createElement("h1");
+        head.textContent = "clicked on button";
 
-      btn.addEventListener("dblclick", () => {
-        if (!document.body.contains(head)) {
-          document.body.prepend(head);// this will add head into body if there is no head
-        } else {
-          document.body.removeChild(head);// this will remove child if there is an head inside the body
-        }
-      });
-    </script>
+        btn.addEventListener("dblclick", () => {
+            if (!document.body.contains(head)) {
+            document.body.prepend(head);// this will add head into body if there is no head
+            } else {
+            document.body.removeChild(head);// this will remove child if there is an head inside the body
+            }
+        });
+        </script>
   </body>
 </html>
