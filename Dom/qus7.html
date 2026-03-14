@@ -1,23 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <ul>
-        <li>hey1</li>
-        <li>hey2</li>
-        <li>hey3</li>
-        <li>hey4</li>
+      <li>hey1</li>
+      <li>hey2</li>
+      <li>hey3</li>
+      <li>hey4</li>
     </ul>
     <script>
-        let lists = document.querySelector("ul");
-        let single = document.createElement("li");
-        single.innerHTML="hey i am a list which is developed via js ";
-        lists.append(single)
+      let lists = document.querySelector("ul");
+      let single = document.createElement("li");
+      single.innerHTML = "hey i am a list which is developed via js ";
 
+      let single2 = document.createElement("li");
+      single2.innerHTML =
+        "hey i am a list which is developed via js and i am 2nd one  ";
+
+      lists.append(single, single2);// append() take multiple input at same time 
+
+      /*
+        appendChild() → only one DOM node , (it will take only one argument at a time )
+
+        append() → multiple items + text allowed
+        */
     </script>
-</body>
+  </body>
 </html>
