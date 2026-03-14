@@ -14,7 +14,7 @@
 
       btn.addEventListener("dblclick", () => {
         if (!document.body.contains(head)) {
-          document.body.prepend(head);
+          document.body.prepend(head);// this will add head into body if there is no head
         } else {
           document.body.removeChild(head);// this will remove child if there is an head inside the body
         }
