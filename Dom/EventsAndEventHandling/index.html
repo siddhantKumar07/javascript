@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .head:hover{
-            color: yellow;
-        }
-    </style>
+   <style>
+    .colo {
+        color: aquamarine;
+    }
+   </style>
 </head>
 <body>
     <h1> hello ji , to change the color just hover on me !!!</h1>
 
     <script>
         let h =document.querySelector("h1");
-        h.addEventListener('mouseenter', ()=>
+        h.addEventListener('click', ()=>
     {
-        h.setAttribute("class","head")
+        h.classList.toggle("colo")
     })
     </script>
     
