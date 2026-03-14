@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .iClass{
+        height: 150px; 
+        width: 150px; 
+        margin: 20px;
+        border-radius: 55px ;
+        object-fit: cover;
+        border: 2px solid rgb(3, 3, 34);
+    }
+</style>
+<body>
+    <!-- create a new img element with a placeholder source and add it at the top of a div  -->
+    <div>
+        <h1>hello i am div</h1>
+    </div>
+    <script>
+        let img = document.createElement("img")
+        img.setAttribute("src","data:image/webp;base64,UklGRtAFAABXRUJQVlA4IMQFAAAQNQCdASpbAfQAPp1OpEulpKQho9dpoLATiWlu4W/RFzOT8if6ntx5FXd1wHz/tAXYTKgCJMiBU7NE8az0j91AL3/TSfiQfIZJ6Jzoqf99VmU50VP++qzKczBultjtuD1Cn2UzJ9q4j54yUliaw1MOyo4fqsjbNTDsqOSksTWGcrOG/ilibMFDnMsEEjxYvOUliaw1LymSiLovmDH8qoOByhtg/niQZcQtn5FCni7YIkU78L1WmbhWMKUlqoqygXkBSFHT9XsSdPW4q/PFPe0nP5XnLfNxErUJXUNsSzwA8RcVvLf1vheEsZLE1hmB/wUh1xSmHw8M3TiunFkEQppAjqPd7KM4+0PDvaZAzIQLuot30N0tRQdvTYUpdG4U5gwRMpwaSVtCFx1bWk1hqZlhQGkllzlnvMKwnLQjDNi+rsY2axoHBXwclJA9BkgElb7/BykmQR8nQd6PjZh2VHI4qjaoEgdwumVpa/C1RkXcqOSksTWGph3imaxQXYxxYnGQZCBg5KSxNYaqgnNbvA89LE1hqYdlRyOHjuSt8lEnUWNSwgTc/ceg8UwgR0CMfeigAP7cBcZcD0G5De6fXiDDBl4U6YGhG3MGrnX5KGTZqkSY9Wbd5c6Rk5j7/nirJ4/hs6Ar34G6vr88TFIkOM3+Isv3hqkYGmzxbJme3Ih3VyHQLbJ7znIiAxB5rPnycLXfxVoBjlOqwXQyEQmprAg2msyrVfWtk8aIYWT38NiQ0lGGALw6id1ooYhrr5bxUDwtnQuvhcDnx3Wq0483ojOFF4R0iILUbyhSnCO6eniH32pQkY23SAK0GYNKvG263dTuwKvSSf0GxIrUNOLrMP0lu1t9sy+jMUIX7H5PsADHXxaUUnXrHGUldILWmM3lpXxQZoosFPeW6EVDXpIc5I9zK9Prqfu7AQPgZF349EbQlFV/SuFSO3+rwdd1FhI7Taa52XssDP/26Bi10c5PI/57JjJme8hgFMlLDuBKNIkFN3CtRZkbc1Mp8XebPmLDLFuztOe+j4Kj/lUP1jnPju5yH6ffbXgyeg4X4/ZGiv3r+jkRWJJKaKAYGWdDFa02ziHV8ONfRvLGRUUlyqMIwSQtaunMU7PQGAIfrKA1DZfgJHlzmPwUSQBmWBs0aCZSwSrvQVTcnQ/Q5M9GPKaFA8AEVl8CoAILBxfdJhLdeCaf67NyIRcvz0GQXJJ4FX+qkTlsloHruOwBVsHrp0ajV6zhzLtFjvWZF2jCvpHcsZJQJuNrnNiToiQHyICd4q4RcxcORHeten9llAZLk2MOLZthKgBO3vLjyerQa4rhoaGD4PWmPea1TBk3vYYnuBEKqAQkowG3l+nwRK0UMTUUXi5rAjHF6JJN2NVdJ7tIA5KwVTAZmHrTy+VLjdOLEf6DYhZRvMYFiVb6zh4a0Mz33J/D8nAYhO1DNcY6GM4F8+ue+Z0gb5ywbca/XjDgH1pDVsgcLblbTV+5Gj29jALkXYcoUckEVIcoOZBTzZvmm3Xh0S5vHvWX4jtq5+UEtrBLjr7jDv182ERVrU5cy5RdxL8aoB2X3I+J791BcuiX+p01f8hgHc0rKGDWbie7/RoNbAdD9IQvnJmO4C9+/Z6rZlECLyntccCniOTz9gSCxJdRME/pXDCdrJtlIQM0F5A349Dh5761NNB1vLWBeyqzwrRCwgQ1nPp3mOuAD/ynx7y1gRoWsVO9RPsCbmNU9QGJDVXjcB9KmE7ayw/PGwn9nVPyjGNrFXYaWmdLvDqAJYxIVTbPcxwblqsDctSpjWVZu2iDTNycVc2tmgcUR9a9j4jmiVYMCBOdDi6RZVnS/kSYYLTHHcdmnma6tepLyK1A4dYgMV91tzHW3g6twfngXl5NpvIvNooimOK4gbBti1tOYUO9Q0tCClY7rQXRCNe/3LipFetVJKIez4BsM8QAAAAAFyc783tAq4I7r4i6m+v5Z8AAAAA=")
+        let div = document.querySelector("div");
+        div.prepend(img)
+        div.style.border="5px solid black "
+        img.classList.add("iClass")//this is the way to add a class to a element 
+    
+    
+    </script>
+</body>
+</html>
