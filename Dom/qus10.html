@@ -6,7 +6,8 @@
     <title>Document</title>
     <style>
         .highlight{
-            color: aqua;
+            color: rgb(149, 44, 255);
+            font-size: 2rem;
         }
     </style>
 </head>
@@ -28,13 +29,22 @@
         <li>12</li>
     </ul>
     <script>
-        let ul = document.querySelector("ul");
-        let lists =document.querySelectorAll("li");// IT CREats a noodelist which is similar to the array 
-        for(let i=0;i<lists.length;i++){
-            if(i%2!=0){
-                lists[i].setAttribute("class","highlight")
-            }
-        }
+        // first way by me and my thinking
+
+        // let ul = document.querySelector("ul");
+        // let lists =document.querySelectorAll("li");// IT CREats a noodelist which is similar to the array 
+        // for(let i=0;i<lists.length;i++){
+        //     if(i%2!=0){
+        //         lists[i].setAttribute("class","highlight")
+        //     }
+        // }
+
+        // second way is by youtube
+        let lists2=document.querySelectorAll("ul li:nth-child(2n)");//it will second the every 2nd element
+        lists2.forEach((value)=>{
+            value.setAttribute("class","highlight")
+        })
+         console.log(lists2)
     </script>
 </body>
 </html>
