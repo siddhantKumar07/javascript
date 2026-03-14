@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- select the first item in a list and delete it from the DOM -->
+     <ul>
+        <li>removed</li>
+        <li>hey2 </li>
+        <li>hey3</li>
+        <li>hey 4</li>
+     </ul>
+     <script>
+        let ul = document.querySelector("ul");
+        let li=document.querySelector("li")
+        // li.remove() // first method to remove 
+        ul.removeChild(li);// second method to remove
+       
+     </script>
+</body>
+</html>
