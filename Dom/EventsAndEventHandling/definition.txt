@@ -1,0 +1,21 @@
+In JavaScript, addEventListener() is used to attach an event handler to an element so that some code runs when a specific event happens (like a click, key press, mouse move, etc.).
+
+example =>
+const button = document.getElementById("btn");
+
+button.addEventListener("click", function() {
+  alert("Button clicked!");
+});
+When the user clicks the button, the alert will appear.
+
+Common Types of JavaScript Events
+1️⃣ Mouse Events
+
+These occur when the user interacts with the mouse.
+
+Event	Description
+click       When an element is clicked
+dblclick	 When double clicked
+mouseover	 When mouse enters element
+mouseout	 When mouse leaves element
+mousemove    When mouse moves
