@@ -14,8 +14,12 @@
       function func(){
         if (!document.body.contains(head)) {
           document.body.prepend(head);
-          document.body.removeChild(head);
-        }
+           }
+          else{
+             document.body.removeChild(head);
+          }
+         
+       
       }
       btn.addEventListener("dblclick", func);// this is the way to add event listner
        btn.removeEventListener('dblclick', func)// this is used to remove event listner
