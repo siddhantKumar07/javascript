@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div style="height: 150px; width: 150px;"></div>
+<body style="background-color: grey;">
+    <div style="height: 150px; width: 150px; "></div>
     <script>
         let div = document.querySelector("div");
+        div.style.backgroundColor="white";
         div.addEventListener('mouseover', ()=>{
        div.style.backgroundColor="yellow";
         })
