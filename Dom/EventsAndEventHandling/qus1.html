@@ -7,6 +7,14 @@
 </head>
 <body>
     <div style="height: 150px; width: 150px;"></div>
-    
+    <script>
+        let div = document.querySelector("div");
+        div.addEventListener('mouseover', ()=>{
+       div.style.backgroundColor="yellow";
+        })
+        div.addEventListener('mouseout', ()=>{
+       div.style.backgroundColor="white";
+        })
+    </script>
 </body>
 </html>
