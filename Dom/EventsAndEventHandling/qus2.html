@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<button> click </button>
+    <script>
+// Write a program where a button prints "Hello" in console when clicked, but after 3 clicks, the event listener is removed.
+ let btn = document.querySelector("button");
+ let count=0;
+ function prin(){
+ console.log("hello");
+     count++;
+     console.log(count)
+      if(count>=3){
+    btn.removeEventListener('click', prin);
+ }
+ }
+
+    btn.addEventListener('click', prin)
+
+
+    </script>
+    
+</body>
+</html>
