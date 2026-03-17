@@ -19,8 +19,9 @@
 <script>
     let select = document.querySelector("select");
     let head = document.querySelector("h1");
-    select.addEventListener('change', ()=>{
+    select.addEventListener('change', (e)=>{
         head.textContent="device selected";
+         console.log(e.target.value)
     })
 </script>
 </body>
