@@ -17,8 +17,11 @@
             //If user types "A" → "AB" event.target.value will be "AB"
         })
 input.addEventListener('input', (e)=>{
-    console.log(e.data)
-            })
+if(e.data !==null){
+        console.log(e.data)
+
+}
+})
     </script>
 
 </body>
