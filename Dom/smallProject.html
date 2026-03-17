@@ -30,17 +30,11 @@
       <h1></h1>
     </main>
     <script>
-  let text = "";
   let h = document.querySelector("h1");
   let main = document.querySelector("main");
-
-  let p = document.createElement("p");
-  main.append(p);
-
   document.addEventListener("keypress", (e) => {
     h.textContent = e.key;
-    text += e.key;
-    p.textContent = text;
+
   });
 </script>
   </body>
