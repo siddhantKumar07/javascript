@@ -10,7 +10,11 @@
 
     <script>
         // storing or checking the input 
-        
+        let input = document.querySelector("input")
+        input.addEventListener('input', (e)=>{
+            console.log(e.target.value)
+        })
+
     </script>
 
 </body>
