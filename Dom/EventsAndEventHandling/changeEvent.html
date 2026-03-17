@@ -7,6 +7,7 @@
 </head>
 <body>
 <select>
+    <h1>Select the device</h1>
     <option selected disabled>Choose you device</option>
     <option value="oppo">Oppo</option>
     <option value="samsung">samsung</option>
@@ -16,7 +17,10 @@
 
 <script>
     let select = document.querySelector("select");
-    
+    let head = document.querySelector("h1");
+    select.addEventListener('change', ()=>{
+        head.textContent="device selected";
+    })
 </script>
 </body>
 </html>
