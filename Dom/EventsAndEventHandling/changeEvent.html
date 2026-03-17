@@ -20,7 +20,7 @@
     let select = document.querySelector("select");
     let head = document.querySelector("h1");
     select.addEventListener('change', (e)=>{
-        head.textContent="device selected";
+        head.textContent=e.target.value +" device selected";
          console.log(e.target.value)
     })
 </script>
