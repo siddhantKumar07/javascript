@@ -21,6 +21,9 @@
             align-items: center;
             justify-content: center;
         }
+        h1{
+          
+        }
     </style>
   </head>
   
@@ -32,9 +35,15 @@
     <script>
   let h = document.querySelector("h1");
   let main = document.querySelector("main");
-  document.addEventListener("keypress", (e) => {
-    h.textContent = e.key;
-
+  document.addEventListener("keydown", (e) => {
+    if(e.key  === " ") {
+      h.textContent = "backSpace";
+      
+    }
+    else{
+h.textContent = e.key;
+    }
+    
   });
 </script>
   </body>
