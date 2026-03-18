@@ -26,11 +26,18 @@
         height: 5vh;
         width: 25vh;
       }
+      #img{
+        background-color: #ea6666;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+      }
     </style>
   </head>
   <body>
     <div id="main">
       <form action="">
+        <input type="text" id="img" src="">
         <input type="text" placeholder="name" />
         <input type="text" placeholder="mail" />
         <input type="text" placeholder="age" />
@@ -48,13 +55,16 @@
         let names = document.createElement("h2");
         let ages = document.createElement("h2");
         let mails = document.createElement("h2");
-        document.body.append(card);
+       
 
         form.addEventListener("submit", (e) => {
           e.preventDefault();
+           document.body.append(card);
          card.append(names, ages, mails);
-        });
-        card.style.height = "30vh";
+        }); 
+        card.style.borderRadius="20px"
+        card.style.border="2px solid black"
+        card.style.height = "40vh";
         card.style.width = "50vh";
         card.style.backgroundColor = "red";
         card.style.padding = "20px 10px ";
