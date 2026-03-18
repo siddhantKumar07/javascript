@@ -13,10 +13,9 @@
         body,html{
             height: 100%;
             width: 100%;
+            padding: 3vw;
         }
         #main{
-            height: 100%;
-            width: 100%;
             display: block;
             padding: 20px 20px;
          
@@ -39,12 +38,30 @@
     </form>
     <script>
         let inputs = document.querySelectorAll("input");
-        
         let form =document.querySelector("form")
         form.addEventListener('submit', (e)=>{
-            e.preventDefault()
-         
+            e.preventDefault() 
         })
+        let name =inputs[0].value
+        let mail =inputs[1].value
+        let age =inputs[2].value
+        
+        let card =document.createElement("div")
+        document.body.append(card)
+        card.style.height="30vh"
+        card.style.width="40vh"
+        card.style.backgroundColor="red"
+        let names =document.createElement("h2")
+        let ages =document.createElement("h2")
+        let mails =document.createElement("h2")
+        card.append(names)
+        card.append(ages)
+        card.append(mails)
+        names.innerText=`Name : ${name}`
+        mails.textContent =`Mail : ${mail}`
+        ages.textContent=`age : ${age}`
+
+       
     </script>
    </div>
 </body>
