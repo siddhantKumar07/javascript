@@ -1,69 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-         *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body,html{
-            height: 100%;
-            width: 100%;
-            padding: 3vw;
-        }
-        #main{
-            display: block;
-            padding: 20px 20px;
-         
-        }
-        input{
-            display: block;
-            margin: 20px 20px;
-            height: 5vh;
-            width: 25vh;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        padding: 3vw;
+      }
+      #main {
+        display: block;
+        padding: 20px 20px;
+      }
+      input {
+        display: block;
+        margin: 20px 20px;
+        height: 5vh;
+        width: 25vh;
+      }
     </style>
-</head>
-<body>
-   <div id="main">
-     <form action="">
-        <input type="text" placeholder="name">
-        <input type="text" placeholder="mail">
-        <input type="text" placeholder="age">
-        <input type="submit" value="Submit">
-    </form>
-    <script>
+  </head>
+  <body>
+    <div id="main">
+      <form action="">
+        <input type="text" placeholder="name" />
+        <input type="text" placeholder="mail" />
+        <input type="text" placeholder="age" />
+        <input type="submit" value="Submit" />
+      </form>
+      <script>
         let inputs = document.querySelectorAll("input");
-        let form =document.querySelector("form")
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault() 
-        })
-        let name =inputs[0].value
-        let mail =inputs[1].value
-        let age =inputs[2].value
-        
-        let card =document.createElement("div")
-        document.body.append(card)
-        card.style.height="30vh"
-        card.style.width="40vh"
-        card.style.backgroundColor="red"
-        card.style.padding="20px 10px "
-        let names =document.createElement("h2")
-        let ages =document.createElement("h2")
-        let mails =document.createElement("h2")
-        card.append(names)
-        card.append(ages)
-        card.append(mails)
-        names.innerText=`Name : ${name}`
-        mails.textContent =`Mail : ${mail}`
-        ages.textContent=`age : ${age}`
+        let name = inputs[0].value;
+        let mail = inputs[1].value;
+        let age = inputs[2].value;
 
-       
-    </script>
-   </div>
-</body>
+        let form = document.querySelector("form");
+
+        let card = document.createElement("div");
+        let names = document.createElement("h2");
+        let ages = document.createElement("h2");
+        let mails = document.createElement("h2");
+        document.body.append(card);
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+         card.append(names, ages, mails);
+        });
+        card.style.height = "30vh";
+        card.style.width = "50vh";
+        card.style.backgroundColor = "red";
+        card.style.padding = "20px 10px ";
+
+         names.innerText = `Name : ${name}`;
+          mails.textContent = `Mail : ${mail}`;
+          ages.textContent = `age : ${age}`;
+        
+      </script>
+    </div>
+  </body>
 </html>
