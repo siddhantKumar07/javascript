@@ -42,7 +42,8 @@
         input.click();// by this function the input is clicked
     })
     input.addEventListener('change', (e)=>{
-     button.textContent=e.value
+     button.textContent=e.target.files[0].name
+   
     })
    
 </script>
