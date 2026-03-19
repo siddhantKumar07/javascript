@@ -14,6 +14,7 @@
         <li>grapes</li>
      </ul>
      <script>
+        //first approach
         let list =document.querySelectorAll("li")
         list.forEach((value)=>{
             value.addEventListener('click', ()=>{
@@ -22,6 +23,12 @@
              value.style.textDecoration="none"
         })
        })
+        })
+
+        // second approach
+        let ul =document.querySelector("ul")
+        ul.addEventListener('click', (e)=>{
+      console.log(e.target)
         })
 
      </script>
