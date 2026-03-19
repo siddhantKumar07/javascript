@@ -48,11 +48,7 @@
       </form>
       <script>
         let main =document.querySelector("#main")
-        let inputs = document.querySelectorAll("input");
-        let name = inputs[0].value;
-        let mail = inputs[1].value;
-        let age = inputs[2].value;
-        let img = inputs[3].value;
+        
 
         let form = document.querySelector("form");
         let card = document.createElement("div");
@@ -64,6 +60,11 @@
 
         form.addEventListener("submit", (e) => {
           e.preventDefault();
+          let inputs = document.querySelectorAll("input");
+        let name = inputs[0].value;
+        let mail = inputs[1].value;
+        let age = inputs[2].value;
+        let img = inputs[3].value;
           main.append(card);
           card.append(imgs, names, ages, mails);
         });
