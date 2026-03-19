@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .lt{
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
     <!-- when someone click on the list item , there should be a line on the middle of the text -->
@@ -28,7 +33,8 @@
         // second approach
         let ul =document.querySelector("ul")
         ul.addEventListener('click', (e)=>{
-         e.target.style.textDecoration ="line-through"
+        //  e.target.style.textDecoration ="line-through"
+        e.target.classList.toggle("lt")//3rd approach using class
         })
 
      </script>
