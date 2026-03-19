@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        div{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(247, 147, 163);
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        let div
+        document.addEventListener('mousemove', (e)=>{
+            console.log(e.clientX+"  " +e.clientY)
+        })
+    </script>
+</body>
+</html>
