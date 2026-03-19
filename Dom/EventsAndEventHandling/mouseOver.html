@@ -10,15 +10,18 @@
             width: 150px;
             background-color: yellow;
         }
+        .new{
+            background-color: red;
+        }
     </style>
 </head>
 <body>
     <div></div>
     <script>
         let div =document.querySelector("div")
-        div.addEventListener('mouseover', ()=>{
-            
-        }, options)
+        div.addEventListener('mousedown', ()=>{//mousedown means when you click on where the listner have 
+            div.classList.toggle("new")
+        })
     </script>
     
 </body>
