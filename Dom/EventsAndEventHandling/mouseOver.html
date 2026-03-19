@@ -19,8 +19,13 @@
     <div></div>
     <script>
         let div =document.querySelector("div")
-        div.addEventListener('mousedown', ()=>{//mousedown means when you click on where the listner have 
-            div.classList.toggle("new")
+        div.addEventListener('mouseover', ()=>{
+            //mousedown means when you click on where the listner have 
+            // div.classList.toggle("new")
+            div.style.backgroundColor="red"
+        })
+        div.addEventListener('mouseout', ()=>{
+            div.style.backgroundColor="yellow"
         })
     </script>
     
