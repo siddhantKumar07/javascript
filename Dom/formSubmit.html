@@ -48,27 +48,25 @@
       </form>
       <script>
         let main =document.querySelector("#main")
-        
-
         let form = document.querySelector("form");
         let card = document.createElement("div");
-        let names = document.createElement("h2");
-        let ages = document.createElement("h2");
-        let mails = document.createElement("h2");
-        let imgs = document.createElement("img");
+        let name = document.createElement("h2");
+        let age = document.createElement("h2");
+        let mail = document.createElement("h2");
+        let img = document.createElement("img");
         
 
         form.addEventListener("submit", (e) => {
           e.preventDefault();
-          let inputs = document.querySelectorAll("input");
-        let name = inputs[0].value;
-        let mail = inputs[1].value;
-        let age = inputs[2].value;
-        let img = inputs[3].value;
-        imgs.setAttribute("src", img);
-        names.innerText = `Name : ${name}`;
-        mails.textContent = `Mail : ${mail}`;
-        ages.textContent = `age : ${age}`;
+        let inputs = document.querySelectorAll("input");
+        let nameData = inputs[0].value;
+        let mailData = inputs[1].value;
+        let ageData = inputs[2].value;
+        let imgData = inputs[3].value;
+        img.setAttribute("src", imgData);
+        name.innerText = `Name : ${nameData}`;
+        mail.textContent = `Mail : ${mailData}`;
+        age.textContent = `age : ${ageData}`;
           main.append(card);
           card.append(imgs, names, ages, mails);
         });
