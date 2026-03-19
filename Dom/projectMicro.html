@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- when someone click on the list item , there should be a line on the middle of the text -->
+     <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>orange</li>
+        <li>grapes</li>
+     </ul>
+     <script>
+        let list =document.querySelectorAll("li")
+        list.forEach((value)=>{
+            value.addEventListener('click', ()=>{
+        value.style.textDecoration="line-through"
+        value.addEventListener('dblclick', ()=>{
+             value.style.textDecoration="none"
+        })
+       })
+        })
+
+     </script>
+    
+</body>
+</html>
