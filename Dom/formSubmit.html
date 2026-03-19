@@ -56,7 +56,7 @@
         let ages = document.createElement("h2");
         let mails = document.createElement("h2");
         let imgs = document.createElement("img");
-        imgs.setAttribute("src", img);
+        
 
         form.addEventListener("submit", (e) => {
           e.preventDefault();
@@ -65,6 +65,10 @@
         let mail = inputs[1].value;
         let age = inputs[2].value;
         let img = inputs[3].value;
+        imgs.setAttribute("src", img);
+        names.innerText = `Name : ${name}`;
+        mails.textContent = `Mail : ${mail}`;
+        ages.textContent = `age : ${age}`;
           main.append(card);
           card.append(imgs, names, ages, mails);
         });
@@ -75,9 +79,6 @@
         card.style.backgroundColor = "grey";
         card.style.padding = "20px 10px ";
 
-        names.innerText = `Name : ${name}`;
-        mails.textContent = `Mail : ${mail}`;
-        ages.textContent = `age : ${age}`;
       </script>
     </div>
   </body>
