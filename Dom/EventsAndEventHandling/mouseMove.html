@@ -22,9 +22,10 @@
 <body>
     <div></div>
     <script>
-        let div
+        let div =document.querySelector("div")
         document.addEventListener('mousemove', (e)=>{
-            console.log(e.clientX+"  " +e.clientY)
+           div.style.left=e.clientX+"px"
+           div.style.top=e.clientY+"px"
         })
     </script>
 </body>
