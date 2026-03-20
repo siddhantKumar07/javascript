@@ -26,7 +26,7 @@
       input.addEventListener("input", (e) => {
         // span.textContent=e.target.value.length // this is for to count character
         let left = 20 - e.target.value.length;
-        if (left < 0) {
+        if (left < 0) {// this will change the color of the span tag when it goes
           span.textContent = left;
           span.style.color = "red";
         } else {
