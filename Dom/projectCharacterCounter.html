@@ -1,31 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        input{
-            margin: 20px 40px;
-            font-size: 20px;
-            height: 40px;
-            width: 420px;
-        }
-        h1{
-           margin: 20px 40px; 
-        }
+      input {
+        margin: 20px 40px;
+        font-size: 20px;
+        height: 40px;
+        width: 420px;
+      }
+      h1 {
+        margin: 20px 40px;
+      }
     </style>
-</head>
-<body>
-    <input type="text" placeholder="enter here ">
+  </head>
+  <body>
+    <input type="text" placeholder="enter here " />
     <h1>character Count : <span></span></h1>
     <script>
-        let count =0;
-        let input =document.querySelector("input");
-        let span =document.querySelector("span");
-       input.addEventListener('input', (e)=>{
-        span.textContent=e.target.value.length // this is for to copy 
-       })
+      let count = 0;
+      let input = document.querySelector("input");
+      let span = document.querySelector("span");
+      input.addEventListener("input", (e) => {
+        // span.textContent=e.target.value.length // this is for to count character
+        let left = 20 - e.target.value.length;
+        if (left < 0) {
+          span.textContent = left;
+          span.style.color = "red";
+        } else {
+          span.textContent = left;
+          span.style.color = "black";
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
