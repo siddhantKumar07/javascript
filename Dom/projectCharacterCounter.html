@@ -6,8 +6,13 @@
     <title>Document</title>
     <style>
         input{
+            margin: 20px 40px;
+            font-size: 20px;
             height: 40px;
             width: 420px;
+        }
+        h1{
+            
         }
     </style>
 </head>
@@ -19,7 +24,7 @@
         let input =document.querySelector("input");
         let span =document.querySelector("span");
        input.addEventListener('input', (e)=>{
-      console.log(e)
+        span.textContent=e.target.value.length
        })
     </script>
 </body>
