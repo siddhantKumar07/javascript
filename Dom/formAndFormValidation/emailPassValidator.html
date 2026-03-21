@@ -20,11 +20,21 @@
       let email = document.querySelector("#email");
       let pass = document.querySelector("#pass");
       let form = document.querySelector("form");
+
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-             email.addEventListener("input", (listener) => {
-        listener.preventDefault();
-        console.log(emailRegex.test(`${listener.target.value}`));
+
+/*
+| Event    | When it runs                      |
+| -------- | --------------------------------- |
+| `input`  | Every key press ❌                 |
+| `change` | When value changes & focus leaves |
+| `blur`   | When user leaves the field ✅      |
+
+*/
+      });
+     email.addEventListener("blur", (listener) => {
+        // console.log(emailRegex.test(`${listener.target.value}`));
         if (emailRegex.test(`${listener.target.value}`) === true) {
           console.log("ok");
         } else {
@@ -33,9 +43,8 @@
           );
         }
       });
-      pass.addEventListener("input", (listener) => {
-        listener.preventDefault();
-        console.log(passwordRegex.test(`${listener.target.value}`));
+            pass.addEventListener("blur", (listener) => { // blur me perform the action when user lives the field 
+        // console.log(passwordRegex.test(`${listener.target.value}`));
         if (passwordRegex.test(`${listener.target.value}`) === true) {
           console.log("ok");
         } else {
@@ -44,8 +53,6 @@
           );
         }
       });
-      });
- 
     </script>
   </body>
 </html>
