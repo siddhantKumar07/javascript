@@ -22,6 +22,28 @@
       let form = document.querySelector("form");
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+             email.addEventListener("input", (listener) => {
+        listener.preventDefault();
+        console.log(emailRegex.test(`${listener.target.value}`));
+        if (emailRegex.test(`${listener.target.value}`) === true) {
+          console.log("ok");
+        } else {
+          console.log(
+            "Please enter a valid email address (e.g., user@domain.com)",
+          );
+        }
+      });
+      pass.addEventListener("input", (listener) => {
+        listener.preventDefault();
+        console.log(passwordRegex.test(`${listener.target.value}`));
+        if (passwordRegex.test(`${listener.target.value}`) === true) {
+          console.log("ok");
+        } else {
+          console.log(
+            "Password must be 8+ characters with uppercase, lowercase, number, and special character",
+          );
+        }
+      });
       });
  
     </script>
