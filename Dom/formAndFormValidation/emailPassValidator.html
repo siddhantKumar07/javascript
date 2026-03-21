@@ -12,14 +12,16 @@
     <form action="">
         <input type="text" id="email" placeholder="enter your mail"><br><br>
         <input type="text" id="pass" placeholder="enter your pass"><br><br>
-        <input type="submit">
+        <input type="submit" >
     </form>
     <script>
       const emailRegex =
         /^(?!.*\.\.)(?!\.)(?!.*\.$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
       const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-      let email = document.querySelector("#email")
-      let pass = document.querySelector("#pass")
+      let email = document.querySelector("#email");
+      let pass = document.querySelector("#pass");
+    let form = document.querySelector("form");
+    
     </script>
   </body>
 </html>
