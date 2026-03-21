@@ -55,8 +55,9 @@
   <body>
     <main>
       <div id="counter">
+        <h1>click to increase and decrease</h1>
         <span id="increase"><button>Increase</button></span>
-        <span id="count">15</span>
+        <span id="count">0</span>
         <span id="decrease"><button>Decrease</button></span>
       </div>
     </main>
@@ -71,12 +72,11 @@
              count++;
             counts.textContent=count;
       })
-      increase.addEventListener('click', ()=>{
-             count++;
+      decrease.addEventListener('click', ()=>{
+             count--;
             counts.textContent=count;
       })
     
-       console.log(count)
     </script>
   </body>
 </html>
