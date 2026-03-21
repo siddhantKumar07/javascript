@@ -17,8 +17,9 @@
     <script>
       const emailRegex =
         /^(?!.*\.\.)(?!\.)(?!.*\.$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
-      console.log(emailRegex.test("h@a.hg"));
       const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      let email = document.querySelector("#email")
+      let pass = document.querySelector("#pass")
     </script>
   </body>
 </html>
