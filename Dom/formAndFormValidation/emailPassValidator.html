@@ -20,10 +20,12 @@
       }
       form {
         border-radius: 20px;
+        /* border: 3px solid black; */
+        box-shadow: 1px 1px 25px black;
         background-color: rgb(246, 88, 88);
-        width: 40%;
+        width: 30%;
     
-        max-height: 70%;
+        max-height: 50%;
         padding: 60px; /* small padding */
       }
       input {
@@ -31,13 +33,23 @@
       }
       #mailError {
         display: none;
-        font-size: 25px;
+        font-size: 15px;
         color: red;
       }
       #passError {
         display: none;
-        font-size: 25px;
+        font-size: 15px;
         color: red;
+      }
+      button{
+        font-size: 1.8em;
+        height: 5.5vh;
+        margin-left: 1.9vw;
+        background-color: #600a6d;
+        border: 2px solid black;
+        border-radius: 10px;
+        width:70%;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -71,10 +83,7 @@
           <br />
         </div>
         <br /><br />
-        <label style="font-size: 20px; font-weight: 900" for="submit"
-          >Submit :</label
-        >
-        <input type="submit" id="submit" />
+    <button> Validate</button>
       </form>
     </main>
     <script>
