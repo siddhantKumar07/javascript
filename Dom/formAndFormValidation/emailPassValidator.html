@@ -22,44 +22,50 @@
         border-radius: 20px;
         /* border: 3px solid black; */
         box-shadow: 1px 1px 25px black;
-        background-color: rgb(246, 88, 88);
-        width: 30%;
-    
-        max-height: 50%;
-        padding: 60px; /* small padding */
+        background-color: rgb(25, 159, 203);
+        width: 35%;
+        min-height: 60%;
+        max-height: 80%;
+        padding: 0px 60px; 
       }
       input {
         font-size: 17px;
+        width: 90%;
+        height: 5vh;
       }
       #mailError {
         display: none;
-        font-size: 15px;
+        font-size: 20px;
         color: red;
       }
       #passError {
         display: none;
-        font-size: 15px;
+        font-size: 20px;
         color: red;
       }
       button{
         font-size: 1.8em;
         height: 5.5vh;
         margin-left: 1.9vw;
-        background-color: #600a6d;
+        margin-bottom: 4vh;
+        background-color: #301be7;
         border: 2px solid black;
         border-radius: 10px;
-        width:70%;
+        width:80%;
         cursor: pointer;
+      }
+      #maildiv{
+        display: block;
+        margin-top: 5vh;
       }
     </style>
   </head>
   <body>
     <main>
       <form action="">
+        <h1 style="font-size: 3.8vh; margin-top: 1.5vh; padding-left: 2vh;">Email, Password Validator</h1>
         <div id="maildiv">
-          <label style="font-size: 20px; font-weight: 900" for="email"
-            >Email :</label
-          >
+          <h2>Email:</h2>
           <input type="text" id="email" placeholder="enter your mail" />
           <span id="mailError">
             <small
@@ -70,9 +76,7 @@
         </div>
         <br /><br />
         <div id="passdiv">
-          <label style="font-size: 20px; font-weight: 900" for="pass"
-            >Password:</label
-          >
+          <h2>Password :</h2>
           <input type="text" id="pass" placeholder="enter your pass" />
           <span id="passError">
             <small
