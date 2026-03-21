@@ -4,12 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
+    <style>
+        #mailError{
+            display: none;
+            font-size: 25px;
+            color: red;
+        }
+        #passError{
+            display: none;
+            font-size: 25px;
+            color: red;
+        }
+    </style>
   </head>
   <body>
     <form action="">
-      <input type="text" id="email" placeholder="enter your mail" /><br /><br />
-      <input type="text" id="pass" placeholder="enter your pass" /><br /><br />
+      <div id="maildiv">
+        <input type="text" id="email" placeholder="enter your mail" />
+      <span id="mailError">
+        <small>"Please enter a valid email address (e.g., user@domain.com)",</small>
+      </span>
+   
+      </div><br><br>
+     <div id="passdiv">
+         <input type="text" id="pass" placeholder="enter your pass" />
+      <span id="passError">
+        <small>"Password must be 8+ characters with uppercase, lowercase, number, and special character",</small>
+      </span>
+      <br />
+     </div>
+     <br><br>
       <input type="submit" />
     </form>
     <script>
@@ -20,7 +44,8 @@
       let email = document.querySelector("#email");
       let pass = document.querySelector("#pass");
       let form = document.querySelector("form");
-
+      let mailError =document.querySelector("#mailError")
+      let passError =document.querySelector("#passError")
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
@@ -33,23 +58,20 @@
 
 */
       });
-     email.addEventListener("blur", (listener) => {
+     email.addEventListener("blur", (listener) => {// blur me perform the action when user lives the field 
         // console.log(emailRegex.test(`${listener.target.value}`));
         if (emailRegex.test(listener.target.value) === true) {
-          console.log("ok");
+        mailError.style.display ="none"
         } else {
-          console.log(
-            "Please enter a valid email address (e.g., user@domain.com)",
-          );
+            mailError.style.display ="initial"
+          
         }
       });
             pass.addEventListener("blur", (listener) => { // blur me perform the action when user lives the field 
         if (passwordRegex.test(listener.target.value) === true) {
-          console.log("ok");
+           passError.style.display ="none"
         } else {
-          console.log(
-            "Password must be 8+ characters with uppercase, lowercase, number, and special character",
-          );
+          passError.style.display ="initial"
         }
       });
     </script>
