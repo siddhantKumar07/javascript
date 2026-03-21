@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input id="name" minlength="5" required type="text" placeholder="Name" /> 
+        <br><br>
+        <input type="text" placeholder="email" id="mail"/><br><br>
+        <input type="text" placeholder="password" /><br><br>
+        <select>
+          <option value="Male">male</option>
+          <option value="Female">female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+        <textarea placeholder="tell me about you"></textarea><br><br>
+       <input type="submit">
+      </form>
+      <script>
+        let mail = document.querySelector("#mail")
+       const emailRegex = /^(?!.*\.\.)(?!\.)(?!.*\.$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
+       console.log( emailRegex.test("h@a..hg"));
+      </script>
+    
+</body>
+</html>
