@@ -35,7 +35,7 @@
       });
      email.addEventListener("blur", (listener) => {
         // console.log(emailRegex.test(`${listener.target.value}`));
-        if (emailRegex.test(`${listener.target.value}`) === true) {
+        if (emailRegex.test(listener.target.value) === true) {
           console.log("ok");
         } else {
           console.log(
@@ -44,8 +44,7 @@
         }
       });
             pass.addEventListener("blur", (listener) => { // blur me perform the action when user lives the field 
-        // console.log(passwordRegex.test(`${listener.target.value}`));
-        if (passwordRegex.test(`${listener.target.value}`) === true) {
+        if (passwordRegex.test(listener.target.value) === true) {
           console.log("ok");
         } else {
           console.log(
