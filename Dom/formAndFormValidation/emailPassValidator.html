@@ -4,24 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
     <form action="">
-        <input type="text" id="email" placeholder="enter your mail"><br><br>
-        <input type="text" id="pass" placeholder="enter your pass"><br><br>
-        <input type="submit" >
+      <input type="text" id="email" placeholder="enter your mail" /><br /><br />
+      <input type="text" id="pass" placeholder="enter your pass" /><br /><br />
+      <input type="submit" />
     </form>
     <script>
       const emailRegex =
         /^(?!.*\.\.)(?!\.)(?!.*\.$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
-      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      const passwordRegex =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       let email = document.querySelector("#email");
       let pass = document.querySelector("#pass");
-    let form = document.querySelector("form");
-    
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+      });
+      email.addEventListener("input", (listener) => {
+        listener.preventDefault();
+        console.log(emailRegex.test(`${listener.target.value}`));
+        if (emailRegex.test(`${listener.target.value}`) === true) {
+          console.log("ok");
+        } else {
+          console.log(
+            "Please enter a valid email address (e.g., user@domain.com)",
+          );
+        }
+      });
+      pass.addEventListener("input", (listener) => {
+        listener.preventDefault();
+        console.log(passwordRegex.test(`${listener.target.value}`));
+        if (passwordRegex.test(`${listener.target.value}`) === true) {
+          console.log("ok");
+        } else {
+          console.log(
+            "Password must be 8+ characters with uppercase, lowercase, number, and special character",
+          );
+        }
+      });
     </script>
   </body>
 </html>
