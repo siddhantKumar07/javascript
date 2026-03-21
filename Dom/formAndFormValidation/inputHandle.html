@@ -12,6 +12,7 @@
       }
       #hide{
         display: none;
+        color: red;
       }
     </style>
   </head>
@@ -39,9 +40,10 @@
   let hideDiv= document.querySelector("#hide");
   form.addEventListener('submit', (e)=>{
     e.preventDefault()
-    if(nm.target.value.length<=2){
-      hi`~
-    }
+    console.log(nm.value.length)
+    if(nm.value.length<=2){
+      hideDiv.style.display="initial"
+  }
   })
   
   
