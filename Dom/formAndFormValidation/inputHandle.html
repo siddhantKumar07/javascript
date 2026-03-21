@@ -13,13 +13,14 @@
       #hide{
         display: none;
         color: red;
+        font-size: 30px;
       }
     </style>
   </head>
   <body>
 
       <form action="">
-        <input id="name" type="text" placeholder="Name" /> 
+        <input id="name" minlength="5" required type="text" placeholder="Name" /> 
         <br> 
         <div id="hide">
           <small> your name should be greater than 2 characteer</small>
@@ -40,9 +41,11 @@
   let hideDiv= document.querySelector("#hide");
   form.addEventListener('submit', (e)=>{
     e.preventDefault()
-    console.log(nm.value.length)
     if(nm.value.length<=2){
       hideDiv.style.display="initial"
+  }
+  else{
+    hideDiv.style.display="none" 
   }
   })
   
