@@ -1,20 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div id="main">
-        <input type="text" placeholder="Name">
-    <input type="text" placeholder="email">
-    <input type="text" placeholder="password">
-<select >
-    <option value="Male">male</option>
-    <option value="Female">female</option>
-    <option value="other">Other</option>
-</select>
-    </div>
-</body>
+    <style>
+      #main {
+      }
+      input,select,textarea {
+        margin: 10px 25px;
+      }
+      #hide{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+
+      <form action="">
+        <input id="name" type="text" placeholder="Name" /> 
+        <br> 
+        <div id="hide">
+          <small> your name should be greater than 2 characteer</small>
+        </div><br>
+        <input type="text" placeholder="email" /><br><br>
+        <input type="text" placeholder="password" /><br><br>
+        <select>
+          <option value="Male">male</option>
+          <option value="Female">female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+        <textarea placeholder="tell me about you"></textarea><br><br>
+       <input type="submit">
+      </form>
+<script>
+  let nm = document.querySelector("#name")
+  let form = document.querySelector("form")
+  let hideDiv= document.querySelector("#hide");
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    if(nm.target.value.length<=2){
+      hi`~
+    }
+  })
+  
+  
+</script>
+  </body>
 </html>
