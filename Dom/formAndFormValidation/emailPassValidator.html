@@ -32,6 +32,8 @@
         font-size: 17px;
         width: 90%;
         height: 5vh;
+        
+
       }
       #mailError {
         display: none;
@@ -125,7 +127,7 @@
         // blur me perform the action when user lives the field
         if (passwordRegex.test(listener.target.value) === true) {
           passError.style.display = "none";
-        } else {
+        } else {//this runs when the password is not valid and the error message will be shown
           passError.style.display = "initial";
         }
       });
