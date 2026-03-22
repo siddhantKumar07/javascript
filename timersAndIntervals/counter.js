@@ -1,8 +1,9 @@
 let count =10;
 let co=setInterval(()=>{
+      console.log(count);
     count--;
-    console.log(count);
+  if(count<0){
+    clearInterval(co);
+  }
 },1000);
-while(count>=0){
-clearInterval(co);
-}
+
