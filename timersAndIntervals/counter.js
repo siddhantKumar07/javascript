@@ -1,6 +1,6 @@
-let count =0;
+let count =10;
 let co=setInterval(()=>{
-    count++;
+    count--;
     console.log(count);
 },1000);
 while(count>=0){
