@@ -8,16 +8,29 @@
     main{
         height: 50vw;
         margin: 0 auto;
+        background-color: yellow;
+        padding: 1px;
+    }
+    #section{
+        width: 25vw;
+        height: 45vh;
+        margin: 10vh auto;
+        /* padding-top: 100px; */
+        background-color: grey;
+        border-radius: 20px;
+
     }
     h1{
         text-align: center;
+        margin-top: 20vh;
     }
     #progress{
         /* height: 40px; */
-        width: 50%;
-        background-color: grey;
+        width: 22vw;
+        background-color: rgb(68, 4, 4);
         text-align: center;
-        margin: 0 auto;
+        /* margin: 10vh auto; */
+        margin-top: 15vh;
          border-radius: 12px;
         text-align: center;
             line-height: 40px;
@@ -35,9 +48,11 @@
 </head>
 <body>
     <main>
-        <h1>Downloading...</h1>
+        <div id="section">
+            <h1>Downloading...</h1>
         <div id="progress">
             <div id="inner"></div>
+        </div>
         </div>
     </main>
     
