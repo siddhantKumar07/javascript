@@ -4,5 +4,5 @@ let co=setInterval(()=>{
     console.log(count);
 },1000);
 while(count>=0){
-
+clearInterval(co);
 }
