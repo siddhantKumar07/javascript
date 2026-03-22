@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    main{
+        height: 50vw;
+        margin: 0 auto;
+    }
+    h1{
+        text-align: center;
+    }
+    #progress{
+        /* height: 40px; */
+        width: 50%;
+        background-color: grey;
+        text-align: center;
+        margin: 0 auto;
+         border-radius: 12px;
+        text-align: center;
+            line-height: 40px;
+    }
+    #inner{
+        width: 0;
+        height: 100%;
+        font-size: 20px;
+         border-radius: inherit;
+        font-weight: bold;
+        text-align: center;
+
+    }
+</style>
+</head>
+<body>
+    <main>
+        <h1>Downloading...</h1>
+        <div id="progress">
+            <div id="inner"></div>
+        </div>
+    </main>
+    
+    <script>
+let inner = document.querySelector("#inner");
+let progress=0;
+let interval = setInterval(()=>{
+if(progress==100){
+    clearInterval(interval);
+    inner.textContent="completed"
+}
+else{
+    progress+=10;
+    inner.style.backgroundColor="red"
+    inner.style.width= progress+"%"
+    inner.textContent=progress+"%"
+}
+},1000)
+    </script>
+</body>
+</html>
