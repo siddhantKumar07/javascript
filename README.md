@@ -4,7 +4,6 @@ Welcome to my JavaScript learning repository! 👋
 
 This repo is a part of my daily practice where I am consistently learning and improving my JavaScript skills. The goal is simple — **learn something new every day and commit it here**.
 
----
 
 ## 📅 What This Repo Is About
 
@@ -13,7 +12,6 @@ This repo is a part of my daily practice where I am consistently learning and im
 * 💻 Writing small programs, examples, and mini-projects
 * 🔁 Building consistency through daily commits
 
----
 
 ## 🎯 Goals
 
@@ -22,7 +20,6 @@ This repo is a part of my daily practice where I am consistently learning and im
 * Stay consistent with coding every day
 * Track my progress publicly
 
----
 
 ## 📂 What You'll Find Here
 
@@ -32,37 +29,30 @@ This repo is a part of my daily practice where I am consistently learning and im
 * ES6+ features
 * Mini projects and experiments
 
----
 
 ## 📈 Progress
 
 I try to commit **every day** to keep the streak alive 🔥
 Each commit represents something new I’ve learned or practiced.
 
----
 
 ## 🤝 Contributions
 
 This is a personal learning repo, but suggestions and feedback are always welcome!
 
----
 
 ## ⭐ Support
 
 If you find this journey helpful or inspiring, feel free to ⭐ the repo!
 
----
 
 ## 📌 Note
 
 Consistency > Perfection
 Learning one step at a time 🚶‍♂️
 
----
 
 ### 🧑‍💻 Author
-
-**Your Name**
 Siddhant kumar
 ---
 
