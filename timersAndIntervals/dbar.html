@@ -1,63 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    main{
-        height: 50vw;
-        margin: 0 auto;
-        background-color: yellow;
-        padding: 1px;
+ <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: Arial, sans-serif;
     }
-    #section{
-        width: 25vw;
-        height: 45vh;
-        margin: 10vh auto;
-        /* padding-top: 100px; */
-        background-color: grey;
-        border-radius: 20px;
 
+    .container {
+      width: 350px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
     }
-    h1{
-        text-align: center;
-        margin-top: 20vh;
-    }
-    #progress{
-        /* height: 40px; */
-        width: 22vw;
-        background-color: rgb(68, 4, 4);
-        text-align: center;
-        /* margin: 10vh auto; */
-        margin-top: 15vh;
-         border-radius: 12px;
-        text-align: center;
-            line-height: 40px;
-    }
-    #inner{
-        width: 0;
-        height: 100%;
-        font-size: 20px;
-         border-radius: inherit;
-        font-weight: bold;
-        text-align: center;
 
+    .title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
     }
-</style>
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background: #e0e0e0;
+      border-radius: 50px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Static progress (change width to control %) */
+    .progress {
+      height: 100%;
+      width: 70%;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border-radius: 50px;
+    }
+
+    /* Optional animated shine effect */
+    .progress::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -40%;
+      width: 40%;
+      height: 100%;
+      background: rgba(255,255,255,0.4);
+      transform: skewX(-20deg);
+      animation: shine 2s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -40%; }
+      100% { left: 100%; }
+    }
+
+    .percentage {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <div id="section">
-            <h1>Downloading...</h1>
-        <div id="progress">
-            <div id="inner"></div>
-        </div>
-        </div>
-    </main>
+    <div class="container">
+    <div class="title">Loading Progress</div>
+
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <div class="percentage"></div>
+  </div>
     
     <script>
-let inner = document.querySelector("#inner");
+let inner = document.querySelector(".progress");
+let percentage = document.querySelector(".percentage");
 let progress=0;
 let interval = setInterval(()=>{
 if(progress==100){
@@ -69,6 +98,7 @@ else{
     inner.style.backgroundColor="red"
     inner.style.width= progress+"%"
     inner.textContent=progress+"%"
+    percentage.textContent=progress+"%"
 }
 },1000)
     </script>
