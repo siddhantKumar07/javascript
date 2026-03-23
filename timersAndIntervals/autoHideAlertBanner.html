@@ -10,7 +10,7 @@
         // alert("This alert will disappear in 5 seconds");
         let h1 = document.querySelector("h1");
         h1.textContent = "This alert will disappear in 5 seconds";
-        
+        document.body.appendChild(h1);
         setTimeout(() => {
             alert("This alert will disappear in 5 seconds");
         }, 5000);
