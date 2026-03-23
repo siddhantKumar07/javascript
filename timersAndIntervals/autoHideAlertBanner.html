@@ -10,7 +10,7 @@
     let h1 = document.createElement("h1");
     h1.textContent = "This alert will disappear in 5 seconds";
     document.body.appendChild(h1);
-  h
+  h1.style.backgroundColor = "red";
     setTimeout(() => {
         document.body.removeChild(h1);
     }, 5000);
