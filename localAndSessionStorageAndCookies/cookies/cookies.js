@@ -1,5 +1,7 @@
 // cookies is a small piece of data that a website can store on your computer. It is used to remember information about you, such as your preferences or login status. Cookies are sent back to the server with each request, allowing the website to recognize you and provide a personalized experience. They can be set to expire after a certain time or when you close your browser. Cookies are commonly used for tracking user behavior and delivering targeted advertisements.
 
+//storage limit (usually around 4KB) and should not be used to store large amounts of data. Additionally, cookies can be accessed by other websites if they are not set with the appropriate security flags (such as HttpOnly and Secure).
+
 // To create a cookie, you can use the document.cookie property. For example:
 document.cookie = "username=John Doe; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
 
