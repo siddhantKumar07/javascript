@@ -116,13 +116,16 @@ Controls cross-site requests (important for security)
 Strict → only same site
 Lax → limited sharing
 None → allow cross-site (must use secure)
+
 🔹 Types of Cookies
 1. Session Cookies
 Deleted when browser closes
 Used for login sessions
+
 2. Persistent Cookies
 Stored for longer time
 Used for "Remember me"
+
 3. Third-party Cookies
 Used by ads/trackers (Google Ads etc.)
 🔥 Real-World Example (Login System)
@@ -138,11 +141,11 @@ Every request:
 Cookie: token=abc123
 Server verifies token → user authenticated ✅
 🔹 Cookies vs LocalStorage vs SessionStorage
-Feature	Cookies 🍪	localStorage 📦	sessionStorage 📄
-Size	~4 KB	~5 MB	~5 MB
-Sent to server	✅ Yes	❌ No	❌ No
-Expiry	Configurable	No expiry	Tab close
-Security	More secure	Less secure	Less secure
+Feature  	Cookies 🍪	localStorage 📦	sessionStorage 📄
+Size	    ~4 KB	      ~5 MB	           ~5 MB
+Sent to server	✅ Yes	❌ No	           ❌ No
+Expiry	Configurable	No expiry	       Tab close
+Security	More secure	Less secure	         Less secure
 
 🚀 When to Use What?
 ✅ Use Cookies when:
