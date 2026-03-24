@@ -33,15 +33,18 @@ User selects dark mode → stored in localStorage
 When user comes back → app reads it → applies dark mode automatically
 
 🔹 2. sessionStorage – When & Why to Use
+
 ✅ Use when:
 Data is needed only temporarily
 Should be cleared when tab is closed
 Data is specific to one tab
+
 💡 Real-life use cases:
 Multi-step forms (store temporary input)
 Temporary login/session info
 Storing OTP verification state
 Payment flow steps
+
 🧪 Example: Multi-Step Form
 // Step 1: Save user name
 sessionStorage.setItem("name", "Rahul");
@@ -49,7 +52,9 @@ sessionStorage.setItem("name", "Rahul");
 // Step 2: Retrieve it on next page
 const name = sessionStorage.getItem("name");
 console.log(name);
+
 👉 How it works:
+
 User fills step 1 → data saved
 Goes to step 2 → data still available
 Closes tab → data gone
