@@ -58,13 +58,6 @@ console.log(name);
 User fills step 1 → data saved
 Goes to step 2 → data still available
 Closes tab → data gone
-🔥 Key Difference (Practical View)
-Situation	Use
-Save user settings permanently	localStorage
-Store login token temporarily	sessionStorage
-Keep cart items after refresh	localStorage
-Store form data for one session	sessionStorage
-
 
 
 🍪 What are Cookies?
@@ -74,16 +67,19 @@ Cookies are small pieces of data stored in the browser that are sent automatical
 👉 Unlike localStorage / sessionStorage, cookies are mainly used for server-client communication.
 
 🔹 Why Cookies are Used?
+
 ✅ Main purposes:
 Authentication (login sessions, JWT tokens)
 Tracking users (analytics, ads)
 Remembering preferences
 Session management
+
 🔹 How Cookies Work (Flow)
 User logs in
 Server sends cookie in response
 Browser stores it
 On every request → cookie is automatically sent back to server
+
 🧪 Example: Setting a Cookie (Client Side)
 // Set cookie
 document.cookie = "username=Rahul; expires=Fri, 31 Dec 2026 12:00:00 UTC; path=/";
@@ -91,25 +87,30 @@ document.cookie = "username=Rahul; expires=Fri, 31 Dec 2026 12:00:00 UTC; path=/
 // Read cookie
 console.log(document.cookie);
 🧪 Example: Setting Cookie (Server - Node.js / Express)
+
 res.cookie("token", "abc123", {
   httpOnly: true,
   secure: true,
   maxAge: 24 * 60 * 60 * 1000
 });
 🔹 Cookie Attributes (VERY IMPORTANT 🔥)
+
 1. expires / max-age
 Defines how long cookie lives
 Example:
 "max-age=3600" // 1 hour
+
 2. httpOnly
 ❌ Cannot be accessed by JavaScript
 ✅ More secure (protects from XSS)
+
 3. secure
 Cookie sent only over HTTPS
+
 4. path
 Defines URL path where cookie is valid
-5. SameSite
 
+5. SameSite
 Controls cross-site requests (important for security)
 
 Strict → only same site
