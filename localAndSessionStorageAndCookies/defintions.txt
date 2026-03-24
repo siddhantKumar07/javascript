@@ -25,9 +25,13 @@ console.log(theme);
 
 // Remove theme
 localStorage.removeItem("theme");
+
 👉 How it works:
+
+
 User selects dark mode → stored in localStorage
 When user comes back → app reads it → applies dark mode automatically
+
 🔹 2. sessionStorage – When & Why to Use
 ✅ Use when:
 Data is needed only temporarily
