@@ -1,0 +1,141 @@
+🔹 What is localStorage and sessionStorage used for?
+
+Both are used to store data in the browser (client-side) so you don’t need to fetch it again from the server.
+
+🔹 1. localStorage – When & Why to Use
+
+✅ Use when:
+You want data to persist even after browser is closed
+Data should be available next time user visits
+Not sensitive data
+💡 Real-life use cases:
+Saving user preferences (theme, language)
+Storing cart items in e-commerce
+Remembering last visited page
+🧪 Example: Save Dark Mode Preference
+// Save theme
+localStorage.setItem("theme", "dark");
+
+// Get theme
+const theme = localStorage.getItem("theme");
+console.log(theme);
+
+// Remove theme
+localStorage.removeItem("theme");
+👉 How it works:
+User selects dark mode → stored in localStorage
+When user comes back → app reads it → applies dark mode automatically
+🔹 2. sessionStorage – When & Why to Use
+✅ Use when:
+Data is needed only temporarily
+Should be cleared when tab is closed
+Data is specific to one tab
+💡 Real-life use cases:
+Multi-step forms (store temporary input)
+Temporary login/session info
+Storing OTP verification state
+Payment flow steps
+🧪 Example: Multi-Step Form
+// Step 1: Save user name
+sessionStorage.setItem("name", "Rahul");
+
+// Step 2: Retrieve it on next page
+const name = sessionStorage.getItem("name");
+console.log(name);
+👉 How it works:
+User fills step 1 → data saved
+Goes to step 2 → data still available
+Closes tab → data gone
+🔥 Key Difference (Practical View)
+Situation	Use
+Save user settings permanently	localStorage
+Store login token temporarily	sessionStorage
+Keep cart items after refresh	localStorage
+Store form data for one session	sessionStorage
+
+
+
+🍪 What are Cookies?
+
+Cookies are small pieces of data stored in the browser that are sent automatically to the server with every request.
+
+👉 Unlike localStorage / sessionStorage, cookies are mainly used for server-client communication.
+
+🔹 Why Cookies are Used?
+✅ Main purposes:
+Authentication (login sessions, JWT tokens)
+Tracking users (analytics, ads)
+Remembering preferences
+Session management
+🔹 How Cookies Work (Flow)
+User logs in
+Server sends cookie in response
+Browser stores it
+On every request → cookie is automatically sent back to server
+🧪 Example: Setting a Cookie (Client Side)
+// Set cookie
+document.cookie = "username=Rahul; expires=Fri, 31 Dec 2026 12:00:00 UTC; path=/";
+
+// Read cookie
+console.log(document.cookie);
+🧪 Example: Setting Cookie (Server - Node.js / Express)
+res.cookie("token", "abc123", {
+  httpOnly: true,
+  secure: true,
+  maxAge: 24 * 60 * 60 * 1000
+});
+🔹 Cookie Attributes (VERY IMPORTANT 🔥)
+1. expires / max-age
+Defines how long cookie lives
+Example:
+"max-age=3600" // 1 hour
+2. httpOnly
+❌ Cannot be accessed by JavaScript
+✅ More secure (protects from XSS)
+3. secure
+Cookie sent only over HTTPS
+4. path
+Defines URL path where cookie is valid
+5. SameSite
+
+Controls cross-site requests (important for security)
+
+Strict → only same site
+Lax → limited sharing
+None → allow cross-site (must use secure)
+🔹 Types of Cookies
+1. Session Cookies
+Deleted when browser closes
+Used for login sessions
+2. Persistent Cookies
+Stored for longer time
+Used for "Remember me"
+3. Third-party Cookies
+Used by ads/trackers (Google Ads etc.)
+🔥 Real-World Example (Login System)
+Step-by-step:
+User logs in
+Server creates token
+Sends cookie:
+res.cookie("token", jwtToken, {
+  httpOnly: true,
+  secure: true
+});
+Every request:
+Cookie: token=abc123
+Server verifies token → user authenticated ✅
+🔹 Cookies vs LocalStorage vs SessionStorage
+Feature	Cookies 🍪	localStorage 📦	sessionStorage 📄
+Size	~4 KB	~5 MB	~5 MB
+Sent to server	✅ Yes	❌ No	❌ No
+Expiry	Configurable	No expiry	Tab close
+Security	More secure	Less secure	Less secure
+
+🚀 When to Use What?
+✅ Use Cookies when:
+Authentication (JWT/session)
+Server needs data on every request
+✅ Use localStorage when:
+Large data (cart, settings)
+✅ Use sessionStorage when:
+Temporary data (forms, steps)
