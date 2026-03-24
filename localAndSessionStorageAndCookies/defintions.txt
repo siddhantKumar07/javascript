@@ -5,9 +5,11 @@ Both are used to store data in the browser (client-side) so you don’t need to 
 🔹 1. localStorage – When & Why to Use
 
 ✅ Use when:
+
 You want data to persist even after browser is closed
 Data should be available next time user visits
 Not sensitive data
+
 💡 Real-life use cases:
 Saving user preferences (theme, language)
 Storing cart items in e-commerce
