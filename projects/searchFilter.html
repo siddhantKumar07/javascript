@@ -157,6 +157,27 @@
             </div>
         </div>
     `).join("");
+    
+    let searchInput = document.getElementById("searchInput");
+    let noResults = document.getElementById("noResults");
+    searchInput.addEventListener("input", () => {
+        let query = searchInput.value.toLowerCase();
+        let cards = document.querySelectorAll(".card");
+        let hasResults = false;
+
+        cards.forEach(card => {
+            let name = card.getAttribute("data-name");
+            if (name.includes(query)) {
+                card.style.display = "block";
+                hasResults = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        noResults.style.display = hasResults ? "none" : "block";
+    });
+
 
   </script>
 </body>
