@@ -148,7 +148,7 @@
         }
     ]
 let container = document.querySelector("#cardContainer")
-container.innerHTML = users.map((val)=>{
+container.innerHTML = users.map((user)=>{
    `<div class="card" data-name="${user.name.toLowerCase()}">
             <img src="${user.image}" alt="${user.name}">
             <div class="card-content">
@@ -158,7 +158,10 @@ container.innerHTML = users.map((val)=>{
         </div>`
 }).join("");
 
-let filter = 
+let input =document.querySelector("#searchInput");
+input.addEventListener('input', ()=>{
+    console.log(input.value)
+})
 
 
  </script>
