@@ -65,7 +65,6 @@
       width: 100%;
       height: 160px;
       object-fit: cover;
-      object-position: center;
     }
 
     /* Content */
@@ -114,9 +113,9 @@
   <div class="no-results" id="noResults">
     No matching cards found
   </div>
-
-  <script>
+ <script>
     let users =[
+
         {
             name: "John Doe",
             description: "Frontend developer who loves React and UI design.",
@@ -148,38 +147,20 @@
             image: "https://images.unsplash.com/photo-1531891570158-e71b35a485bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vZGVsc3xlbnwwfHwwfHx8MA%3D%3D"
         }
     ]
-    let container = document.getElementById("cardContainer");
-    container.innerHTML = users.map((user) => `
-        <div class="card" data-name="${user.name.toLowerCase()}">
+let container = document.querySelector("#cardContainer")
+container.innerHTML = users.map((val)=>{
+   `<div class="card" data-name="${user.name.toLowerCase()}">
             <img src="${user.image}" alt="${user.name}">
             <div class="card-content">
                 <h3>${user.name}</h3>
                 <p>${user.description}</p>
             </div>
-        </div>
-    `).join("");
+        </div>`
+}).join("");
 
-    let searchInput = document.getElementById("searchInput");
-    let noResults = document.getElementById("noResults");
-    searchInput.addEventListener("input", () => {
-        let query = searchInput.value.toLowerCase();
-        let cards = document.querySelectorAll(".card");
-        let hasResults = false;
-
-        cards.forEach(card => {
-            let name = card.getAttribute("data-name");
-            if (name.includes(query)) {
-                card.style.display = "initial";
-                hasResults = true;
-            } else {
-                card.style.display = "none";
-            }
-        });
-
-        noResults.style.display = hasResults ? "none" : "initial";
-    });
+let filter = 
 
 
-  </script>
+ </script>
 </body>
 </html>
