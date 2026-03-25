@@ -13,7 +13,7 @@ let arr3 = [];
 for (let i = 0; i < arr.length; i++) {
   arr3[i] = []; // ✅ create row first
   for (let j = 0; j < arr[i].length; j++) {
-    arr3[i][j] = arr[i][j] * arr2[i][j];
+    arr3[i][j] = arr[i][j] * arr2[i][j];// multiply corresponding elements and store in arr3
   }
 }
 
