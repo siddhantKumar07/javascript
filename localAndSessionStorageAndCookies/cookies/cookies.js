@@ -11,6 +11,6 @@ const usernameCookie = cookies.find(cookie => cookie.trim().startsWith('username
 const username = usernameCookie ? usernameCookie.split('=')[1] : null;
 // To delete a cookie, you can set its expiration date to a past date. For example:
 document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-//sddj
+//sddj zxjkchsdfdsaf
 // It is important to note that cookies have a size limit (usually around 4KB) and should not be used to store large amounts of data. Additionally, cookies can be accessed by other websites if they are not set with the appropriate security flags (such as HttpOnly and Secure).
 
