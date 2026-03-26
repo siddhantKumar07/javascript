@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>New Call Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="card-container">
+
+    <!-- left buttons -->
+    <div class="side-buttons">
+        <button id="add">+</button>
+        <button>↑</button>
+        <button>↓</button>
+    </div>
+
+    <!-- main card -->
+    <div class="card">
+
+        <div class="profile">
+            <img src="https://i.pravatar.cc/100" alt="">
+            <div>
+                <h3>Fatima Uma</h3>
+                <p>Home town</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <div>
+                <p>Singapore</p>
+                <span>Bookings</span>
+            </div>
+            <div>
+                <p>3 times</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="call">📞 Call</button>
+            <button class="msg">Message</button>
+        </div>
+
+    </div>
+
+    <!-- color buttons -->
+    <div class="colors">
+        <button class="dot black"></button>
+        <button class="dot purple"></button>
+        <button class="dot brown"></button>
+        <button class="dot teal"></button>
+    </div>
+
+</div>
+
+<div class="form-container">
+    <h2>New Call</h2>
+
+    <label>Name URL</label>
+    <input type="text" placeholder="https://example.com/photo.jpg">
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter full name">
+
+    <label>Home Town</label>
+    <input type="text" placeholder="Enter home town">
+
+    <label>Purpose</label>
+    <input type="text" placeholder="e.g., Quick appointment note">
+
+    <label>Category</label>
+    <div class="tags">
+        <label class="tag emergency">
+            <input type="radio" name="category" value="Emergency">
+            <span>Emergency</span>
+        </label>
+
+        <label class="tag important">
+            <input type="radio" name="category" value="Important">
+            <span>Important</span>
+        </label>
+
+        <label class="tag urgent">
+            <input type="radio" name="category" value="Urgent">
+            <span>Urgent</span>
+        </label>
+
+        <label class="tag">
+            <input type="radio" name="category" value="No Rush">
+            <span>No Rush</span>
+        </label>
+    </div>
+
+    <button class="btn create">Create Note</button>
+    <button class="btn close">Close</button>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
