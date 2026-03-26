@@ -33,7 +33,11 @@
     let card = document.querySelectorAll(".card");
     let h1 =document.querySelectorAll(".card h1");
     let discription = document.querySelectorAll(".card p"); 
-    
-    card.forEach((indivi)=>(
-        indivi.name =
-    ))
+    function showUser(arr) {
+        arr.forEach((user, index) => {
+            h1[index].textContent = user.name;
+            discription[index].textContent = user.description;
+            card[index].style.backgroundImage = `url(${user.image})`;
+        });
+        showUser(users);    
+    }
