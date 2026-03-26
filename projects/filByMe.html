@@ -64,7 +64,9 @@
     .card img {
       width: 100%;
       height: 160px;
-      object-fit: cover;
+      object-fit: fill;
+      object-position: 20% 20%;
+
     }
 
     /* Content */
@@ -148,7 +150,7 @@
         }
     ]
 let container = document.querySelector("#cardContainer")
-container.innerHTML = users.map((user)=>{
+container.innerHTML = users.map((user)=>(
    `<div class="card" data-name="${user.name.toLowerCase()}">
             <img src="${user.image}" alt="${user.name}">
             <div class="card-content">
@@ -156,12 +158,23 @@ container.innerHTML = users.map((user)=>{
                 <p>${user.description}</p>
             </div>
         </div>`
-}).join("");
+)).join("");
 
-let input =document.querySelector("#searchInput");
-input.addEventListener('input', ()=>{
-    console.log(input.value)
-})
+let inputs = document.querySelector("#searchInput");
+
+inputs.addEventListener('input', () => {
+    let putted = inputs.value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach((value) => {
+      console.log(value);
+        if (value.dataset.name.includes(putted)) {
+            value.style.display = "block";
+        } else {
+            value.style.display = "none";
+        }
+    });
+});
 
 
  </script>
