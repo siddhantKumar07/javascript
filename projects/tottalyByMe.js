@@ -5,6 +5,11 @@
             image: "https://plus.unsplash.com/premium_photo-1667520043080-53dcca77e2aa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWxzfGVufDB8fDB8fHww"
         },
         {
+            name: "someOne",
+            description: "A model With big dreams.",
+            image: "https://images.unsplash.com/photo-1671043073957-9d2cbcabd554?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fG1vZGVsJTIwaG90JTIwbnVkZSUyMHdvbWVufGVufDB8fDB8fHww"
+        },
+        {
             name: "Sarah Smith",
             description: "Backend developer specializing in Node.js and databases.",
             image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZWxzfGVufDB8fDB8fHww"
