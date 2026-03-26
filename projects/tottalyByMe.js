@@ -30,3 +30,10 @@
             image: "https://images.unsplash.com/photo-1531891570158-e71b35a485bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vZGVsc3xlbnwwfHwwfHx8MA%3D%3D"
         }
     ]
+    let card = document.querySelectorAll(".card");
+    let h1 =document.querySelectorAll(".card h1");
+    let discription = document.querySelectorAll(".card p"); 
+    
+    card.forEach((indivi)=>(
+        indivi.name =
+    ))
