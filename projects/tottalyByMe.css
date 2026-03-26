@@ -65,3 +65,11 @@ main{
 :-webkit-scrollbar{
     display: none;
 }
+
+input{
+    padding: 10px 20px;
+    width: 30vw;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
