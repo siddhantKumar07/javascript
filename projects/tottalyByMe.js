@@ -31,7 +31,7 @@
         }
     ]
     let card = document.querySelectorAll(".card");
-    let h1 =document.querySelectorAll(".card h1");
+    let h1 = document.querySelectorAll(".card h1");
     let discription = document.querySelectorAll(".card p"); 
     function showUser(arr) {
         arr.forEach((user, index) => {
@@ -39,5 +39,18 @@
             discription[index].textContent = user.description;
             card[index].style.backgroundImage = `url(${user.image})`;
         });
-        showUser(users);    
+           
     }
+    showUser(users); 
+    let searchInput = document.getElementById("search");
+    searchInput.addEventListener("input", function() {
+        users.forEach((user, index) => {
+            if(user.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
+            // if(user.name.toLowerCase().startsWith(searchInput.value.toLowerCase())) {
+                card[index].style.display = "block";
+            }
+            else {
+                card[index].style.display = "none";
+            }
+        });
+    });
