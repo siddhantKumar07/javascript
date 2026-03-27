@@ -61,7 +61,7 @@ createBtn.addEventListener("click", function () {
   `;
 
   // add to container
-  container.appendChild(card);
+ container.prepend(card);
 
   // optional: clear form
   document.getElementById("img-url").value = "";
@@ -70,3 +70,7 @@ createBtn.addEventListener("click", function () {
   document.getElementById("purpose").value = "";
   document.querySelectorAll('input[name="category"]').forEach(r => r.checked = false);
 });
+
+
+// array where all the data stored
+const tasks = [];
