@@ -3,6 +3,11 @@ let close = document.querySelector(".close");
 let formContainer = document.querySelector(".form-container");
 let createBtn = document.querySelector(".create");
 const container = document.getElementById("cards-container");
+let newer = document.querySelector("#newer");
+let older = document.querySelector("#older");
+
+// Track current card index
+let currentCardIndex = 0;
 
 // ✅ DEFAULT DATA
 const defaultData = [
@@ -67,14 +72,46 @@ function createCard(data, index) {
   container.append(card);
 }
 
-// ✅ SAVE DATA
+// to update card display based on current index
+function updateCardDisplay() {
+  const data = JSON.parse(localStorage.getItem("tasks")) || [];
+  container.innerHTML = "";
+  
+  data.forEach((item, index) => {
+    createCard(item, index);
+  });
+
+  // Show cards with stacking effect
+  const cards = container.querySelectorAll(".card");
+  cards.forEach((card, index) => {
+    if (index < currentCardIndex) {
+      // Cards before current: hidden
+      card.style.opacity = "0";
+      card.style.pointerEvents = "none";
+    } else if (index === currentCardIndex) {
+      // Current card: fully visible on top
+      card.style.opacity = "1";
+      card.style.pointerEvents = "auto";
+      card.style.transform = `translateY(0px) scale(1)`;
+      card.style.zIndex = 1000 - index;
+    } else {
+      // Cards after current: slightly visible behind with offset
+      card.style.opacity = "0.6";
+      card.style.pointerEvents = "none";
+      card.style.transform = `translateY(${(index - currentCardIndex) * 8}px) scale(0.98)`;
+      card.style.zIndex = 1000 - index;
+    }
+  });
+}
+
+// to save the data at the local storage (new card at top)
 function saveToLocalStorage(obj) {
   const oldData = JSON.parse(localStorage.getItem("tasks")) || [];
-  oldData.push(obj);
+  oldData.unshift(obj); // Add new card at the beginning
   localStorage.setItem("tasks", JSON.stringify(oldData));
 }
 
-// ✅ LOAD DATA (WITH DEFAULT)
+// to load data from local storage and display cards
 function loadFromLocalStorage() {
   let data = JSON.parse(localStorage.getItem("tasks"));
 
@@ -84,14 +121,29 @@ function loadFromLocalStorage() {
     localStorage.setItem("tasks", JSON.stringify(defaultData));
   }
 
-  container.innerHTML = "";
-
-  data.forEach((item, index) => {
-    createCard(item, index);
-  });
+  currentCardIndex = 0; // Reset to first card
+  updateCardDisplay();
 }
 
-// ✅ CREATE BUTTON
+// to show the previous card
+newer.addEventListener("click", () => {
+  const data = JSON.parse(localStorage.getItem("tasks")) || [];
+  if (currentCardIndex > 0) {
+    currentCardIndex--;
+    updateCardDisplay();
+  }
+});
+
+// to show the next card
+older.addEventListener("click", () => {
+  const data = JSON.parse(localStorage.getItem("tasks")) || [];
+  if (currentCardIndex < data.length - 1) {
+    currentCardIndex++;
+    updateCardDisplay();
+  }
+});
+
+// to create a new card
 createBtn.addEventListener("click", function () {
   const img = document.getElementById("img-url").value;
   const name = document.getElementById("full-name").value;
@@ -108,7 +160,7 @@ createBtn.addEventListener("click", function () {
 
   const newData = { img, name, town, purpose, category };
 
-  // save
+  // save (new card at top)
   saveToLocalStorage(newData);
 
   // reload UI
@@ -126,5 +178,5 @@ createBtn.addEventListener("click", function () {
   formContainer.style.display = "none";
 });
 
-// ✅ LOAD ON PAGE START
+// to load data on page start
 window.addEventListener("DOMContentLoaded", loadFromLocalStorage);
