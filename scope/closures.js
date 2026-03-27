@@ -12,3 +12,7 @@ var fn = outer();
 fn();
 fn();
 fn();
+
+// how its work 
+
+// It happens because when a function is created, JavaScript stores a reference to the lexical environment in which that function was defined, and as long as that function can still be accessed, the outer variables it references are kept alive in memory.
