@@ -17,4 +17,26 @@ Whenever JavaScript runs:
 3.Then destroys it
 */
 
+/*
+2. Types of Execution Context (Detailed)
+
+🌍 1. Global Execution Context (GEC)
+Created once when program starts
+Stored at the bottom of the call stack
+Has:
+Global variables
+Functions
+this → refers to window (in browser)
+var a = 10;
+
+function foo() {
+    console.log("Hello");
+}
+
+👉 Memory is allocated for:
+
+a
+foo
+
+*/
  
