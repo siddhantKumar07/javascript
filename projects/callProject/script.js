@@ -74,3 +74,17 @@ createBtn.addEventListener("click", function () {
 
 // array where all the data stored
 const tasks = [];
+
+function saveToLocalStorage(obj) {
+    if(localStorage.getItem()===null) {
+        let oldData =[];
+        oldData.push(obj);
+        localStorage.setItem("tasks", JSON.stringify(oldData));
+
+    }
+        else {
+            let oldData = JSON.parse(localStorage.getItem("tasks"));
+            oldData=JSON.parse(oldData);
+        }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
