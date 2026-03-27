@@ -6,6 +6,7 @@ let fullNameInput = document.querySelector("#full-name");// this is for to selec
 let homeTownInput = document.querySelector("#home-town");// this is for to select the home town input field
 let purposeInput = document.querySelector("#purpose");// this is for to select the purpose input field
 const radios = document.querySelectorAll('input[name="category"]');//  this is for to check which radio button is selected and log it to the console
+let createBtn = document.querySelector(".create");// this is for to select the create button
 
 //when click on add button the form will be shown
 add.addEventListener("click", function () {
