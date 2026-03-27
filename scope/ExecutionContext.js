@@ -60,3 +60,41 @@ Parameters: x, y
 Local variables: result
 
 */
+/*
+3. Execution Context Phases (Deep Dive)
+
+Every execution context runs in 2 phases:
+
+✅ Phase 1: Memory Creation Phase (Hoisting)
+
+👉 JS scans the code before execution
+
+What happens internally:
+Type	Stored as
+var	undefined
+let/const	uninitialized (TDZ)
+functions	full function body
+Example:
+console.log(a); // undefined
+var a = 10;
+Behind the scenes:
+
+Memory Phase:
+
+a → undefined
+
+Execution Phase:
+
+a → 10
+⚠️ Temporal Dead Zone (TDZ)
+console.log(x); // ❌ ReferenceError
+let x = 5;
+
+👉 let & const exist in TDZ until initialized
+
+✅ Phase 2: Code Execution Phase
+Code runs line-by-line
+Values assigned
+Functions invoked
+
+*/
