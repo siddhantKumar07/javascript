@@ -40,3 +40,23 @@ foo
 
 */
  
+
+/*
+2. Function Execution Context (FEC)
+
+Every time a function is invoked:
+
+A new execution context is created
+function sum(x, y) {
+    var result = x + y;
+    return result;
+}
+
+sum(2, 3);
+
+👉 New context includes:
+
+Parameters: x, y
+Local variables: result
+
+*/
