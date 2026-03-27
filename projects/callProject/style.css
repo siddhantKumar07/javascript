@@ -10,9 +10,10 @@ body {
 /* container */
 .card-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     margin: 50px;
+    padding-top: 20px;
 }
 
 /* left buttons */
@@ -110,14 +111,16 @@ body {
 
 /* color dots */
 .colors {
+    margin-left: 5vw;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .dot {
-    width: 15px;
-    height: 15px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
