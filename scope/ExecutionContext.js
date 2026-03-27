@@ -60,6 +60,7 @@ Parameters: x, y
 Local variables: result
 
 */
+
 /*
 3. Execution Context Phases (Deep Dive)
 
@@ -70,13 +71,16 @@ Every execution context runs in 2 phases:
 👉 JS scans the code before execution
 
 What happens internally:
-Type	Stored as
-var	undefined
-let/const	uninitialized (TDZ)
-functions	full function body
+
+Type	           Stored as
+var	               undefined
+let/const	       uninitialized (TDZ)
+functions	       full function body
+
 Example:
 console.log(a); // undefined
 var a = 10;
+
 Behind the scenes:
 
 Memory Phase:
