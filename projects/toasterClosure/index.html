@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button id="btn">Click me</button>
+
+    <script>
+        function createToaster() {
+            let count = 0;
+            return function() {
+                count++;
+                alert(`You have clicked the button ${count} times!`);
+            }
+        }
+
+        const toaster = createToaster();
+        document.getElementById('btn').addEventListener('click', toaster);
+    </script>
 </body>
 </html>
