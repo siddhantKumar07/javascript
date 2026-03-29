@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        .hello{
             width: 400px;
             height: 40px;
             background-color: #f0f0f0;
             border: 2px solid #312424;
+            position: absolute;
+            /* left: 20px; */
+            right: 0px;
         }
     </style>
 </head>
 <body>
-    <div></div>
+    
     <script>
-        
+        function createtoaster(obj){
+            return function(notifi){
+     let div = document.createElement("div");
+     div.classList.add("hello");
+     div.textContent=notifi;
+     document.body.append(div)
+     setTimeout(()=>{
+document.body.removeChild(div);
+     },obj.duration*1000)
+            }
+        }
+   let toaster=createtoaster({duration:3});
     </script>
+    
 </body>
 </html>
