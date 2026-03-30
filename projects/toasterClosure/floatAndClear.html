@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         .box1 {
-  float: left;
+  float: right;
   height: 50px;
     width: 50px;
     background-color: red;
@@ -26,14 +26,19 @@
     width: 50px;
     background-color: green;
     border: 2px solid black;
-    
+
   clear: both;
 }
     </style>
 </head>
 <body>
-    <div class="box1"></div>
+    <!-- <div class="box1"></div>
 <div class="box2"></div>
-<div class="box3"></div>
+<div class="box3"></div> -->
+<div style="float:left; width:100px; height:100px; background:red;"></div>
+
+<p style="clear:left;">
+  This text will go below the box
+</p>
 </body>
 </html>
