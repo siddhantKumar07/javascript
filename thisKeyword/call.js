@@ -21,5 +21,3 @@ fun(); // This will log the global object (window in browsers)
 fun.call(obj); // This will log the obj object because this is set to obj in the call method
 
 // In summary, call is a method that allows us to call a function with a specific this value and arguments provided individually. It is useful for invoking functions with a specific context and passing arguments directly.
-
-// thats all 
