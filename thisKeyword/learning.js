@@ -32,7 +32,6 @@ const myArrowFunction = () => {
 };
 myArrowFunction(); // In a browser, this will log the window object
 
-// In strict mode, this is undefined in functions that are not called as methods
 'use strict';
 function myStrictFunction() {
   console.log(this);
