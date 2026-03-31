@@ -25,7 +25,7 @@ class MyClass {
     }
 }
 const myInstance = new MyClass('My Instance');
-myInstance.myMethod(); // This will log "My Instance"
+myInstance.myMethod(); // This will log "My 
 // In arrow functions, this refers to the surrounding context
 const myArrowFunction = () => { 
     console.log(this);
