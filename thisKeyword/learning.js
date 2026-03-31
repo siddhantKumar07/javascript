@@ -2,11 +2,13 @@
 
 // In a global context, this refers to the global object (window in browsers)
 console.log(this); // In a browser, this will log the window object
+
 // In a function, this refers to the object that is calling the function
 function myFunction() {
   console.log(this);
 }
 myFunction(); // In a browser, this will log the window object
+
 // In an object method, this refers to the object that is calling the method
 const myObject = {
   name: 'My Object',
@@ -15,6 +17,7 @@ const myObject = {
     }
 };
 myObject.myMethod(); // This will log "My Object"
+
 // In a class, this refers to the instance of the class
 class MyClass {
   constructor(name) {
@@ -26,6 +29,7 @@ class MyClass {
 }
 const myInstance = new MyClass('My Instance');
 myInstance.myMethod(); // This will log "My Instance"
+
 // In arrow functions, this refers to the surrounding context
 const myArrowFunction = () => { 
     console.log(this);
