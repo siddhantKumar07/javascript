@@ -30,6 +30,7 @@ myInstance.myMethod(); // This will log "My Instance"
 const myArrowFunction = () => { 
     console.log(this);
 };
+myArrowFunction(); // In a browser, this will log the window object
 
 // In strict mode, this is undefined in functions that are not called as methods
 
