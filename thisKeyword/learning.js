@@ -37,4 +37,5 @@ myArrowFunction(); // In a browser, this will log the window object
 function myStrictFunction() {
   console.log(this);
 }
+myStrictFunction(); // This will log undefined
 
