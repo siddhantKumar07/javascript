@@ -5,7 +5,7 @@ console.log(this); // In a browser, this will log the window object
 
 // In a function, this refers to the object that is calling the function
 function myFunction() {
-  console.log(this);
+  console.log("inside the function "+this);
 }
 myFunction(); // In a browser, this will log the window object
 
