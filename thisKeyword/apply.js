@@ -9,3 +9,12 @@ const myObject = {
 myObject.myMethod('Hello'); // This will log "Hello My Object"
 
 let obj = {
+    name: "siddhant kumar"
+}
+let fun = function() {
+    console.log(this)
+}
+fun(); // This will log the global object (window in browsers)
+
+// second method to attached the function to the object
+fun.apply(obj); // This will log the obj object because this is set to obj in the apply method
