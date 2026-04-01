@@ -2,3 +2,7 @@
 const myObject = {
     name: 'My Object',
     myMethod: function(greeting) {
+
+        console.log(greeting + ' ' + this.name);
+    }
+};
