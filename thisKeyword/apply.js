@@ -18,3 +18,5 @@ fun(); // This will log the global object (window in browsers)
 
 // second method to attached the function to the object
 fun.apply(obj); // This will log the obj object because this is set to obj in the apply method
+
+// In summary, apply is a method that allows us to call a function with a specific this value and arguments provided as an array. It is useful for invoking functions with a specific context and passing arguments as an array.
