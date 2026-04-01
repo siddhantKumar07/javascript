@@ -1,1 +1,1 @@
-// apply is used 
+// apply is used to call a function
