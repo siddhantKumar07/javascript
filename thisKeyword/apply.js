@@ -1,1 +1,1 @@
-// apply is used to call a function with a specific this value and arguments
+// apply is used to call a function with a specific this value and arguments provided as an 
