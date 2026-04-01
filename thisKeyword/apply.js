@@ -6,3 +6,6 @@ const myObject = {
         console.log(greeting + ' ' + this.name);
     }
 };
+myObject.myMethod('Hello'); // This will log "Hello My Object"
+
+let obj = {
