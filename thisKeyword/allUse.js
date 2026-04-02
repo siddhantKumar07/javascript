@@ -1,3 +1,4 @@
+// a class in JavaScript is a blueprint for creating objects. It defines properties and methods that the objects created from the class will have. The "this" keyword is used within a class to refer to the current instance of the class, allowing us to access its properties and methods.
 class name{
 name(){
     console.log("This is the use of this keyword in JavaScript");
