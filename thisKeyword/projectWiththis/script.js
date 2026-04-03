@@ -27,8 +27,8 @@ const userManager ={
    <div class="card">
       <img src="${photo}" />
       <h3>${name}</h3>
-      <h5>Backend Engineer</h5>
-      <p>Enjoys solving complex problems and optimizing APIs.</p>
+      <h5>${role}</h5>
+      <p>${bio}</p>
     </div>`;
     
 },
