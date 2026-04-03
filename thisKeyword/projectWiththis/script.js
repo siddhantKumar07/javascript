@@ -30,9 +30,7 @@ const userManager ={
       <h5>${role}</h5>
       <p>${bio}</p>
     </div>`;
-    
 
-    document.body.append(card)
 },
  addUser : function(user){
     this.users.push(user);
