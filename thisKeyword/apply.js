@@ -12,7 +12,7 @@ let obj = {
     name: "siddhant kumar"
 }
 let fun = function() {
-    console.log(this)
+    console.log(this.name) // this will log the name property of the object that fun is called on
 }
 fun(); // This will log the global object (window in browsers)
 
