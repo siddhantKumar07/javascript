@@ -31,6 +31,8 @@ const userManager ={
       <p>${bio}</p>
     </div>`;
     
+
+    document.body.append(card)
 },
  addUser : function(user){
     this.users.push(user);
