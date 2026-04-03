@@ -3,6 +3,7 @@ let nameInput = form.querySelector("input[placeholder='Name']");
 let roleInput = form.querySelector("input[placeholder='Role']");
 let bioInput = form.querySelector("textarea[placeholder='Bio']");
 let photoInput = form.querySelector("input[placeholder='Photo URL']");
+let cardContainer = document.querySelector(".card-container");
 
 const userManager ={
     users: [],
@@ -16,10 +17,30 @@ const userManager ={
     let role = roleInput.value;
     let bio = bioInput.value;
     let photo = photoInput.value;
-    this.users.push({name, role, bio, photo});
-    console.log(this);
+    this.addUser({
+        name,
+        role,
+        bio,
+        photo
+    });
+   cardContainer.innerHTML += `
+   <div class="card">
+      <img src="${photo}" />
+      <h3>${name}</h3>
+      <h5>Backend Engineer</h5>
+      <p>Enjoys solving complex problems and optimizing APIs.</p>
+    </div>`;
+    
+},
+ addUser : function(user){
+    this.users.push(user);
+},
+
+removeUser : function(name){
+    this.users = this.users.filter(user => user.name !== name); 
 }
-}
+};
 userManager.init();
+console.log(userManager.users);
 
  
