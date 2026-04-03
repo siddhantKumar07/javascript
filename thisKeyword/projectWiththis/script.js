@@ -12,19 +12,14 @@ const userManager ={
     },
     submitForm :function(e){
     e.preventDefault();
-    // let name = nameInput.value;
-    // let role = roleInput.value;
-    // let bio = bioInput.value;
-    // let photo = photoInput.value;
-    // let user = {
-    //     name: name,
-    //     role: role, 
-    //     bio: bio,
-    //     photo: photo
-    // }
+    let name = nameInput.value;
+    let role = roleInput.value;
+    let bio = bioInput.value;
+    let photo = photoInput.value;
+    this.users.push({name, role, bio, photo});
     console.log(this);
 }
 }
-
+userManager.init();
 
  
