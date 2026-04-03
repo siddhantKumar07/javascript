@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Card UI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    /* FORM */
+    .form-container {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      width: 320px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      margin-bottom: 40px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 6px;
+      background: #333;
+      color: #fff;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #444;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form-container button:hover {
+      background: #666;
+    }
+
+    /* CARDS */
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1a1a1a;
+      width: 250px;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 5px 0;
+    }
+
+    .card h5 {
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #ccc;
+    }
+    textarea{
+        resize: none;
+        width: 100%;
+        height: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FORM -->
+  <div class="form-container">
+    <h2>Add User</h2>
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="Role" />
+    <textarea  placeholder="Bio"></textarea>
+    <input type="text" placeholder="Photo URL" />
+    <button>Submit</button>
+  </div>
+
+  <!-- CARDS -->
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" />
+      <h3>John Doe</h3>
+      <h5>Frontend Developer</h5>
+      <p>Loves building beautiful UIs and learning new technologies.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" />
+      <h3>Jane Smith</h3>
+      <h5>Backend Engineer</h5>
+      <p>Enjoys solving complex problems and optimizing APIs.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/65.jpg" />
+      <h3>Alex Lee</h3>
+      <h5>UI/UX Designer</h5>
+      <p>Passionate about user experience and clean design.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
