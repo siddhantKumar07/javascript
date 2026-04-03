@@ -29,6 +29,7 @@ const userManager ={
       <h3>${name}</h3>
       <h5>${role}</h5>
       <p>${bio}</p>
+      <button onclick="userManager.removeUser('${name}')">Remove</button>
     </div>`;
 
 },
@@ -38,6 +39,14 @@ const userManager ={
 
 removeUser : function(name){
     this.users = this.users.filter(user => user.name !== name); 
+    cardContainer.innerHTML = this.users.map(user => `
+    <div class="card">
+      <img src="${user.photo}" />
+        <h3>${user.name}</h3>
+        <h5>${user.role}</h5>
+        <p>${user.bio}</p>
+        <button onclick="userManager.removeUser('${user.name}')">Remove</button>
+    </div>`).join('');
 }
 };
 userManager.init();
