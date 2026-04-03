@@ -38,16 +38,20 @@ const userManager ={
 },
 
 removeUser : function(name){
-    this.users = this.users.filter(user => user.name !== name); 
-    cardContainer.innerHTML = this.users.map(user => `
+    this.users = this.users.filter(function(user) {
+  return user.name !== name;
+});
+    this.users.map(function(user) {
+  return `
     <div class="card">
       <img src="${user.photo}" />
-        <h3>${user.name}</h3>
-        <h5>${user.role}</h5>
-        <p>${user.bio}</p>
-        <button onclick="userManager.removeUser('${user.name}')">Remove</button>
-    </div>`).join('');
-}
+      <h3>${user.name}</h3>
+      <h5>${user.role}</h5>
+      <p>${user.bio}</p>
+    </div>
+  `;
+});
+},
 };
 userManager.init();
 console.log(userManager.users);
