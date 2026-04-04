@@ -31,26 +31,30 @@ const userManager ={
       <p>${bio}</p>
       <button onclick="userManager.removeUser('${name}')">Remove</button>
     </div>`;
-
+form.reset();
 },
  addUser : function(user){
     this.users.push(user);
 },
 
-removeUser : function(name){
-    this.users = this.users.filter(function(user) {
-  return user.name !== name;
-});
-    this.users.map(function(user) {
-  return `
-    <div class="card">
-      <img src="${user.photo}" />
-      <h3>${user.name}</h3>
-      <h5>${user.role}</h5>
-      <p>${user.bio}</p>
-    </div>
-  `;
-});
+removeUser: function(name){
+
+  this.users = this.users.filter(function(user) {
+    return user.name !== name;
+  });
+
+  cardContainer.innerHTML = this.users.map(function(user) {
+    return `
+      <div class="card">
+        <img src="${user.photo}" />
+        <h3>${user.name}</h3>
+        <h5>${user.role}</h5>
+        <p>${user.bio}</p>
+      </div>
+    `;
+  }).join('');
+
+
 },
 };
 userManager.init();
