@@ -7,6 +7,12 @@ class Bank{
 
     }
     deposit(balance){
-        this.balance +=balance
+       return this.balance +=balance
+    }
+    withdraw(money){
+       return this.balance-=money;
+    }
+    checkBalance(){
+        return this.balance;
     }
 }
