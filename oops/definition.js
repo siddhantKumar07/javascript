@@ -11,17 +11,21 @@ const person = {
 
 person.greet(); // Output: Hello, my name is John and I am 30 years old.
 
-// Example of a constructor function
-function Person(name, age) {
-  this.name = name;
-    this.age = age;
-    this.greet = function() {
-    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+// oops also allows us to create classes, which are blueprints for creating objects. We can define properties and methods in a class, and then create instances of that class.
+
+// Example of a class
+class Animal {
+  constructor(name, species) {
+    this.name = name;
+    this.species = species;
+  }
+    makeSound() {
+    console.log(`${this.name} makes a sound.`);
     }
 }
 
-const person1 = new Person('Alice', 25);
-const person2 = new Person('Bob', 35);  
+const dog = new Animal('Buddy', 'Dog');
+const cat = new Animal('Whiskers', 'Cat');
 
-person1.greet(); // Output: Hello, my name is Alice and I am 25 years old.
-person2.greet(); // Output: Hello, my name is Bob and I am 35 years old.
+dog.makeSound(); // Output: Buddy makes a sound.
+cat.makeSound(); // Output: Whiskers makes a sound.
