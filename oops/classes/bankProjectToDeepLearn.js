@@ -16,3 +16,7 @@ class Bank{
         return this.balance;
     }
 }
+ const sbi =new Bank("siddhant kumar","gkp",0);
+console.log( sbi.balance)
+sbi.deposit(55000);
+console.log( "balance after deposit :"+sbi.balance)
