@@ -5,4 +5,9 @@ class BiscuitFactory {
      this.price=price;
      this.flavour=flavour
     }
+    details(){
+        console.log(`biscuit name :${this.name} quantity in 1 packet :${this.quantity}`)
+    }
 }
+
+const parle = new BiscuitFactory("parleG",8,5,"sweet")
