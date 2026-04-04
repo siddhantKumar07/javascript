@@ -20,3 +20,5 @@ class Bank{
 console.log( sbi.balance)
 sbi.deposit(55000);
 console.log( "balance after deposit :"+sbi.balance)
+sbi.withdraw(5000);
+console.log("balance after withdraw :"+sbi.balance)
