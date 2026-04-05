@@ -11,7 +11,7 @@ class BiscuitFactory {
 }
 
 const parle = new BiscuitFactory("parleG",8,5,"sweet")
-parle.details();
+parle.details();// biscuit name :parleG, quantity in 1 packet :8, price :5 and  flavour :sweet
 const hideandseek = new BiscuitFactory("hide and seek",10,10,"chocolate")
 hideandseek.details();
 
