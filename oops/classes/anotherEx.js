@@ -12,3 +12,5 @@ class BiscuitFactory {
 
 const parle = new BiscuitFactory("parleG",8,5,"sweet")
 parle.details();
+const hideandseek = new BiscuitFactory("hide and seek",10,10,"chocolate")
+hideandseek.details();
