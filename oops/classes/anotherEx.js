@@ -17,3 +17,5 @@ hideandseek.details();// biscuit name :hide and seek, quantity in 1 packet :10, 
 
 const britannia = new BiscuitFactory("britannia",12,15,"butter")
 britannia.details();
+
+// thats all about today class and object in js, see you in next topic.
