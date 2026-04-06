@@ -20,4 +20,4 @@ britannia.details();
 
 // thats all about today class and object in js, see you in next topic.
 
-// In the above code we have created a class called BiscuitFactory which has a constructor to initialize the properties of the class and a method called details to display the details of the biscuit. We have created three objects of the class and called the details method to display the details of .    
+// In the above code we have created a class called BiscuitFactory which has a constructor to initialize the properties of the class and a method called details to display the details of the biscuit. We have created three objects of the class and called the details method to display the details of each biscuit.    
