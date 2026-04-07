@@ -17,4 +17,5 @@ hideandseek.details();// biscuit name :hide and seek, quantity in 1 packet :10, 
 
 const britannia = new BiscuitFactory("britannia",12,15,"butter")
 britannia.details();
+console.log(parle instanceof BiscuitFactory
 
