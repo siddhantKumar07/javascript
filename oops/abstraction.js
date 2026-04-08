@@ -8,3 +8,13 @@ class Car {
         this.model = model;
     }
 }
+
+class CarFactory {
+    createCar(brand, model) {
+        return new Car(brand, model);
+    }
+}
+
+const carFactory = new CarFactory();
+const myCar = carFactory.createCar('Toyota', 'Corolla');
+
