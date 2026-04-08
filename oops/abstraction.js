@@ -18,5 +18,4 @@ class CarFactory {
 const carFactory = new CarFactory();
 const myCar = carFactory.createCar('Toyota', 'Corolla');
 
-console.log(myCar); // Car { brand: 'Toyota', model: 'Corolla' }
 
