@@ -18,7 +18,8 @@
             }
 
             write() {
-              let h1=  document.createElement("h1").innerText = `The ${this.name} pencil is writing and the color id ${this.color}.`;
+              let h1=  document.createElement("h1")
+              h1.innerText = `The ${this.name} pencil is writing and the color id ${this.color}.`;
               h1.style.color = this.color;
               h1.style.fontSize = `${this.length}px`;
               h1.style.textAlign = "center";
@@ -26,7 +27,8 @@
 
             }
         }
-        const myPencil = new Pencil("HB", "yellow", 7);
+        const myPencil = new Pencil("HB", "yellow", 20);
+        const myPencil2 = new Pencil("2B", "red", 25);
     </script>
 </body>
 </html>
