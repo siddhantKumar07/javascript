@@ -1,3 +1,4 @@
+// this is a way to create objects using function constructor in JavaScript. It is a common way to create objects before the introduction of classes in ES6.
 function Constructor(name, age) {
     this.name = name;
     this.age = age;
