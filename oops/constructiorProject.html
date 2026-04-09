@@ -18,7 +18,8 @@
             }
 
             write() {
-              let h1=  document.createElement("h1").innerText = `The ${this.color} pencil is writing.`;
+              let h1=  document.createElement("h1").innerText = `The ${this.name} pencil is writing and the color id ${this.color}.`;
+              h1.style.color = this.color;;
                 document.body.append(h1);
 
             }
