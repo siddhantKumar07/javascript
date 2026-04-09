@@ -17,7 +17,7 @@
                 this.name = name;
             }
 
-            write() {
+            write(text) {
               let h1=  document.createElement("h1")
               h1.innerText = `The ${this.name} pencil is writing and the color is ${this.color}.`;
               h1.style.color = this.color;
