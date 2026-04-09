@@ -18,4 +18,4 @@ class collegeNewAdimission {
 }
 const student1 = new collegeNewAdimission(18, "Alice", "New York", "1234567890", "Computer Science");
 const student2 = new collegeNewAdimission(19, "Bob", "Los Angeles", "0987654321", "Mechanical Engineering");
-student1.details(); // Output: Name: Alice, Age: 18, City: New York, Mobile Number: 1234567890, Branch: Computer 
+student1.details(); // Output: Name: Alice, Age: 18, City: New York, Mobile Number: 1234567890, Branch: Computer Science
