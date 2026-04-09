@@ -19,6 +19,8 @@
 
             write() {
               let h1=  document.createElement("h1").innerText = `The ${this.color} pencil is writing.`;
+                document.body.appendChild(h1);
+                
             }
         }
         const myPencil = new Pencil("HB", "yellow", 7);
