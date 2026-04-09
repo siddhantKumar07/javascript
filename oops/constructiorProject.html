@@ -21,7 +21,9 @@
                 console.log(`The ${this.color} pencil is writing.`);
             }
         }
-        pen
+        const myPencil = new Pencil("HB", "yellow", 7);
+        console.log(myPencil); // Pencil { name: 'HB', color: 'yellow', length: 7 }
+        myPencil.write(); // The yellow pencil is writing.
     </script>
 </body>
 </html>
