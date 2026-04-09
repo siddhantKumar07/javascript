@@ -19,13 +19,14 @@
 
             write() {
               let h1=  document.createElement("h1").innerText = `The ${this.name} pencil is writing and the color id ${this.color}.`;
-              h1.style.color = this.color;;
+              h1.style.color = this.color;
+              h1.style.fontSize = `${this.length}px`;
+              h1.style.textAlign = "center";
                 document.body.append(h1);
 
             }
         }
         const myPencil = new Pencil("HB", "yellow", 7);
-        console.log(myPencil); // Pencil { name: 'HB', color: 'yellow', length: 7 }
     </script>
 </body>
 </html>
