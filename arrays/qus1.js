@@ -19,3 +19,7 @@ console.log(arr);
 for(let i=0;i<arr.length;i++){
     console.log(arr[i]);
 }
+console.log("using for each loop");
+arr.forEach(element => {
+    console.log(element);
+});
