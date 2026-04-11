@@ -10,4 +10,8 @@ function Person(name, age) {
     this.name = name;
     this.age = age;
 }
-p
+Person.prototype.sum(a, b) {
+    return a + b;
+}
+const person1 = new Person("Alice", 30);
+const person2 = new Person("Bob", 25);
