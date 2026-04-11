@@ -8,3 +8,6 @@ console.log(arr);
 
 arr.shift();
 console.log(arr);
+
+arr.splice(2,0,3);
+console.log(arr);
