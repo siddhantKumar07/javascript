@@ -5,3 +5,6 @@ console.log(arr);
 
 arr.unshift(1);
 console.log(arr);
+
+arr.shift();
+console.log(arr);
