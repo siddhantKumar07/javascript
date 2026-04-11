@@ -15,3 +15,5 @@ Person.prototype.sum = function(a, b) {
 }
 const person1 = new Person("Alice", 30);
 const person2 = new Person("Bob", 25);
+console.log(person1.sum(2, 3)); // Output: 5
+console.log(person2.sum(4, 5)); // Output: 9
