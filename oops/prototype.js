@@ -10,7 +10,7 @@ function Person(name, age) {
     this.name = name;
     this.age = age;
 }
-Person.prototype.sum(a, b) {
+Person.prototype.sum = function(a, b) {
     return a + b;
 }
 const person1 = new Person("Alice", 30);
