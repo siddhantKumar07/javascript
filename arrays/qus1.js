@@ -14,3 +14,8 @@ console.log(arr);
 
 arr.splice(3,0,4);
 console.log(arr);
+
+// for iterating array
+for(let i=0;i<arr.length;i++){
+    console.log(arr[i]);
+}
