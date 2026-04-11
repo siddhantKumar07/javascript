@@ -23,3 +23,5 @@ console.log("using for each loop");
 arr.forEach(element => {
     console.log(element);
 });
+
+//
