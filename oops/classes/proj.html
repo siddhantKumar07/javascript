@@ -11,18 +11,18 @@
 
     <script>
    class user {
-    constructor(name, text) {
+    constructor(name) {
         this.name = name;
-        this.text = text;
+       
     }
-    write(){
+    write(text){
         let h1 = document.createElement("h1");
-        h1.textContent =`${this.name} : ${this.text}`;
+        h1.textContent =`${this.name} : ${text}`;
         document.body.appendChild(h1);
     }
    }
-   let user1 = new user("Alice", "Hello, world!");
-   
+   let user1 = new user("Alice");
+   let user2 = new user("Bob");
         
     </script>
 </body>
