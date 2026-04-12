@@ -21,8 +21,22 @@
         document.body.appendChild(h1);
     }
    }
+   class admin extends user{
+    constructor(name,role){
+        this.role = role;
+        super(name);
+    }
+    delete(user){
+        h1.querySelectorAll("h1").forEach((h1)=>{
+            if(h1.textContent.includes(user.name)){
+                h1.remove();
+            }
+        });
+    }
+   }
    let user1 = new user("Alice");
    let user2 = new user("Bob");
+    let admin1 = new admin("Charlie","admin");
         
     </script>
 </body>
