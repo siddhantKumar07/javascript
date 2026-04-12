@@ -10,7 +10,19 @@
 
 
     <script>
-
+   class user {
+    constructor(name, text) {
+        this.name = name;
+        this.text = text;
+    }
+    write(){
+        let h1 = document.createElement("h1");
+        h1.textContent =`${this.name} : ${this.text}`;
+        document.body.appendChild(h1);
+    }
+   }
+   let user1 = new user("Alice", "Hello, world!");
+   
         
     </script>
 </body>
