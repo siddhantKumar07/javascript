@@ -10,3 +10,11 @@ class animal{
         console.log(`${this.name} is making a sound.`);
     }
 }
+class dog extends animal{
+    constructor(name, age, breed){
+        super(name, age);
+    }
+}
+const dog1 = new dog("Buddy", 3, "Golden Retriever");   
+dog1.eat();
+dog1.voice();
