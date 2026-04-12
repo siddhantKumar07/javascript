@@ -5,6 +5,9 @@ class pencil {
         this.price = price;
         this.brand = brand;
     }
+    write() {
+        console.log(`The ${this.color} pencil is writing. brand is ${this.brand}`);
+    }
 }
 const pencil1 = new pencil("red", 10, 5, "Faber-Castell");
 console.log(pencil1);
