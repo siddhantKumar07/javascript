@@ -10,7 +10,7 @@ function Person(name, age) {
     this.name = name;
     this.age = age;
 }
-Person.prototype.sum = function(a, b) {
+Person.prototype.sum = function(a, b) {//this is a method added to the prototype of the Person function, which means that all instances of Person will have access to this method.all instance refers to the same method in memory, so it is more efficient than defining the method inside the constructor function.
     return a + b;
 }
 const person1 = new Person("Alice", 30);
