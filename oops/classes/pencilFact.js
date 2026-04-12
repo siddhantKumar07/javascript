@@ -11,5 +11,6 @@ class pencil {
 }
 const pencil1 = new pencil("red", 10, 5, "Faber-Castell");
 console.log(pencil1);
+pencil1.write();
 const pencil2 = new pencil("blue", 12, 7, "Staedtler");
 console.log(pencil2);
