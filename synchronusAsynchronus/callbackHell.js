@@ -42,6 +42,7 @@ function getComments(postId, callback) {
         callback(comments);
     }, 2000);
 }
+//Callback Hell in JavaScript is a situation where you have multiple nested callbacks, making the code hard to read, understand, and maintain. It often occurs when you have asynchronous operations that depend on the results of previous operations, leading to a deeply nested structure. This can make it difficult to handle errors and can lead to "callback pyramids" that are visually unappealing and hard to debug. To avoid callback hell, developers often use Promises or async/await syntax, which allows for cleaner and more readable code when dealing with asynchronous operations.
 getUser(1, (user) => {
     console.log(`User fetched: ID: ${user.id}, Name: ${user.name}`);    
     getPosts(user.id, (posts) => {
