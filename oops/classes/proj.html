@@ -15,8 +15,9 @@
         this.name = name;
        
     }
+    
     write(text){
-        let h1 = document.createElement("h1");
+         let h1 = document.createElement("h1");
         h1.textContent =`${this.name} : ${text}`;
         document.body.appendChild(h1);
     }
