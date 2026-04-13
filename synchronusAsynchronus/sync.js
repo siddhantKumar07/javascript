@@ -9,3 +9,11 @@ function syncFunction() {
 syncFunction();
 console.log("This will be printed after the synchronus function is executed");
 
+// asynchronus example
+function asyncFunction() {
+    setTimeout(() => {
+        console.log("This is an asynchronus function");
+    }, 2000);
+}
+asyncFunction();
+console.log("This will be printed before the asynchronus function is executed");
