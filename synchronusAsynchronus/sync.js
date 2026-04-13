@@ -2,3 +2,10 @@
 
 // Asynchronus is a process that happens simultaneously. It is a non-blocking process. It means that the next process can start before the previous process is completed. For example, if we have a function that takes 5 seconds to execute, then the next function can start immediately without waiting for the first function to complete.
 
+// synchronus example
+function syncFunction() {
+    console.log("This is a synchronus function");
+}
+syncFunction();
+console.log("This will be printed after the synchronus function is executed");
+
