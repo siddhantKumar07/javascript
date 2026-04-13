@@ -12,7 +12,7 @@ function fetchData() {
              }else{
                 reject("Error fetching data");
              } // This will be called when the data is successfully fetched 
-            // reject("Error fetching data"); // This will be called if there is an error fetching data 
+            // reject("Error fetching data"); // This will be called if there is an error fetching 
         }, 2000);
     });
 
