@@ -8,8 +8,8 @@ fetch('https://dummyjson.com/users')
 })
 .then((data)=>{
     console.log(data.users); // This will log the first name of the first user in the results array
-    pic.src = data.users[5].image; // This will set the src attribute of the img element to the image URL of the first user in the results array
-    name.textContent = data.users[5].firstName; // This will set the text content of the h1 element to the first name of the first user in the results array
+    pic.src = data.users[5].image; 
+    name.textContent = data.users[5].firstName; 
 })
 .catch((data)=>{
     console.log(data);
