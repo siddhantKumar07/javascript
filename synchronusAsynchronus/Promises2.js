@@ -6,3 +6,11 @@ let promisesss = new Promise((resolve, reject) => {
         reject("promise rejected");
     }
 });
+
+promisesss
+.then((message)=>{
+    console.log(message);
+})
+.catch((error)=>{
+    console.error(error);
+});
