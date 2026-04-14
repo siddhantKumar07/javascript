@@ -2,8 +2,11 @@
 
 fetch('https://dummyjson.com/users')
 .then((response)=>{
-    console.log(response);
+    // console.log(response);
     return response.json(); // This will parse the response body as JSON and return a promise that resolves to the parsed data
+})
+.then((data)=>{
+    console.log(data.users[1].firstName); // This will log the first name of the first user in the results array
 })
 .catch((data)=>{
     console.log(data);
