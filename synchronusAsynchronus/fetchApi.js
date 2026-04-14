@@ -5,6 +5,6 @@ fetch('https://dummyjson.com/users')
     console.log(response);
     return response.json(); // This will parse the response body as JSON and return a promise that resolves to the parsed data
 })
-.then((data)=>{
+.catch((data)=>{
     console.log(data);
 })
