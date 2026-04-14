@@ -12,7 +12,9 @@ let promises = new Promise((resolve, reject) => {
 async function runner() {
 try{
     let mess = await promises;
-
+   console.log(mess)
 }
-cq
+catch(err){
+    console.log(err)
+}
 }
