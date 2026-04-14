@@ -9,4 +9,10 @@ let promises = new Promise((resolve, reject) => {
    },3000)
 })
 
-async
+async function runner() {
+try{
+    let mess = await promises;
+
+}
+cq
+}
