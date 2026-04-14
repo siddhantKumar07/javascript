@@ -18,3 +18,12 @@ prom
 .catch((error)=>{
     console.error(error);
 });
+
+let promise2 = new Promise((res,rej)=>{
+     if(1<4){
+        res("yes 1 is less than 4")
+     }
+     else rej("no no ")
+})
+
+pro
