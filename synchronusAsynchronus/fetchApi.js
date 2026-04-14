@@ -3,7 +3,7 @@
 fetch('https://dummyjson.com/users')
 .then((response)=>{
     console.log(response);
-    // return response.json(); // This will parse the response body as JSON and return a promise that resolves to the parsed data
+    return response.json(); // This will parse the response body as JSON and return a promise that resolves to the parsed data
 })
 .then((data)=>{
     console.log(data);
