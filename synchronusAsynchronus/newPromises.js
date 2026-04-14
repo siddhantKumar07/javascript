@@ -26,4 +26,10 @@ let promise2 = new Promise((res,rej)=>{
      else rej("no no ")
 })
 
-pro
+promise2
+.then((message)=>{
+    console.log(message)
+})
+.catch(()=>{
+    console.log("error")
+})
