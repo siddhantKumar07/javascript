@@ -27,4 +27,3 @@ fetchData()
         console.error("Error:", error);
     }
     );
-// A Promise in JavaScript is an object that represents the result of an asynchronous operation (something that takes time, like API calls, file reading, etc.). It can be in one of three states: pending (initial state, neither fulfilled nor rejected), fulfilled (operation completed successfully), or rejected (operation failed). Promises allow you to handle asynchronous operations more cleanly and avoid callback hell by chaining .then() for success and .catch() for errors.
