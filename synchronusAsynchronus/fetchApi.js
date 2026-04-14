@@ -13,8 +13,6 @@ fetch('https://dummyjson.com/users')
     // name.textContent = data.users[5].firstName; 
 
     data.users.forEach((user)=>{
-        // let div = document.createElement("div");
-        // div.classList.add("card");
         card.innerHTML += `
         <img src="${user.image}" >
         <h1>${user.firstName}</h1>
@@ -22,7 +20,6 @@ fetch('https://dummyjson.com/users')
         <p>${user.phone}</p>
         <p>${user.age}</p>
         <p>${user.gender}</p>`
-        // document.body.append(div);
     });
 
 })
