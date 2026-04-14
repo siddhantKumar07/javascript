@@ -16,5 +16,6 @@ public class arr{
         System.out.println(Arrays.deepToString(arr2));
 
         int arr3[][] = {{1,2,3},{4,5,6}};
+        System.out.println(Arrays.deepToString(arr3));
     }
 }
