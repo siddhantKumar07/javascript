@@ -8,7 +8,8 @@ fetch('https://dummyjson.com/users')
     return response.json(); // This will parse the response body as JSON and return a promise that resolves to the parsed data
 })
 .then((data)=>{
-
+ //basically we are using the data to create a card for each user and append it to the card container
+ 
     data.users.forEach((user)=>{
         card.innerHTML += `
         <div class="card">
