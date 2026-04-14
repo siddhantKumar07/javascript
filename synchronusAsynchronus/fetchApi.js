@@ -9,7 +9,7 @@ fetch('https://dummyjson.com/users')
 })
 .then((data)=>{
  //basically we are using the data to create a card for each user and append it to the card container
- // the data is taken from the API and then we are using the forEach loop to iterate through the users and create a card for each user and append it to the card 
+ // the data is taken from the API and then we are using the forEach loop to iterate through the users and create a card for each user and append it to the card container
     data.users.forEach((user)=>{
         card.innerHTML += `
         <div class="card">
