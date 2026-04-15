@@ -30,4 +30,4 @@ fetch('https://dummyjson.com/users')
 })
 
 
-// pic.
+// pi.
