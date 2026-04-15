@@ -19,7 +19,7 @@ fetch('https://dummyjson.com/users')
         <p>${user.phone}</p>
         <p>${user.age}</p>
         <p>${user.gender}</p>
-        </div>
+        </div>            
     `;
         document.body.append(card);
     });
