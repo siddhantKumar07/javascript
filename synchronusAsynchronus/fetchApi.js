@@ -29,5 +29,3 @@ fetch('https://dummyjson.com/users')
     console.log(data);
 })
 
-
-// 
