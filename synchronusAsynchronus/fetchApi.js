@@ -30,4 +30,4 @@ fetch('https://dummyjson.com/users')
 })
 
 
-// pi c.src = "https://cdn.pixabay.com/photo
+// pi c.src = "https://cdn.pixabay
