@@ -28,3 +28,4 @@ fetch('https://dummyjson.com/users')
 .catch((data)=>{
     console.log(data);
 })
+......
