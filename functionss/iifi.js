@@ -11,5 +11,3 @@
 let result = (function(a, b) {
     return a + b;
 })(5, 10); // Output: 15
-
-console.log(result); // Output: 15
