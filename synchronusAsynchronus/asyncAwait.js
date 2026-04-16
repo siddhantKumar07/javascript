@@ -10,6 +10,7 @@ let promises = new Promise((resolve, reject) => {
    },3000)
 })
 
+
 async function runner() {
 try{
     let mess = await promises;
@@ -20,4 +21,4 @@ catch(err){
 }
 }
 
-runner()
+runner() // Output will be either "resoved the request" or "rejected the request" after 3 seconds, depending on the random number generated.
