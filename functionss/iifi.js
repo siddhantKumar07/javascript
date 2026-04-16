@@ -7,3 +7,9 @@
 })(); // Output: "This is an IIFE function"
 
 // IIFEs are commonly used to create a new scope and avoid polluting the global namespace. They can also be used to execute code immediately without having to call the function separately.
+
+let result = (function(a, b) {
+    return a + b;
+})(5, 10); // Output: 15
+
+console.log(result); // Output: 15
