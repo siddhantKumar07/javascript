@@ -7,7 +7,9 @@ balance = amount;
 function getbalance(){
 return balance;
 }
-fun
+function withdraw(amount){
+
+}
 
 })();
 
