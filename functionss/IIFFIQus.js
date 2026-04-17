@@ -10,9 +10,9 @@ function getbalance(){
 return balance;
 }
 
-function withdraw(amount){
+function withdraw(amount){  
 if(amount > balance){
-console.log("Insufficient balance");    
+console.log("Insufficient balance");  
 }else{
 balance -= amount;
 console.log(`Withdrawn amount: ${amount}, Remaining balance: ${balance}`);
@@ -28,5 +28,5 @@ withdraw
 retfun.addBalance(1000);
 console.log(retfun.getbalance()); // Output: 1000
 
-retfun.withdraw(200); // Output: Withdrawn amount: 200, Remaining balance: 800
+retfun.withdraw(200); 
 console.log(retfun.getbalance()); 
