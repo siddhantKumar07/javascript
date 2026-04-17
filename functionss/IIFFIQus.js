@@ -27,3 +27,6 @@ withdraw
 
 retfun.addBalance(1000);
 console.log(retfun.getbalance()); // Output: 1000
+
+retfun.withdraw(200); // Output: Withdrawn amount: 200, Remaining balance: 800
+console.log(retfun.getbalance()); // Output: 800
