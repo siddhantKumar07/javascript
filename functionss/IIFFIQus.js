@@ -1,12 +1,13 @@
 let retfun =(()=>{
 console.log("This is an IIFE function using arrow function syntax");
 let balance;
-function setbalance(amount){
+function addBalance(amount){
 balance = amount;   
 }
 function getbalance(){
 return balance;
 }
+fun
 
 })();
 
