@@ -7,10 +7,15 @@ balance = amount;
 function getbalance(){
 return balance;
 }
+
 function withdraw(amount){
-
+if(amount > balance){
+console.log("Insufficient balance");    
+}else{
+balance -= amount;
+console.log(`Withdrawn amount: ${amount}, Remaining balance: ${balance}`);
 }
-
+}
 })();
 
 console.log(balance); 
