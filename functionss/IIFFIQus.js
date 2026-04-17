@@ -26,7 +26,7 @@ withdraw
 })();
 
 retfun.addBalance(1000);
-console.log(retfun.getbalance()); // Output: 1000
+console.log(retfun.getbalance()); 
 
 retfun.withdraw(200); 
 console.log(retfun.getbalance()); 
