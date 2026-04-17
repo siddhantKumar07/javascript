@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merge Objects</title>
+</head>
+<body>
+
+<h2>Merging Two Objects in JavaScript</h2>
+
+<script>
+    // First object
+    let obj1 = {
+        name: "Rahul",
+        age: 20
+    };
+
+    // Second object
+    let obj2 = {
+        course: "BCA",
+        city: "Delhi"
+    };
+
+    // Merging objects using Object.assign()
+    let mergedObj = Object.assign({}, obj1, obj2);
+
+    document.write("<b>Object 1:</b> " + JSON.stringify(obj1) + "<br>");
+    document.write("<b>Object 2:</b> " + JSON.stringify(obj2) + "<br>");
+    document.write("<b>Merged Object:</b> " + JSON.stringify(mergedObj));
+</script>
+
+</body>
+</html>
