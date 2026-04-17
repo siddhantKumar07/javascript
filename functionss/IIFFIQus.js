@@ -18,5 +18,11 @@ balance -= amount;
 console.log(`Withdrawn amount: ${amount}, Remaining balance: ${balance}`);
 }
 }
+return {
+addBalance,
+getbalance,
+withdraw
+}
 })();
 
+console.log(retfun); 
