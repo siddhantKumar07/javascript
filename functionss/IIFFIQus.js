@@ -25,4 +25,5 @@ withdraw
 }
 })();
 
-console.log(retfun); 
+retfun.addBalance(1000);
+console.log(retfun.getbalance()); // Output: 1000
