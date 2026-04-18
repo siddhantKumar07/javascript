@@ -20,3 +20,4 @@ let counter = (function() {
 })();
 
 counter.increment();
+counter.increment();
