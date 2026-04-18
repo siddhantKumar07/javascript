@@ -12,7 +12,7 @@ function factory(name, price) {
     },
     buyProduct(qnty) {
       if (qnty > stock) {
-        console.err(`Not enough stock. Only ${stock} items available.`);
+        console.error(`Not enough stock. Only ${stock} items available.`);
       } else {
         stock -= qnty;
         console.log(`Purchased ${qnty} items. Remaining stock: ${stock}`);
