@@ -22,3 +22,6 @@ function factory(name, price) {
 }
 let electro=factory('Laptop', 999);
 electro.checkStock();
+electro.addStock(5);
+electro.buyProduct(3);
+electro.checkStock();
