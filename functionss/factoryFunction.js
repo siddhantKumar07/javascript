@@ -17,5 +17,6 @@ addStock(qnty){
         stock -= qnty;
         console.log(`Purchased ${qnty} items. Remaining stock: ${stock}`);
     }
-
+   }
 }
+   }
