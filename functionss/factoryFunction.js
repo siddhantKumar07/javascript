@@ -25,3 +25,4 @@ electro.checkStock();
 electro.addStock(5);
 electro.buyProduct(3);
 electro.checkStock();
+electro.buyProduct(150);
