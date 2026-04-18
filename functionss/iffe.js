@@ -21,3 +21,4 @@ let counter = (function() {
 
 counter.increment();
 counter.increment();
+console.log(counter.getCount()); 
