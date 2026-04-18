@@ -5,8 +5,10 @@ function factory (name,price){
     price,
   checkStock(){
     console.log(`There are ${stock} items in stock`);
-  }
-
+  },
+addStock(qnty){
+    stock += qnty;
+    console.log(`Added ${qnty} items to stock. Total stock: ${stock}`);
    }
 
 }
