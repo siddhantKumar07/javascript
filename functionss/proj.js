@@ -1,24 +1,24 @@
 class youtubeChannel{
-     users = []
+     subscriber = []
 
     subscriber(userName){
-        this.users.push(userName);
+        this.subscriber.push(userName);
         userName.update("New subscriber: " + userName.name);
     }
     unsubscriber(userName){
-      this.users = this.users.filter((user) => {
+      this.subscriber = this.subscriber.filter((user) => {
   return user.name !== userName.name;
 });
         userName.update("Unsubscribed: " + userName.name);
     }
-    notifySubscribers()
+    notifySubscribers(message)
     {
-        this.users.forEach(user => {
-            user.update("New video uploaded!");
+        this.subscriber.forEach(user => {
+            user.update(message);
         });
     }
   checkSubscribers(){
-    console.log("Number of subscribers:", this.users);
+    console.log("Number of subscribers:", this.subscriber);
   }
 }
 class user{
@@ -26,7 +26,7 @@ class user{
         this.name = name;
     }
 update(message){
-    console.log(message);
+    console.log(this.name+" "+message);
 }
 
 }
@@ -39,3 +39,4 @@ channel.subscriber(user2);
 channel.checkSubscribers();
 channel.unsubscriber(user1);
 channel.checkSubscribers(user1);
+channel.notifySubscribers("New video uploaded! at the Channel");
