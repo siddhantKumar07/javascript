@@ -9,6 +9,13 @@ function factory (name,price){
 addStock(qnty){
     stock += qnty;
     console.log(`Added ${qnty} items to stock. Total stock: ${stock}`);
-   }
+   },
+   buyProduct(qnty){
+    if(qnty > stock){
+        console.err(`Not enough stock. Only ${stock} items available.`);
+    } else {
+        stock -= qnty;
+        console.log(`Purchased ${qnty} items. Remaining stock: ${stock}`);
+    }
 
 }
