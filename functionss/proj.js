@@ -28,3 +28,6 @@ let channel = new youtubeChannel();
 let user1 = new user("Alice");
 channel.subscriber(user1);
 channel.checkSubscribers();
+let user2 = new user("Bob");
+channel.subscriber(user2);
+channel.checkSubscribers();
