@@ -9,7 +9,9 @@ class youtubeChannel{
         this.users.pop(userName);
     }
     notifySubscribers(){}
-
+  checkSubscribers(){
+    console.log("Number of subscribers:", this.users.length);
+  }
 }
 class user{
     constructor(name){
@@ -23,3 +25,4 @@ update(message){
 let channel = new youtubeChannel();
 let user1 = new user("Alice");
 channel.subscriber(user1);
+channel.checkSubscribers();
