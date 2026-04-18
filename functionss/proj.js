@@ -9,8 +9,14 @@ class youtubeChannel{
       this.users = this.users.filter((user) => {
   return user.name !== userName.name;
 });
+        userName.update("Unsubscribed: " + userName.name);
     }
-    notifySubscribers(){}
+    notifySubscribers()
+    {
+        this.users.forEach(user => {
+            user.update("New video uploaded!");
+        });
+    }
   checkSubscribers(){
     console.log("Number of subscribers:", this.users);
   }
