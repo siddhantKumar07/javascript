@@ -1,3 +1,5 @@
+// Factory function to create product objects
+
 function factory(name, price) {
   stock = 10;
   return {
