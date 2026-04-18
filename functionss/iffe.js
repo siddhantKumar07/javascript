@@ -3,3 +3,18 @@
 (function() {
     console.log('This is an IIFE');
 })(); // Output: This is an IIFE
+
+// its also called module pattern because it can be used to create a module that encapsulates private variables and functions, and exposes only the necessary parts to the outside world.
+let counter = (function() {
+    let count = 0; // private variable
+    function increment() { // private function
+        count++;
+    }
+    function getCount() { // public function    
+        return count;
+    }
+    return {
+        increment,
+        getCount
+    };
+})();
