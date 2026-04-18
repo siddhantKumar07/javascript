@@ -1,32 +1,32 @@
-let retfun =(()=>{
-console.log("This is an IIFE function using arrow function syntax");
-let balance;
+let retfun = (() => {
+  console.log("This is an IIFE function using arrow function syntax");
+  let balance;
 
-function addBalance(amount){
-balance = amount;   
-}
+  function addBalance(amount) {
+    balance = amount;
+  }
 
-function getbalance(){
-return balance;
-}
+  function getbalance() {
+    return balance;
+  }
 
-function withdraw(amount){  
-if(amount > balance){
-console.log("Insufficient balance");  
-}else{
-balance -= amount;
-console.log(`Withdrawn amount: ${amount}, Remaining balance: ${balance}`);
-}
-}
-return {
-addBalance,
-getbalance,
-withdraw
-}
+  function withdraw(amount) {
+    if (amount > balance) {
+      console.log("Insufficient balance");
+    } else {
+      balance -= amount;
+      console.log(`Withdrawn amount: ${amount}, Remaining balance: ${balance}`);
+    }
+  }
+  return {
+    addBalance,
+    getbalance,
+    withdraw,
+  };
 })();
 
 retfun.addBalance(1000);
-console.log(retfun.getbalance()); 
+console.log(retfun.getbalance());
 
-retfun.withdraw(200); 
-console.log(retfun.getbalance()); 
+retfun.withdraw(200);
+console.log(retfun.getbalance());
