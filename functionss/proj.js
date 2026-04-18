@@ -6,7 +6,9 @@ class youtubeChannel{
         userName.update("New subscriber: " + userName.name);
     }
     unsubscriber(userName){
-        this.users.pop(userName);
+       this.users= this.users.filter(()=>{
+        return userName.name!==userName.name;
+       })
     }
     notifySubscribers(){}
   checkSubscribers(){
