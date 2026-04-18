@@ -7,5 +7,15 @@ class youtubeChannel{
     unsubscriber(userName){
         users.pop(userName);
     }
-    
+    notifySubscribers(){}
+
+}
+class user{
+    constructor(name){
+        this.name = name;
+    }
+update(message){
+    console.log(message);
+}
+
 }
