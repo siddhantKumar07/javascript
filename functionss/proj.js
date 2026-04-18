@@ -7,7 +7,7 @@ class youtubeChannel{
     }
     unsubscriber(userName){
        this.users= this.users.filter(()=>{
-        return userName.name!==userName.name;
+        return userName.name!=userName.name;
        })
     }
     notifySubscribers(){}
@@ -31,3 +31,5 @@ channel.checkSubscribers();
 let user2 = new user("Bob");
 channel.subscriber(user2);
 channel.checkSubscribers();
+channel.unsubscriber(user1);
+channel.checkSubscribers(user1);
