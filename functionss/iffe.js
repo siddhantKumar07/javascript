@@ -18,3 +18,5 @@ let counter = (function() {
         getCount
     };
 })();
+
+counter.increment();
