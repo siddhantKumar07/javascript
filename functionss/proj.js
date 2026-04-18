@@ -6,13 +6,13 @@ class youtubeChannel{
         userName.update("New subscriber: " + userName.name);
     }
     unsubscriber(userName){
-       this.users= this.users.filter(()=>{
-        return userName.name!=userName.name;
-       })
+      this.users = this.users.filter((user) => {
+  return user.name !== userName.name;
+});
     }
     notifySubscribers(){}
   checkSubscribers(){
-    console.log("Number of subscribers:", this.users.length);
+    console.log("Number of subscribers:", this.users);
   }
 }
 class user{
