@@ -1,12 +1,12 @@
 class youtubeChannel{
-     users = [];
+     users = []
 
     subscriber(userName){
-        users.push(userName);
-        update("New subscriber: " + userName);
+        this.users.push(userName);
+        userName.update("New subscriber: " + userName.name);
     }
     unsubscriber(userName){
-        users.pop(userName);
+        this.users.pop(userName);
     }
     notifySubscribers(){}
 
@@ -20,3 +20,6 @@ update(message){
 }
 
 }
+let channel = new youtubeChannel();
+let user1 = new user("Alice");
+channel.subscriber(user1);
