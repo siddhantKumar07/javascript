@@ -3,6 +3,7 @@ class youtubeChannel{
 
     subscriber(userName){
         users.push(userName);
+        update("New subscriber: " + userName);
     }
     unsubscriber(userName){
         users.pop(userName);
