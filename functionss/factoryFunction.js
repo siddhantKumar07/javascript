@@ -20,3 +20,5 @@ function factory(name, price) {
     },
   };
 }
+let electro=factory('Laptop', 999);
+electro.checkStock();
