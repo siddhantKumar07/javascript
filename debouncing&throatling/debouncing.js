@@ -10,3 +10,10 @@ function debounce(func, delay) {
         , delay);
     };
 }
+// Example usage:
+const searchInput = document.getElementById('search');
+const debouncedSearch = debounce(function() {
+    console.log('Searching for:', this.value);
+}, 300);
+searchInput.addEventListener('input', debouncedSearch);
+
