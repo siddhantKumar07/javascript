@@ -12,14 +12,14 @@
     <script>
         let input = document.getElementById('search');
         function debounce(fnc,delay){
-            fnc()
+            fnc();
             return function(){
                 console.log("hello i am a returned function")
             }
         }
         input.addEventListener("input",debounce(function(){
             console.log("hello i am passed from debounce as a parameter")
-        },100));
+        },1000));
     </script>
 </body>
 </html>
