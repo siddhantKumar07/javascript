@@ -101,7 +101,10 @@ async function getColor() {
     try {
         const response = await fetch('https://x-colors.yurace.pro/api/random');
         const data = await response.json();
-        console.log(data);
+        random.addEventListener('click', () => {
+            document.body.style.backgroundColor = data.hex.value;
+            document.getElementById('colorName').textContent = data.hex.value;
+        });
     } catch (error) {
         console.error(error);
     }
