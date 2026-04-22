@@ -105,7 +105,7 @@ random.addEventListener('click', async () => {
         const data = await response.json();
 
         document.body.style.backgroundColor = data.hex;
-         
+         console.log(data.hex);
         const hex = data.hex.replace('#', '');
 
         const colornm = await fetch(`https://corsproxy.io/?https://www.thecolorapi.com/id?hex=${hex}`);
