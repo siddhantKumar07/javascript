@@ -8,19 +8,17 @@
 <body>
     
     <script>
-try {
-    const response = await fetch('https://www.thecolorapi.com/id?hex=ff0000');
-
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+async function getColor() {
+    try {
+        const response = await fetch('https://www.thecolorapi.com/id?hex=ff0000');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
     }
-
-    const data = await response.json();
-    console.log(data);
-
-} catch (error) {
-    console.error('Error:', error);
 }
-    </script>
+
+getColor();
+</script>
 </body>
 </html>
