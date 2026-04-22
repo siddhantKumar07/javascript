@@ -110,7 +110,6 @@ random.addEventListener('click', async () => {
         const colornm = await fetch(`https://corsproxy.io/?https://www.thecolorapi.com/id?hex=${hex}`);
         const colornmData = await colornm.json();
 
-        console.log(colornmData);
 
         colorName.textContent =`${colornmData.name.value} (${colornmData.hex.value})`;
 
