@@ -96,6 +96,7 @@ input {
         let random = document.getElementById('randomBtn');
         let apply = document.getElementById('applyBtn');
         let colorName = document.getElementById('colorName');
+        let colorInput = document.getElementById('colorInput');
      
         // this is for to get a random color from the api;
 
@@ -110,7 +111,6 @@ random.addEventListener('click', async () => {
         const colornm = await fetch(`https://corsproxy.io/?https://www.thecolorapi.com/id?hex=${hex}`);
         const colornmData = await colornm.json();
         colorName.textContent =`${colornmData.name.value} (${colornmData.hex.value})`;
-
     } catch (error) {
         console.error(error);
     }
