@@ -88,13 +88,14 @@ input {
         </div>
 
         <div class="current-color">
-            Current Color: <span id="colorName">green</span>
+            Current Color: <span id="colorName"></span>
         </div>
     </div>
     
     <script>
         let random = document.getElementById('randomBtn');
         let apply = document.getElementById('applyBtn');
+        let colorName = document.getElementById('colorName');
      
         // this is for to get a random color from the api;
 
@@ -104,6 +105,8 @@ random.addEventListener('click', async () => {
         const data = await response.json();
 
         document.body.style.backgroundColor = data.hex;
+        // const colornm = await fetch(`https://www.thecolorapi.com/id?hex=${data.hex}`);
+        // const colornmData = await colornm.json();
         console.log(data.hex);
 
         document.getElementById('colorName').textContent = data.hex;
@@ -111,6 +114,8 @@ random.addEventListener('click', async () => {
         console.error(error);
     }
 });
+
+
 
 </script>
 </body>
