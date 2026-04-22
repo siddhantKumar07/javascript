@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+     <div class="container">
+        <h1>Color Changer</h1>
+
+        <div class="controls">
+            <button id="randomBtn">Random Color</button>
+
+            <input type="text" id="colorInput" placeholder="Enter a color or hex (e.g. white or #ff0000)">
+
+            <button id="applyBtn">Apply Color</button>
+        </div>
+
+        <div class="current-color">
+            Current Color: <span id="colorName">green</span>
+        </div>
+    </div>
     
     <script>
 async function getColor() {
