@@ -2,6 +2,8 @@
 let pic = document.querySelector("img");
 let name = document.querySelector("h1");
 let card = document.querySelector(".cardContainer");
+let search = document.querySelector("#searchInput");
+
 fetch('https://dummyjson.com/users')
 .then((response)=>{
     // console.log(response);
