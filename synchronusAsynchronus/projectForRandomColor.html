@@ -97,19 +97,20 @@ input {
         let apply = document.getElementById('applyBtn');
 
         // this is for to get a random color from the api;
-async function getColor() {
+
+random.addEventListener('click', async () => {
     try {
         const response = await fetch('https://x-colors.yurace.pro/api/random');
         const data = await response.json();
-        random.addEventListener('click', () => {
-            document.body.style.backgroundColor = data.hex;
-            console.log(data.hex);
-            document.getElementById('colorName').textContent = data.hex.value;
-        });
+
+        document.body.style.backgroundColor = data.hex;
+        console.log(data.hex);
+
+        document.getElementById('colorName').textContent = data.hex;
     } catch (error) {
         console.error(error);
     }
-}
+});
 getColor();
 </script>
 </body>
