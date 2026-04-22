@@ -30,3 +30,19 @@ fetch('https://dummyjson.com/users')
 .catch((data)=>{
     console.log(data);
 })
+ 
+
+search.addEventListener("input",(e)=>{
+    let value = e.target.value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    cards.forEach((card)=>{
+        let name = card.querySelector("h1").textContent.toLowerCase();
+        if(name.includes(value)){
+            card.style.display = "block";
+        }
+        else{
+            card.style.display = "none";
+        }
+    })
+}
+)
