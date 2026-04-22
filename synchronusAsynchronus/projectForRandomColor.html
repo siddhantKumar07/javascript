@@ -116,7 +116,11 @@ random.addEventListener('click', async () => {
     }
 });
 
-
+colorInput.addEventListener('input', () => {
+    const color = colorInput.value.trim();
+    document.body.style.backgroundColor = color;
+    colorName.textContent = color;
+});
 
 </script>
 </body>
