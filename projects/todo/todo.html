@@ -1,93 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #container{
-            width: 400px;
-            height: auto;
-            margin: 20vh auto;
-            text-align: center;
-            border:1px solid #000000;
-            box-shadow: inset 0px 0 8px #000000;
-            padding: 20px;
-        }
-        #inputContainer{
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        #todoInput{
-            width: 70%;
-            padding: 10px;
-            font-size: 16px;
-        }
-        #addBtn{
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-left: 10px;
-            background-color: #3ac5c3;
-        }
+      #container {
+        width: 400px;
+        height: auto;
+        margin: 20vh auto;
+        text-align: center;
+        border: 1px solid #000000;
+        box-shadow: inset 0px 0 8px #000000;
+        padding: 20px;
+      }
+      #inputContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      #todoInput {
+        width: 70%;
+        padding: 10px;
+        font-size: 16px;
+      }
+      #addBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-left: 10px;
+        background-color: #3ac5c3;
+      }
     </style>
-</head>
-<body>
-    <button> <img src="cross.png" alt="Cross"> </button>
+  </head>
+  <body>
+    <button><img src="cross.png" alt="Cross" /></button>
     <div id="container">
-     <h1>Simple Todo List</h1>
-     <div id="inputContainer">
-        <input type="text" placeholder="add some task here...."id="todoInput">
+      <h1>Simple Todo List</h1>
+      <div id="inputContainer">
+        <input
+          type="text"
+          placeholder="add some task here...."
+          id="todoInput"
+        />
         <button id="addBtn">Add</button>
-     </div>
+      </div>
     </div>
 
     <script>
-        const addBtn = document.getElementById('addBtn');
-        const todoInput = document.getElementById('todoInput');
-        const container = document.getElementById('container');
-     document.body.addEventListener('keypress',(e)=>{
+      const addBtn = document.getElementById("addBtn");
+      const todoInput = document.getElementById("todoInput");
+      const container = document.getElementById("container");
+      document.body.addEventListener("keypress", (e) => {
         console.log(e.code);
-        if(e.code ==="Enter"){
-            //  addBtn.addEventListener('click', () => {
-            const task = todoInput.value.trim();
-            if(task){
-                const taskElement = document.createElement('div');
-                taskElement.textContent = task;
-                taskElement.style.marginTop = '10px';
-                taskElement.style.padding = '10px';
-                taskElement.style.border = '1px solid #000000';
-                taskElement.style.backgroundColor = "lightblue";
-                container.appendChild(taskElement);
-                todoInput.value = '';
-            }
-        // });
+        if (e.code === "Enter") {
+          //  addBtn.addEventListener('click', () => {
+          const task = todoInput.value.trim();
+          if (task) {
+            const taskElement = document.createElement("div");
+            taskElement.textContent = task;
+            taskElement.style.marginTop = "10px";
+            taskElement.style.padding = "10px";
+            taskElement.style.border = "1px solid #000000";
+            taskElement.style.backgroundColor = "lightblue";
+            container.appendChild(taskElement);
+            todoInput.value = "";
+          }
+          // });
         }
-     })
-           addBtn.addEventListener('click', () => {
-            const task = todoInput.value.trim();
-            if(task){
-                const taskElement = document.createElement('div');
-                taskElement.textContent = task;
-                taskElement.style.marginTop = '10px';
-                taskElement.style.padding = '10px';
-                taskElement.style.border = '1px solid #000000';
-                taskElement.style.backgroundColor = "lightblue";
+      });
+      addBtn.addEventListener("click", () => {
+        const task = todoInput.value.trim();
+        if (task) {
+          const taskElement = document.createElement("div");
+          taskElement.textContent = task;
+          taskElement.style.marginTop = "10px";
+          taskElement.style.padding = "10px";
+          taskElement.style.border = "1px solid #000000";
+          taskElement.style.backgroundColor = "lightblue";
 
-                let crossbtn = document.createElement("button");
-                crossbtn.style.height='40px';
-                crossbtn.style.width='3vw';
-                crossbtn.textContent="cross";
-    crossbtn.style.backgroundImage= url('https://th.bing.com/th/id/R.af2dfd726ed01af133fcaf3e4707ebdf?rik=Splt9KbDNoqzsQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fred-cross-png-red-cross-png-file-2000.png&ehk=c08%2fLiA3GhmZXJtiynUTW6PqvFt%2ffTrjzw6d%2b%2fgbExE%3d&risl=&pid=ImgRaw&r=0') 
-                crossbtn.style.objectFit='cover'
-                container.appendChild(taskElement);
-                taskElement.appendChild(crossbtn);
-                todoInput.value = '';
-            }
-        });
-
-        
-       
+          let crossbtn = document.createElement("button");
+          crossbtn.style.height = "40px";
+          crossbtn.style.width = "3vw";
+          crossbtn.textContent = "cross";
+          crossbtn.style.backgroundImage = url(
+            "https://th.bing.com/th/id/R.af2dfd726ed01af133fcaf3e4707ebdf?rik=Splt9KbDNoqzsQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fred-cross-png-red-cross-png-file-2000.png&ehk=c08%2fLiA3GhmZXJtiynUTW6PqvFt%2ffTrjzw6d%2b%2fgbExE%3d&risl=&pid=ImgRaw&r=0",
+          );
+          crossbtn.style.backgroundSize = "cover";
+          crossbtn.style.backgroundPosition = "center";
+          container.appendChild(taskElement);
+          taskElement.appendChild(crossbtn);
+          todoInput.value = "";
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
