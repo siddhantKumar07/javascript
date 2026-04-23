@@ -45,8 +45,9 @@
         const addBtn = document.getElementById('addBtn');
         const todoInput = document.getElementById('todoInput');
         const container = document.getElementById('container');
-
-        addBtn.addEventListener('click', () => {
+     document.body.addEventListener('keypress',(e)=>{
+        if(e.code =="enter"){
+             addBtn.addEventListener('click', () => {
             const task = todoInput.value.trim();
             if(task){
                 const taskElement = document.createElement('div');
@@ -59,6 +60,9 @@
                 todoInput.value = '';
             }
         });
+        }
+     })
+       
     </script>
 </body>
 </html>
