@@ -101,6 +101,7 @@ input {
 
 random.addEventListener('click', async () => {
     try {
+        // this will fetch a random color from the API and set it as the background color of the page. It will also fetch the name of the color using another API and display it on the page.
         const response = await fetch('https://x-colors.yurace.pro/api/random');
         const data = await response.json();
 
