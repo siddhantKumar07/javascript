@@ -73,7 +73,11 @@
                 taskElement.style.padding = '10px';
                 taskElement.style.border = '1px solid #000000';
                 taskElement.style.backgroundColor = "lightblue";
+                crossbtn.style.height='10px';
+                crossbtn.style.width='25px';
+                crossbtn.textContent="cross";
                 container.appendChild(taskElement);
+                taskElement.appendChild(crossbtn);
                 todoInput.value = '';
             }
         });
