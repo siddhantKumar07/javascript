@@ -8,10 +8,10 @@
         #container{
             width: 400px;
             height: auto;
-            margin: 0 auto;
+            margin: 20vh auto;
             text-align: center;
             border:1px solid #000000;
-            box-shadow: inset 0 0 10px #000000;
+            box-shadow: inset 0px 0 8px #000000;
             padding: 20px;
         }
         #inputContainer{
@@ -40,5 +40,24 @@
         <button id="addBtn">Add</button>
      </div>
     </div>
+
+    <script>
+        const addBtn = document.getElementById('addBtn');
+        const todoInput = document.getElementById('todoInput');
+        const container = document.getElementById('container');
+
+        addBtn.addEventListener('click', () => {
+            const task = todoInput.value.trim();
+            if(task){
+                const taskElement = document.createElement('div');
+                taskElement.textContent = task;
+                taskElement.style.marginTop = '10px';
+                taskElement.style.padding = '10px';
+                taskElement.style.border = '1px solid #000000';
+                container.appendChild(taskElement);
+                todoInput.value = '';
+            }
+        });
+    </script>
 </body>
 </html>
