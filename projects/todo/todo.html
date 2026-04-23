@@ -67,6 +67,7 @@
             const task = todoInput.value.trim();
             if(task){
                 const taskElement = document.createElement('div');
+                let crossbtn = document.createElement("button");
                 taskElement.textContent = task;
                 taskElement.style.marginTop = '10px';
                 taskElement.style.padding = '10px';
@@ -76,6 +77,8 @@
                 todoInput.value = '';
             }
         });
+
+        
        
     </script>
 </body>
