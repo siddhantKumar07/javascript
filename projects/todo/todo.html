@@ -46,8 +46,24 @@
         const todoInput = document.getElementById('todoInput');
         const container = document.getElementById('container');
      document.body.addEventListener('keypress',(e)=>{
-        if(e.code =="enter"){
-             addBtn.addEventListener('click', () => {
+        console.log(e.code);
+        if(e.code ==="Enter"){
+            //  addBtn.addEventListener('click', () => {
+            const task = todoInput.value.trim();
+            if(task){
+                const taskElement = document.createElement('div');
+                taskElement.textContent = task;
+                taskElement.style.marginTop = '10px';
+                taskElement.style.padding = '10px';
+                taskElement.style.border = '1px solid #000000';
+                taskElement.style.backgroundColor = "lightblue";
+                container.appendChild(taskElement);
+                todoInput.value = '';
+            }
+        // });
+        }
+     })
+           addBtn.addEventListener('click', () => {
             const task = todoInput.value.trim();
             if(task){
                 const taskElement = document.createElement('div');
@@ -60,8 +76,6 @@
                 todoInput.value = '';
             }
         });
-        }
-     })
        
     </script>
 </body>
