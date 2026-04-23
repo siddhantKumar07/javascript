@@ -50,9 +50,6 @@
       const addBtn = document.getElementById("addBtn");
       const todoInput = document.getElementById("todoInput");
       const container = document.getElementById("container");
-            let crossbtn = document.createElement("button");
-
-
       document.body.addEventListener("keypress", (e) => {
         console.log(e.code);
         if (e.code === "Enter") {
@@ -71,6 +68,7 @@
           // });
         }
       });
+
       addBtn.addEventListener("click", () => {
         const task = todoInput.value.trim();
         if (task) {
@@ -91,13 +89,13 @@
           crossbtn.style.backgroundPosition = "center";
           crossbtn.style.float = "right";
           crossbtn.style.marginTop = "-10px";
+          crossbtn.addEventListener("click", () => {
+            crossbtn.parentElement.remove();
+          });
           taskElement.appendChild(crossbtn);
           container.appendChild(taskElement);
           todoInput.value = "";
         }
-      });
-      crossbtn.addEventListener("click", () => {
-        crossbtn.parentElement.remove();
       });
     </script>
   </body>
