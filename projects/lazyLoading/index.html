@@ -23,6 +23,7 @@ img{
     width: 80%;
     height: 80vh;
     object-fit: cover;
+    opacity: 0;
 }
 
 </style>
@@ -35,13 +36,13 @@ img{
 <h1> lazy loading images with intersection observer</h1>
 
 <div id="gapdiv"></div>
-<img src="./photo-1774166487979-8a920ccd12ee.avif" alt="Description of the image">
+<img data-src="./photo-1774166487979-8a920ccd12ee.avif" >
 <div id="gapdiv"></div>
-<img src="./photo-1775125423050-5623636a2490.avif" alt="">
+<img data-src="./photo-1775125423050-5623636a2490.avif" alt="">
 <div id="gapdiv"></div>
-<img src="./photo-1776451591680-d8ceafca123e.avif" alt="">
+<img data-src="./photo-1776451591680-d8ceafca123e.avif" alt="">
 <div id="gapdiv"></div>
-<img src="./photo-1776941438021-ab8fd966d5e5.avif" alt="">
+<img data-src="./photo-1776941438021-ab8fd966d5e5.avif" alt="">
     </div>
 </body>
 </html>
