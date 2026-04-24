@@ -54,9 +54,7 @@ images.forEach((img)=>{
             if(entry.isIntersecting){
                 const lazyImage = entry.target;
                 lazyImage.src = lazyImage.dataset.src;
-                lazyImage.onload = () => {
-                    lazyImage.style.opacity = '1';
-                }
+               
                 observer.unobserve(lazyImage);
             }
         })
