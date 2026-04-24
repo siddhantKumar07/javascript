@@ -48,7 +48,21 @@ img{
 <script>
     // lazy loading images with intersection observer
 const images = document.querySelectorAll('img');
-
+images.forEach((img)=>{
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                const lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.onload = () => {
+                    lazyImage.style.opacity = '1';
+                }
+                observer.unobserve(lazyImage);
+            }
+        })
+    })
+    observer.observe(img);
+})
 </script>
 </body>
 </html>
