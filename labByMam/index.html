@@ -1,15 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            background-color: #cac8c8;
-        }
-    #container {
-        width: 300px;
+      body {
+        background-image: linear-gradient(to right, rgb(206, 157, 157),rgb(74, 115, 202),pink);
+        
+      }
+      #container {
+        width: 400px;
+        height: 400px;
         margin: 0 auto;
         padding: 20px;
         border: 1px solid #ccc;
@@ -21,53 +23,65 @@
         position: relative;
         top: 200px;
         box-shadow: 0 0 10px 2px rgb(189, 172, 172);
-    }
-    form{
+        border-radius: 20px;
+      }
+      form {
         width: 100%;
+        height: 80%;
         padding: 40px;
         display: flex;
         flex-direction: column;
         gap: 10px;
         background-color: #a6d8f0;
-
-    }
-    #submit{
+        border-radius: 20px;
+      }
+      #name {
+        height: 4vh;
+        border-radius: 10px;
+        font-size: larger;
+      }
+      #email {
+        height: 4vh;
+        border-radius: 10px;
+        font-size: larger;
+      }
+      #pass {
+        height: 4vh;
+        border-radius: 10px;
+        font-size: larger;
+      }
+      #submit {
         margin-top: 7px;
         background-color: #1b63bc;
         padding: 10px;
         border-radius: 7px;
-    }
+      }
     </style>
-</head>
-<body>
-<div id="container">
-<form >
-    <label for="name">Name:</label>
-    <input type="text" id="name">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
-    <label for="pass">Password</label>
-    <input type="password" id="pass">
-    <input type="submit" value="Submit" id="submit">
-</form>
-</div>
-<script>
-    let email = document.querySelector("#email")
-    let name =document.querySelector("#name")
-    let pass = document.querySelector("#pass")
-    let submit = document.querySelector("#submit")
-    // form.addEventListener('click', (e)=>{
-    //     e.preventDefault();
-    // })
-    submit.addEventListener("click",(e)=>{
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="pass">Password</label>
+        <input type="password" id="pass" />
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </div>
+    <script>
+      let email = document.querySelector("#email");
+      let name = document.querySelector("#name");
+      let pass = document.querySelector("#pass");
+      let submit = document.querySelector("#submit");
+
+      submit.addEventListener("click", (e) => {
         e.preventDefault();
         console.log(`name => ${name.value}`);
-        console.log(`email => ${email.value}`)
-        console.log(`password => ${pass.value}`)
-    })
-
-   
-</script>
-
-</body>
+        console.log(`email => ${email.value}`);
+        console.log(`password => ${pass.value}`);
+      });
+    </script>
+  </body>
 </html>
