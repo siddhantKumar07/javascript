@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    #container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 200px;
+    }
+    form{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #a6d8f0;
+
+    }
+    #submit{
+        margin-top: 7px;
+        background-color: #1b63bc;
+        padding: 10px;
+        border-radius: 7px;
+    }
+    </style>
 </head>
 <body>
-    
+<div id="container">
+<form >
+    <label for="name">Name</label>
+    <input type="text" id="name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="pass">Password</label>
+    <input type="password"  id="pass">
+    <input type="submit" value="Submit" id="submit">
+    <p>register here</p>
+</form>
+</div>
+<script>
+    let email = document.querySelector("#email")
+    let name =document.querySelector("#name")
+    let pass = document.querySelector("#pass")
+    let 
+</script>
+
 </body>
 </html>
