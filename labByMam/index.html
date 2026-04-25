@@ -76,6 +76,8 @@
       let pass = document.querySelector("#pass");
       let submit = document.querySelector("#submit");
       let form = document.querySelector("form")
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
 
       submit.addEventListener("click", (e) => {
         e.preventDefault();
@@ -86,11 +88,17 @@
       else{
         console.log(`name => ${name.value}`);
       }
-      if(email.value.includes("@")){
+      if(emailRegex.test(email.value)){
         console.log(`email => ${email.value}`);
       }else{
         alert("wrong formate")
       }
+      if(passRegex.test(pass.value)){
+ alert("Password must contain uppercase, lowercase, number & special character");
+      }else{
+        console.log(`password => ${pass.value}`);
+      }
+      console.log("form submitted successfully");
 form.reset();
       });
     </script>
