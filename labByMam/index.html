@@ -42,12 +42,12 @@
 <body>
 <div id="container">
 <form >
-    <label for="name">Name</label>
+    <label for="name">Name:</label>
     <input type="text" id="name">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email"><br><br>
     <label for="pass">Password</label>
-    <input type="password"  id="pass">
+    <input type="password" id="pass">
     <input type="submit" value="Submit" id="submit">
 </form>
 </div>
@@ -55,19 +55,17 @@
     let email = document.querySelector("#email")
     let name =document.querySelector("#name")
     let pass = document.querySelector("#pass")
-    
-    form.addEventListener('click', (e)=>{
+    let submit = document.querySelector("#submit")
+    // form.addEventListener('click', (e)=>{
+    //     e.preventDefault();
+    // })
+    submit.addEventListener("click",(e)=>{
         e.preventDefault();
+        console.log(`name => ${name.value}`);
+        console.log(`email => ${email.value}`)
+        console.log(`password => ${pass.value}`)
     })
-email.addEventListener("input",()=>{
-console.log(email.value)
-})
-name.addEventListener("input",()=>{
-console.log(name.value)
-})
-pass.addEventListener("input",()=>{
-console.log(pass.value)
-})
+
    
 </script>
 
