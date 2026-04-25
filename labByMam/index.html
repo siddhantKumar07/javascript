@@ -78,9 +78,19 @@
 
       submit.addEventListener("click", (e) => {
         e.preventDefault();
+        if(name.value.length<=5)
+      {
+        alert("name should be greater than 5")
+      }
+      else{
         console.log(`name => ${name.value}`);
+      }
+      if(email.includes("@")){
         console.log(`email => ${email.value}`);
-        console.log(`password => ${pass.value}`);
+      }else{
+        alert("wrong formate")
+      }
+
       });
     </script>
   </body>
