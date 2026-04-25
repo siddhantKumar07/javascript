@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-color: #cac8c8;
+        }
     #container {
         width: 300px;
         margin: 0 auto;
@@ -17,8 +20,10 @@
         align-items: center;
         position: relative;
         top: 200px;
+        box-shadow: 0 0 10px 2px rgb(189, 172, 172);
     }
     form{
+        width: 100%;
         padding: 40px;
         display: flex;
         flex-direction: column;
@@ -44,16 +49,26 @@
     <label for="pass">Password</label>
     <input type="password"  id="pass">
     <input type="submit" value="Submit" id="submit">
-    <p>register here</p>
 </form>
 </div>
 <script>
     let email = document.querySelector("#email")
     let name =document.querySelector("#name")
     let pass = document.querySelector("#pass")
-    console.log(email.value)
-    console.log(name.value)
-    console.log(pass.value)
+    
+    form.addEventListener('click', (e)=>{
+        e.preventDefault();
+    })
+email.addEventListener("input",()=>{
+console.log(email.value)
+})
+name.addEventListener("input",()=>{
+console.log(name.value)
+})
+pass.addEventListener("input",()=>{
+console.log(pass.value)
+})
+   
 </script>
 
 </body>
