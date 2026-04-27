@@ -158,8 +158,8 @@ function deleteLast() {
 
 function calculate() {
   try {
-    display.value = eval(display.value);
-    display.value = math.evaluate(display.value);
+    // display.value = eval(display.value);
+    display.value = math.evaluate(display.value);//this is the safer way to evaluate the expression, it handles more complex expressions and is less prone to security issues than eval.
   } catch {
     display.value = "Error";
   }
