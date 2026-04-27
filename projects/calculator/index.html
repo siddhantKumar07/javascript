@@ -137,18 +137,17 @@ body {
 </div>
 
 <script>
-    let input = document.querySelector("#display");
-      input.addEventListener("keypress", (e) => {
+    let display = document.querySelector("#display");
+      display.addEventListener("keypress", (e) => {
         if (e.key === "Enter") {
           try {
-            input.value = eval(input.value);
+            display.value = eval(display.value);
           } catch {
-            input.value = "Error";
+            display.value = "Error";
           }
         }
 
       });
-let display = document.getElementById("display");
 
 function appendValue(value) {
   display.value += value;
