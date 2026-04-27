@@ -141,6 +141,16 @@ body {
     input.addEventListener("input", () => {
       console.log(input.value);
       console.log(eval(input.value));
+      input.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          try {
+            input.value = eval(input.value);
+          } catch {
+            input.value = "Error";
+          }
+        }
+
+      });
     });
 let display = document.getElementById("display");
 
