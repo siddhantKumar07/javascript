@@ -138,9 +138,6 @@ body {
 
 <script>
     let input = document.querySelector("#display");
-    input.addEventListener("input", () => {
-      console.log(input.value);
-      console.log(eval(input.value));
       input.addEventListener("keypress", (e) => {
         if (e.key === "Enter") {
           try {
@@ -151,7 +148,6 @@ body {
         }
 
       });
-    });
 let display = document.getElementById("display");
 
 function appendValue(value) {
