@@ -162,6 +162,11 @@ function calculate() {
     display.value = math.evaluate(display.value);//this is the safer way to evaluate the expression, it handles more complex expressions and is less prone to security issues than eval.
   } catch {
     display.value = "Error";
+    if (display.value === "Error") {
+      setTimeout(() => {
+        display.value = "";
+      }, 1500);
+    }
   }
 }
 </script>
