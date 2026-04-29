@@ -160,8 +160,8 @@ function calculate() {
   try {
     // display.value = eval(display.value); //eval is not recommended due to security risks and potential bugs, especially with user input. It can execute arbitrary code if the input is not properly sanitized.
     display.value = math.evaluate(display.value);//this is the safer way to evaluate the expression, it handles more complex expressions and is less prone to security issues than eval.
-  } catch (err){
-    // display.value = err.message;
+  } catch {
+    display.value = "Error";
   }
 }
 </script>
