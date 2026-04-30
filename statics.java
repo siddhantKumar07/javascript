@@ -10,6 +10,8 @@ class statics {
     static void display() {
         System.out.println("Value of a: " + a);
         System.out.println("Static method");
+        int num = 20; // Local variable
+        System.out.println("Local variable num: " + num);
     }
 
     public static void main(String[] args) {
