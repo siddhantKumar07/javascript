@@ -9,7 +9,6 @@ class statics {
     }
     static void display() {
         System.out.println("Value of a: " + a);
-        System.out.println("Static method");
     }
 
     public static void main(String[] args) {
