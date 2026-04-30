@@ -8,6 +8,7 @@ class statics {
         System.out.println("Static Block 2");
     }
     static void display() {
+        System.out.println("Value of a: " + a);
         System.out.println("Static method");
     }
 
