@@ -18,7 +18,7 @@ class child extends parent{
 public class poly {
     public static void main(String[] args) {
         parent obj = new child(); 
-        obj.show();
+        o
     }
    
 }
