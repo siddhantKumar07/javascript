@@ -6,7 +6,8 @@ public class thro {
             System.out.println(arr[5]);
         }
         catch(Exception e){
-    e.getMessage();
+    
+System.out.println(e.getMessage());
     e.printStackTrace();
         }
         // catch(Throwable e){
