@@ -5,9 +5,6 @@ public class thro {
         try{
             System.out.println(arr[5]);
         }
-        catch(Exception e){
-    
-        System.out.println(e.getMessage());
-        }
+      
     }
 }
