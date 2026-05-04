@@ -12,7 +12,7 @@ public class thro {
         }
         // catch(Throwable e){
         //     System.out.println("exception occurs ");
-        // e.printStackTrace();
+        e.printStackTrace();
         // }
     }
 }
