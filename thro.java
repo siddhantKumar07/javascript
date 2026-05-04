@@ -8,5 +8,6 @@ public class thro {
         catch(Exception e){
     
         System.out.println(e.getMessage());
-
+        }
+    }
 }
