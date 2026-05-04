@@ -8,11 +8,5 @@ public class thro {
         catch(Exception e){
     
         System.out.println(e.getMessage());
-        e.printStackTrace();
-        }
-        // catch(Throwable e){
-        //     System.out.println("exception occurs ");
-        e.printStackTrace();
-        // }
-    }
+
 }
