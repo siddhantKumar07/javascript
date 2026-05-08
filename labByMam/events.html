@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+
+    table{
+        border:2px solid blue
+    }
+</style>
 <body>
+    
     <button onclick="alert('hey! this is a alert')" >
         Click! 
     </button>
     choice:
-    <select name="cars" id="cars">
+    <select name="cars" id="cars" style="">
         <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>
         <option value="mercedes">Mercedes</option>
@@ -18,7 +27,47 @@
         <option value="wagnor">Wagnor</option>
         <option value="sp">SPok</option>                      
       </select> 
+      <table >
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>class</th>
+        </tr>
+        <tr>
+            <td>sid</td>
+            <td>21</td>
+            <td>mca</td>
+        </tr>
+        <tr>
+            <td>sidhant</td>
+            <td>21</td>
+            <td>MCA</td>
+        </tr>
+        <tr>
+            <td>sidhant kumar</td>
+            <td>2</td>
+            <td>MCA</td>
+        </tr>
+      </table>
 
-
+      <form >
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+<br>
+        <label for="age">Age :</label>
+        <input type="text" id="age">
+        <br>
+        <input type="submit" value="submit">
+      </form>
+<script>
+    let name = document.querySelector('#name');
+    let age = document.querySelector('#age');
+    let submit = document.querySelector('#submit');
+    submit.addEventListener('click', function(event){
+        event.preventDefault();
+        console.log(name.value);
+        console.log(age.value);
+    })
+</script>
 </body>
 </html>
