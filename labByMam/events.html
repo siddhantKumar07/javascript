@@ -109,8 +109,8 @@ img{
     let img = document.querySelectorAll('img');
     img.forEach(function(image){
         image.addEventListener('click', function(){
-            alert('you clicked on an image');
-            console.log('you clicked on an image');
+           let src = image.getAttribute('src');
+           window.open(src, '_blank');
         })
     })
 
