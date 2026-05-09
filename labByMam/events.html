@@ -12,14 +12,17 @@
     height: 40vh;
     width: 100vw;
    display: flex;
-   white-space: nowrap;
+   white-space: wrap;
+   align-items: center;
+   justify-content: center;
 }
 #secondaryContainer{
     height: 100%;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-shrink: 0;
     overflow-x: scroll;
 }
 img{
