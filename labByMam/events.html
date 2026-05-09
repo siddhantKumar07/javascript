@@ -13,8 +13,6 @@
     width: 100vw;
    display: flex;
    white-space: nowrap;
-   /* align-items: center;
-   justify-content: center; */
 }
 #secondaryContainer{
     height: 100%;
@@ -25,7 +23,9 @@
     flex-shrink: 0;
     overflow-x: scroll;
     gap: 10px;
+    
 }
+
 img{
     height: 100%;
     width: 35%;
@@ -105,6 +105,12 @@ img{
         event.preventDefault();
         console.log(name.value);
         console.log(age.value);
+    })
+    let img = document.querySelectorAll('img');
+    img.forEach(function(image){
+        image.addEventListener('click', function(){
+            alert('you clicked on an image');
+        })
     })
 
 
