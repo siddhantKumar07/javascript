@@ -4,5 +4,5 @@ function  some() {
 some();
 
 let a = some;
-console.log("hello")
+console.log("hello");
 a();
