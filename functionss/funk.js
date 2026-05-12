@@ -4,4 +4,5 @@ function  some() {
 some();
 
 let a = some;
+console.log("hello")
 a();
