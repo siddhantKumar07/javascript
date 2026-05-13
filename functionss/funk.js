@@ -13,6 +13,10 @@ let obj={
         for(let i=0;i<5;i++){
             console.log(i);
         }
-    }
+    },
+    some:"hello"
 }
 obj.mthod();
+console.log(obj.some);
+
+
