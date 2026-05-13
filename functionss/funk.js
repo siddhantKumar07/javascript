@@ -17,6 +17,6 @@ let obj={
     some:"hello"
 }
 obj.mthod();
-console.log(obj.some);
+console.log(obj.some
 
 
