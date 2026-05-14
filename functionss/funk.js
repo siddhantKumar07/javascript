@@ -18,6 +18,6 @@ let obj={
 }
 obj.mthod();
 console.log(obj.some);
-console.log("hey br")
+console.log("hey broo")
 
 
