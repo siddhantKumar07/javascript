@@ -20,6 +20,10 @@ obj.mthod();
 console.log(obj.some);
 console.log("hey broo")
 console.log("hey broo")
+function add(a,b){
+    return a+b;
+}
+console.log(add(2,3));
 
 
 
