@@ -25,5 +25,9 @@ function add(a,b){
 }
 console.log(add(2,3));
 
-
-
+function add(...a){
+return a.forEach(element => {
+    console.log(element);
+});
+}
+add(1,2,3,4,5);
