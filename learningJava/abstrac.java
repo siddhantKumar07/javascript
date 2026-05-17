@@ -15,5 +15,10 @@ abstract class animal{
 
 public class abstrac {
     public static void main(String[] args) {
+
+        dog d = new dog("Buddy");
+        d.sound();
+        d.eat();
+        d.sleep();
     }
 }
