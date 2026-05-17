@@ -14,6 +14,12 @@ class dog extends animal{
     dog(String name){
         super(name);
     }
+    void sound(){
+        System.out.println(name + " says: Woof!");
+    }
+    void sleep() {
+        System.out.println(name + " is sleeping.");
+    }
 
 }
 public class abstrac {
