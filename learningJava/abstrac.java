@@ -5,6 +5,7 @@ abstract class animal{
     animal(String name){
         this.name = name;
     }
+    static int count = 0;
     // also can create the default methods in abstatrct class
     void eat() {
         System.out.println(name + " is eating.");
@@ -29,5 +30,7 @@ public class abstrac {
         d.sound();
         d.eat();
         d.sleep();
+        animal.count++;
+        System.out.println("Number of animals: " + animal.count);
     }
 }
