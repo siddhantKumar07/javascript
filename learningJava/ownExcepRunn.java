@@ -7,7 +7,7 @@ public class ownExcepRunn {
     static int balance = 1000;
     static void Withdrawl(int amount) throws NotSufficientBalance{
   if(amount>balance){
-  throw new NotSufficientBalance("kya re bikhmangya !!!!");
+  throw new NotSufficientBalance("no money !!!!");
   }
   else{
     System.out.println("withdrwal amount = "+amount);
