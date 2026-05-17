@@ -1,5 +1,6 @@
 abstract class animal{
     abstract void sound();
+   abstract void sleep() ;
     String name;
     animal(String name){
         this.name = name;
@@ -8,11 +9,13 @@ abstract class animal{
     void eat() {
         System.out.println(name + " is eating.");
     }
-    void sleep() {
-        System.out.println(name + " is sleeping.");
-    }
 }
+class dog extends animal{
+    dog(String name){
+        super(name);
+    }
 
+}
 public class abstrac {
     public static void main(String[] args) {
 
