@@ -12,6 +12,7 @@ public class NewGEn{
 System.out.println(data);
     }
     public static void main(String[] args) {
-        
+        NewGEn obj = new NewGEn();
+        obj.hey("heellllloooooo");
     }
 }
