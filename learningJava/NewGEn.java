@@ -8,6 +8,9 @@ class any<T>{
 
 
 public class NewGEn{
+    <T> void hey(T data){
+System.out.println(data);
+    }
     public static void main(String[] args) {
         
     }
