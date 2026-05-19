@@ -64,7 +64,7 @@ section{
 span{
     color: white;
 }
-section div{
+section #todo, #progress,#done{
     border: 2px solid #fffafa;
     border-radius: 20px;
     padding: 10px;
@@ -75,4 +75,7 @@ section div{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    border-radius: inherit;
+    padding: 10px;
+    border: 2px solid #fffafa;
 }
