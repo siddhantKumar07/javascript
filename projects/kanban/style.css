@@ -64,10 +64,14 @@ span {
   color: white;
 }
 section > * {
-  border: 2px solid #fffafa;
   border-radius: 20px;
   padding: 10px;
   background-color: #312d2d;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+section > *:hover {
+  border: 3px dashed white;
+  scale: 1.02;
 }
 
 .top {
@@ -83,12 +87,13 @@ section > * {
   padding: 5px;
   padding-bottom: 10px;
   border-radius: 5px;
-  cursor: move;
+  cursor: grab;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   border: 2px solid #fffafa;
   background-color: #575353;
+  
 }
 .tasktitle {
   font-size: 1.3rem;
