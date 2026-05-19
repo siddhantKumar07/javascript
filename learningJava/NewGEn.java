@@ -17,5 +17,6 @@ System.out.println(data);
         obj.hey(555555555555555l);
         any<String> obj2 = new any<>();
         obj2.hello("hiiiiiiiiiiiiiiiiiiiii");
+
     }
 }
