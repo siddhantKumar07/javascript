@@ -57,7 +57,7 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 35px 55px;
-  column-gap: 80px;
+  column-gap: 50px;
   background-color: black;
 }
 span {
@@ -69,7 +69,7 @@ section > * {
   background-color: #312d2d;
   transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
-section > *:hover {
+section .dotted {
   border: 3px dashed white;
   scale: 1.02;
 }
@@ -100,12 +100,15 @@ section > *:hover {
   font-weight: bold;
 }
 .task button {
-  padding: 7px 10px;
+ height: 34%;
+ width: 25%;
   background-color: #fc4242;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 1px;
   margin-left: auto;
+  flex-shrink: 0;
+  margin-bottom: 5px;
 }
