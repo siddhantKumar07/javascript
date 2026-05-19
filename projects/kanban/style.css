@@ -50,11 +50,18 @@ nav{
     font-size: 1.1rem;
 }
 section{
-    height: 100vh;
-    width: 100vw;
+    height: 80vh;
+    width: 90vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    margin-top: 15px;
-    margin: 15px 25px;
+    margin: 15px 85px;
+    column-gap: 70px;
+    border-radius: 15px;
+
+}
+div{
+    border: 2px solid #3e3a3a;
+    border-radius: inherit;
+    padding: 10px;
 }
