@@ -9,6 +9,10 @@ html,body{
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+main{
+    height: 100%;
+    width: 100%;
+}
 nav{
     height: 10%;
     width: 100%;
@@ -44,4 +48,13 @@ nav{
       border: 2px solid white;
     font-weight: bold;
     font-size: 1.1rem;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 15px;
+    margin: 15px 25px;
 }
