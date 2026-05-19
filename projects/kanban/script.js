@@ -7,22 +7,13 @@ tasks.forEach((task) => {
     console.log(e);
   });
 });
-todo.addEventListener("dragenter", (e) => {
-  todo.classList.add("dotted");
-});
-todo.addEventListener("dragleave", (e) => {
-  todo.classList.remove("dotted");
-});
 
-doing.addEventListener("dragenter", (e) => {
-  doing.classList.add("dotted");
+function dashedscale(child){
+child.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+  child.classList.add("dotted");
 });
-doing.addEventListener("dragleave", (e) => {
-  doing.classList.remove("dotted");
-});
-done.addEventListener("dragenter", (e) => {
-  done.classList.add("dotted");
-});
-done.addEventListener("dragleave", (e) => {
-  done.classList.remove("dotted");
-});
+child.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+  child.classList.remove("dotted");
+});}
