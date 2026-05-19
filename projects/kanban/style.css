@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    height: 10%;
+    width: 100%;
+    background-color: #3e3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    
+}
+#kanbantxt{
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#addtask button{
+    padding: 12px 20px;
+    background-color: #675959;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+      border: 2px solid #675959;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+#addtask button:hover{
+    background-color: #675959;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+      border: 2px solid white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
