@@ -15,5 +15,7 @@ System.out.println(data);
         NewGEn obj = new NewGEn();
         obj.hey("heellllloooooo");
         obj.hey(555555555555555l);
+        any<String> obj2 = new any<>();
+        obj2.hello("hiiiiiiiiiiiiiiiiiiiii");
     }
 }
