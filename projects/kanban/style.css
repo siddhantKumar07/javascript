@@ -1,92 +1,106 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
-html,body{
-    height: 100%;
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-main{
-    height: 100%;
-    width: 100%;
+main {
+  height: 100%;
+  width: 100%;
 }
-nav{
-    height: 10%;
-    width: 100%;
-    background-color: #3e3a3a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px;
-    
+nav {
+  height: 10%;
+  width: 100%;
+  background-color: #3e3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
 }
-#kanbantxt{
-    color: white;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+#kanbantxt {
+  color: white;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
-#addtask button{
-    padding: 12px 20px;
-    background-color: #675959;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-      border: 2px solid #675959;
-    font-weight: bold;
-    font-size: 1.1rem;
+#addtask button {
+  padding: 12px 20px;
+  background-color: #675959;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #675959;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
-#addtask button:hover{
-    background-color: #675959;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-      border: 2px solid white;
-    font-weight: bold;
-    font-size: 1.1rem;
+#addtask button:hover {
+  background-color: #675959;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
-section{
-    min-height: 90%;
-    max-height: fit-content;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 35px 55px;
-    column-gap: 80px;
-    background-color: black;
+section {
+  min-height: 90%;
+  max-height: fit-content;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 35px 55px;
+  column-gap: 80px;
+  background-color: black;
+}
+span {
+  color: white;
+}
+section > * {
+  border: 2px solid #fffafa;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #312d2d;
+}
 
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 7px;
 }
-span{
-    color: white;
+.task {
+  height: 15vh;
+  color: white;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 2px solid #fffafa;
+  background-color: #575353;
 }
-section #todo, #progress,#done{
-    border: 2px solid #fffafa;
-    border-radius: 20px;
-    padding: 10px;
-
+.tasktitle {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
-.top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    border: 2px solid #fffafa;
-}
-.task{
-    background-color: #675959;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: move;
-}
-.task span{
-    display: block;
+.task button {
+  padding: 7px 10px;
+  background-color: #fc4242;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: auto;
 }
