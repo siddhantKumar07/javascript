@@ -75,7 +75,18 @@ section #todo, #progress,#done{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    border-radius: inherit;
+    border-radius: 5px;
     padding: 10px;
     border: 2px solid #fffafa;
+}
+.task{
+    background-color: #675959;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: move;
+}
+.task span{
+    display: block;
 }
