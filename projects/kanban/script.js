@@ -17,3 +17,6 @@ child.addEventListener("dragleave", (e) => {
     e.preventDefault();
   child.classList.remove("dotted");
 });}
+dashedscale(todo);
+dashedscale(doing);
+dashedscale(done);
