@@ -13,16 +13,33 @@ let addNewTaskbtn=document.querySelector("#addNewTaskbtn");
 addNewTaskbtn.addEventListener("click",()=>{
   form.style.display="block";
 })
-submitbtn.addEventListener('click', (e)=>{
-e.preventDefault();
-container.innerHTML+=`<div draggable="true" class="task">
-                <span class="tasktitle">${taskname.value}</span>
-                <span class="taskdesc">${description.value}</span>
-                <button>DELETE</button>
-            </div>`
-            form.style.display="none";
-            form.reset();
-})
+submitbtn.addEventListener('click', (e) => {
+
+    e.preventDefault();
+
+    let task = document.createElement("div");
+
+    task.classList.add("task");
+
+    task.setAttribute("draggable", "true");
+
+    task.innerHTML = `
+        <span class="tasktitle">${taskname.value}</span>
+        <span class="taskdesc">${description.value}</span>
+        <button>DELETE</button>
+    `;
+
+    task.addEventListener("dragstart", () => {
+        dragElement = task;
+    });
+
+    container.append(task);
+
+    form.style.display = "none";
+
+    form.reset();
+});
+
 
 tasks.forEach((task) => {
   task.addEventListener("drag", (e) => {
@@ -52,8 +69,3 @@ function dashedscale(child){
 dashedscale(todo);
 dashedscale(doing);
 dashedscale(done);
-
-
-
-
-
