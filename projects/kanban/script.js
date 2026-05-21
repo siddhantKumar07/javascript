@@ -2,9 +2,11 @@ let todo = document.querySelector("#todo");
 let doing = document.querySelector("#progress");
 let done = document.querySelector("#done");
 let tasks = document.querySelectorAll(".task");
+let dragElement =null;
 tasks.forEach((task) => {
   task.addEventListener("drag", (e) => {
-    // console.log(e);
+    
+  dragElement=task;
   });
 });
 
@@ -21,6 +23,8 @@ function dashedscale(child){
 
   child.addEventListener("drop", (e) => {
       child.classList.remove("dotted");
+      child.append(dragElement);
+      
   console.log(e);
   });
 }
