@@ -27,3 +27,4 @@ function dashedscale(child){
 dashedscale(todo);
 dashedscale(doing);
 dashedscale(done);
+console.lo("iikhj")
