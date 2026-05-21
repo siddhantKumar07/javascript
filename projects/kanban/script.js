@@ -30,5 +30,5 @@ dashedscale(done);
 
 function pageXOffset(){
 requestIdleCallback;
-ResizeObserver;
+
 }
