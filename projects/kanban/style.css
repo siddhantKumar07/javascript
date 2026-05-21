@@ -121,8 +121,8 @@ form{
   right:50%;
   height:25vh;
   width:25vw;
-  background-color: #ff8080;
-  transform: translate(50%,-40%);
+  background-color: #4f9f84;
+  transform: translate(50%,-50%);
   border-radius: 10px;
   border: 2px solid;
   padding: 15px;
@@ -138,13 +138,13 @@ form input{
   border: none;
 }
 #submitbtn{
-  background-color: #3e3a3a;
+  background-color: #701a1a;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 1.1rem;
-  margin-left: 50%;
+  margin-left: 40%;
 }

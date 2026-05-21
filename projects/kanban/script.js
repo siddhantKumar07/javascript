@@ -20,9 +20,9 @@ container.innerHTML+=`<div draggable="true" class="task">
                 <span class="taskdesc">${description.value}</span>
                 <button>DELETE</button>
             </div>`
+            form.style.display="none";
+            form.reset();
 })
-
-
 
 tasks.forEach((task) => {
   task.addEventListener("drag", (e) => {
@@ -52,4 +52,8 @@ function dashedscale(child){
 dashedscale(todo);
 dashedscale(doing);
 dashedscale(done);
-console.lo("iikhj")
+
+
+
+
+
