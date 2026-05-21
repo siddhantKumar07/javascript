@@ -80,6 +80,7 @@ section .dotted {
   align-items: center;
   margin-bottom: 10px;
   padding: 7px;
+  gap 
 }
 .task {
   height: 15vh;
