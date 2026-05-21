@@ -27,3 +27,8 @@ function dashedscale(child){
 dashedscale(todo);
 dashedscale(doing);
 dashedscale(done);
+
+function pageXOffset(){
+requestIdleCallback;
+ResizeObserver;
+}
