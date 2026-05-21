@@ -24,7 +24,7 @@ function dashedscale(child){
   child.addEventListener("drop", (e) => {
       child.classList.remove("dotted");
       child.append(dragElement);
-      
+       
   console.log(e);
   });
 }
