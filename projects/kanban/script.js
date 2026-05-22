@@ -14,10 +14,10 @@ addNewTaskbtn.addEventListener("click",()=>{
   form.style.display="block";
 })
 submitbtn.addEventListener('click', (e) => {
-  // if(taskname.value=="" || description.value==""){
-  //   alert("Please fill all the fields");
-  //   return;
-  // }
+  if(taskname.value=="" || description.value==""){
+    alert("Please fill all the fields");
+    return;
+  }
     e.preventDefault();
 
     let task = document.createElement("div");
