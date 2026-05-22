@@ -51,7 +51,7 @@ nav {
 }
 section {
   min-height: 90%;
-  max-height: fit-content;
+  max-height: 90%;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -59,6 +59,7 @@ section {
   padding: 35px 55px;
   column-gap: 50px;
   background-color: black;
+  overflow-y:scroll;
 }
 span {
   color: white;
@@ -68,6 +69,7 @@ section > * {
   padding: 10px;
   background-color: #312d2d;
   transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  overflow-y: scroll;
 }
 section .dotted {
   border: 3px dashed white;
