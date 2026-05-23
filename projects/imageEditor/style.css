@@ -34,9 +34,9 @@ main {
     border: 1px solid black;
     grid-area: buttons;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: var(--gap-lg);
+    gap: var(--gap-xxl);
     background: var(--medium);
 }
 .button-group button{
@@ -56,30 +56,55 @@ main {
 }
 .button-group input{
     padding: var(--padding-sm);
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     border-radius: var(--border-radius-md);
     border: 2px solid;
     background: var(--button-color);
     color: var(--primary-color);
     cursor: pointer;
 
-}
-.button-group input:hover {
-    background: var(--button-color-hover);
-}
-button-group input::file-selector-button {
-    background: var(--button-color-hover);
-}
-.button-group input::file-selector-button{
-    background: var(--button-color);
-    border: none;
-    padding: var(--padding-sm) var(--padding-md);
-    font-size: var(--font-size-md);
-    border-radius: var(--border-radius-md);
-    color: var(--primary-color);
-    cursor: pointer;
 
 }
+#upload{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--padding-sm) var(--padding-lg);
+
+    font-size: var(--font-size-md);
+    font-weight: 500;
+
+    border-radius: var(--border-radius-md);
+    border: none;
+
+    background: var(--button-color);
+    color: var(--primary-color);
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hover */
+#upload:hover{
+    background: var(--button-color-hover);
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Click Effect */
+#upload:active{
+    transform: scale(0.97);
+}
+
+
 .preview{
     height: 100%;
     background: var(--low);
@@ -102,4 +127,8 @@ button-group input::file-selector-button {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    font-size: var(--font-size-lg);
+    padding: var(--padding-md);
+    color: var(--primary-color);
+
 }

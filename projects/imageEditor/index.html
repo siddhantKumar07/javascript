@@ -10,17 +10,19 @@
   <body>
     <main>
       <div class="button-group">
+       <label for="file-input" id="upload">Upload Image</label>
         <input
           type="file"
           id="file-input"
           accept="image/*"
-          value="Upload Image"
+          hidden
         />
         <button id="reset">Reset</button>
         <button id="download">Download</button>
         <button id="url">
             <input type="text" id="image-url" placeholder="Enter image URL" />
         </button>
+
       </div>
       <div class="preview">
         <img id="preview-image" src="" alt="Preview Image" />
