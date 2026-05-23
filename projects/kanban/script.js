@@ -9,9 +9,13 @@ let submitbtn=document.querySelector("#submitbtn");
 let taskname=document.querySelector("#taskname");
 let description=document.querySelector("#description"); 
 let addNewTaskbtn=document.querySelector("#addNewTaskbtn");
+let main=document.querySelector("main");
 
 addNewTaskbtn.addEventListener("click",()=>{
   form.style.display="block";
+    // main.style.opacity="0.5";
+   main.style.filter = "blur(5px)";
+
 })
 submitbtn.addEventListener('click', (e) => {
   if(taskname.value=="" || description.value==""){
