@@ -10,6 +10,9 @@ let taskname=document.querySelector("#taskname");
 let description=document.querySelector("#description"); 
 let addNewTaskbtn=document.querySelector("#addNewTaskbtn");
 let main=document.querySelector("main");
+let todoCount = document.querySelector("#todoCount");
+let progressCount = document.querySelector("#progressCount");
+let doneCount = document.querySelector("#doneCount");
 
 addNewTaskbtn.addEventListener("click",()=>{
   form.style.display="block";
@@ -21,6 +24,7 @@ submitbtn.addEventListener('click', (e) => {
     alert("Please fill all the fields");
     return;
   }
+  main.style.filter = "blur(0px)";
     e.preventDefault();
 
     let task = document.createElement("div");
@@ -68,8 +72,12 @@ function dashedscale(child){
   child.addEventListener("drop", (e) => {
       child.classList.remove("dotted");
       child.append(dragElement);
-       
+       count[0].innerText =e.target.childElementCount-1;
+       count[1].innerText =e.target.childElementCount-1;
+       count[2].innerText =e.target.childElementCount-1;
   console.log(e);
+  console.log(e.target.childElementCount);
+  console.log(count);
   });
 }
 dashedscale(todo);
