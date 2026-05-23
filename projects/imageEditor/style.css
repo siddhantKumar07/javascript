@@ -132,3 +132,13 @@ main {
     color: var(--primary-color);
 
 }
+
+.adjust label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.adjust input[type="range"]{
+    width: 90%;
+}
+
