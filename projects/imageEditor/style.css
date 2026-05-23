@@ -32,7 +32,6 @@ main {
 .button-group{
     border: 1px solid black;
     grid-area: buttons;
-
     display: flex;
     justify-content: center;
     align-items: center;
