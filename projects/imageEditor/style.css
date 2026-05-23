@@ -33,10 +33,51 @@ main {
     border: 1px solid black;
     grid-area: buttons;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    gap: var(--gap-lg);
     background: var(--medium);
+}
+.button-group button{
+    padding: var(--padding-md) var(--padding-lg);
+    font-size: var(--font-size-md);
+    border-radius: var(--border-radius-md);
+    border: none;
+    background: var(--button-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.button-group button:hover{
+    background: var(--button-color-hover);
+}
+.button-group button:active{
+    background: var(--button-color-hover);
+}
+.button-group input{
+    padding: var(--padding-md);
+    font-size: var(--font-size-md);
+    border-radius: var(--border-radius-md);
+    border: none;
+    background: var(--button-color);
+    color: var(--primary-color);
+    cursor: pointer;
+
+}
+.button-group input:hover {
+    background: var(--button-color-hover);
+}
+button-group input::file-selector-button {
+    background: var(--button-color-hover);
+}
+.button-group input::file-selector-button{
+    background: var(--button-color);
+    border: none;
+    padding: var(--padding-sm) var(--padding-md);
+    font-size: var(--font-size-md);
+    border-radius: var(--border-radius-md);
+    color: var(--primary-color);
+    cursor: pointer;
+
 }
 .preview{
     background: var(--low);
