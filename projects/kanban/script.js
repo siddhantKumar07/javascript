@@ -13,7 +13,6 @@ let main=document.querySelector("main");
 
 addNewTaskbtn.addEventListener("click",()=>{
   form.style.display="block";
-    // main.style.opacity="0.5";
    main.style.filter = "blur(5px)";
 
 })
