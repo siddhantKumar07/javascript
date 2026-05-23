@@ -1,24 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
- 
-<main>
-    <div class="button-group">
-            <input type="file" id="file-input" accept="image/*"value="Upload Image">
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="button-group">
+        <input
+          type="file"
+          id="file-input"
+          accept="image/*"
+          value="Upload Image"
+        />
         <button id="reset">Reset</button>
         <button id="download">Download</button>
-    </div>
-    <div class="preview"></div>
-    <div class="adjust"></div>
-</main>
+      </div>
+      <div class="preview">
+        <img id="preview-image" src="" alt="Preview Image" />
+      </div>
+      <div class="adjust">
+        <label for="brightness">Brightness</label>
+        <input type="range" id="brightness" min="0" max="200" value="100" />
+        <label for="contrast">Contrast</label>
+        <input type="range" id="contrast" min="0" max="200" value="100" />
+        <label for="saturation">Saturation</label>
+        <input type="range" id="saturation" min="0" max="200" value="100" />
+        <label for="grayscale">Grayscale</label>
+        <input
+          type="range"
+          id="grayscale"
+          min="0"
+          max="100
+"
+          value="0"
+        />
+        <label for="sepia">Sepia</label>
+        <input type="range" id="sepia" min="0" max="100" value="0" />
+      </div>
+    </main>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

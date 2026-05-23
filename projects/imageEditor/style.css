@@ -39,7 +39,7 @@ main {
     background: var(--medium);
 }
 .button-group button{
-    padding: var(--padding-md) var(--padding-lg);
+    padding: var(--padding-sm) var(--padding-md);
     font-size: var(--font-size-md);
     border-radius: var(--border-radius-md);
     border: none;
@@ -54,7 +54,7 @@ main {
     background: var(--button-color-hover);
 }
 .button-group input{
-    padding: var(--padding-md);
+    padding: var(--padding-sm);
     font-size: var(--font-size-md);
     border-radius: var(--border-radius-md);
     border: none;
@@ -86,6 +86,11 @@ button-group input::file-selector-button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.preview img{
+    max-width: 90%;
+    max-height: 100%;
+    object-fit: cover;
 }
 .adjust{
     background: var(--top);
