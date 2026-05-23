@@ -2,6 +2,15 @@ let inputImage = document.getElementById("file-input");
 let previewImage = document.getElementById("preview-image");
 let reset =document.querySelector("#reset");
 let download = document.querySelector("#download");
+let urlInput = document.getElementById("image-url");
+
+// for url input
+urlInput.addEventListener("input",(e)=>{
+    previewImage.src = e.target.value;
+    urlInput.value = "";
+});
+
+// for to select the image fro the local coputer
 inputImage.addEventListener("input",(e)=>{
 previewImage.src = URL.createObjectURL(e.target.files[0]);
 inputImage.value = "";
