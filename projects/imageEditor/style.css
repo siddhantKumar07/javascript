@@ -126,9 +126,9 @@ main {
     grid-area: adjust;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     font-size: var(--font-size-lg);
-    padding: var(--padding-md);
+    padding: var(--padding-sm);
+    gap: var(--gap-sm);
     color: var(--primary-color);
 
 }
