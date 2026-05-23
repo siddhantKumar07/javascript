@@ -72,12 +72,10 @@ function dashedscale(child){
   child.addEventListener("drop", (e) => {
       child.classList.remove("dotted");
       child.append(dragElement);
-       count[0].innerText =e.target.childElementCount-1;
-       count[1].innerText =e.target.childElementCount-1;
-       count[2].innerText =e.target.childElementCount-1;
+       todoCount.innerText =todo.childElementCount-2;
+       progressCount.innerText =doing.childElementCount-1;
+       doneCount.innerText =done.childElementCount-1;
   console.log(e);
-  console.log(e.target.childElementCount);
-  console.log(count);
   });
 }
 dashedscale(todo);
