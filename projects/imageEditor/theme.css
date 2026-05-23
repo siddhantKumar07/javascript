@@ -3,4 +3,12 @@
   --medium:#3B7597;
   --low:#6FD1D7;
   --lowest:#5DF8D8;
+
+  /* for padding  */
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 2rem;
+  --padding-xxl: 3rem;
 }
+
