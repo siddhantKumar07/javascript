@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -149,4 +149,285 @@ form input{
   padding: 10px 20px;
   font-size: 1.1rem;
   margin-left: 40%;
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  overflow: hidden;
+}
+
+
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+
+nav {
+  min-height: 70px;
+  width: 100%;
+  background-color: #242222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+#kanbantxt {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#addtask button {
+  padding: 12px 22px;
+  background-color: #675959;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+#addtask button:hover {
+  border: 2px solid white;
+  transform: scale(1.03);
+}
+
+
+section {
+  height: calc(100% - 70px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 25px;
+  background-color: #111;
+  overflow-y: auto;
+}
+
+
+section > * {
+  background-color: #222;
+  border-radius: 18px;
+  padding: 15px;
+  overflow-y: auto;
+  min-height: 500px;
+  transition: 0.3s ease;
+  border: 1px solid #333;
+}
+
+section .dotted {
+  border: 3px dashed white;
+  transform: scale(1.02);
+}
+
+
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.top span {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.task {
+  min-height: 150px;
+  background-color: #3b3737;
+  color: white;
+  padding: 15px;
+  border-radius: 14px;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #555;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.task:hover {
+  transform: translateY(-3px);
+}
+
+.tasktitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.taskdesc {
+  color: #d6d6d6;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+
+
+.task button {
+  padding: 10px 16px;
+  background-color: #ff4b4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: auto;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.task button:hover {
+  background-color: #ff2222;
+  transform: scale(1.03);
+}
+
+
+form {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  max-width: 90%;
+  background-color: #1f1f1f;
+  transform: translate(-50%, -50%);
+  border-radius: 18px;
+  border: 1px solid #444;
+  padding: 25px;
+  z-index: 100;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+  color: white;
+  margin-bottom: 18px;
+  outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #777;
+}
+
+
+
+#submitbtn {
+  width: 100%;
+  background-color: #0d8b5c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+#submitbtn:hover {
+  background-color: #0ab372;
+}
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 20px;
+}
+
+
+
+@media (max-width: 1000px) {
+
+  section {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  section > * {
+    min-height: auto;
+  }
+
+  nav {
+    padding: 15px;
+  }
+
+  #kanbantxt {
+    font-size: 1.4rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #addtask button {
+    width: 100%;
+  }
+
+  .task {
+    min-height: 130px;
+  }
+
+  .tasktitle {
+    font-size: 1rem;
+  }
+
+  .taskdesc {
+    font-size: 0.9rem;
+  }
+
+  form {
+    width: 92%;
+    padding: 20px;
+  }
+
 }
