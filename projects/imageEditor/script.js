@@ -31,6 +31,3 @@ download.addEventListener("click",()=>{
         a.click();
     }
 });
-
-
-// previewImage.src = URL.createObjectURL(e.target.files[0]);
