@@ -182,7 +182,6 @@ margin-left: var(--margin-lg);
     flex-direction: column;
     font-size: var(--font-size-lg);
     padding: var(--padding-lg);
-    gap: var(--gap-sm);
     color: var(--primary-color);
 
 }

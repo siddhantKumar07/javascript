@@ -101,13 +101,13 @@ const filters={
         step:1
     },
     blur:{  
-        name:"Blur",
-        unit:"px",
-        default:0,
-        min:0,
-        max:20,
-        step:0.1
-    },
+    name:"Blur",
+    unit:"px",
+    default:0,
+    min:0,
+    max:20,
+    step:0.1
+},
     hueRotation:{
         name:"Hue Rotation",
         unit:"deg",
@@ -150,7 +150,7 @@ let adjustcontainer = document.querySelector(".adjust")
 
 for(let key in filters){
     let filter = filters[key];
-    let building = createfilters(filter.name,filter.unit,filter.defaultValue,filter.min,filter.max,filter.step);
+    let building = createfilters(filter.name,filter.unit,filter.default,filter.min,filter.max,filter.step);
 
     // storing the returned element in to the adjust container
 
