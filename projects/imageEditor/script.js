@@ -156,3 +156,7 @@ for(let key in filters){
 
     adjustcontainer.append(building);
 }
+
+//canvas 
+
+let canvasImg = document.querySelector("#canvas");
