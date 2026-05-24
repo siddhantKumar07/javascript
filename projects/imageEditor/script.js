@@ -119,29 +119,6 @@ const filters={
 
 }
 
-function createFilter(name,unit,defaultValue,min,max,step){
-    let filterContainer = document.createElement("div");
-    filterContainer.classList.add("filter");
-    let label = document.createElement("label");
-    label.textContent = name;
-    let input = document.createElement("input");
-    input.type = "range";
-    input.min = min;
-    input.max = max;
-    input.value = defaultValue;
-    input.step = step;
-    filterContainer.appendChild(label);
-    filterContainer.appendChild(input);
-    return filterContainer;
-}
-
-let adjustContainer = document.querySelector(".adjust");
-for(let key in filters){
-    let filter = filters[key];
-    let filterElement = createFilter(filter.name,filter.unit,filter.default,filter.min,filter.max,filter.step);
-    adjustContainer.appendChild(filterElement);
-}
-
 function createfilters(name,unit,defaultValue,min,max,step){
 
     // creating the container;
@@ -149,7 +126,7 @@ let container = document.createElement("div");
 
 //creating the label for the name;
 let label = document.createElement("label");
-label.name=name;
+label.textContent=name;
 
 // creating the input type range according to the parameter
 let input = document.createElement("input");
@@ -163,4 +140,19 @@ input.step=step;
 container.appendChild(label);
 container.appendChild(input);
 
+// return the container
+return container;
+}
+
+let adjustcontainer = document.querySelector(".adjust")
+
+// selecting the data from the objects
+
+for(let key in filters){
+    let filter = filters[key];
+    let building = createfilters(filter.name,filter.unit,filter.defaultValue,filter.min,filter.max,filter.step);
+
+    // storing the returned element in to the adjust container
+
+    adjustcontainer.append(building);
 }
