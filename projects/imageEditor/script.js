@@ -3,9 +3,53 @@ let reset =document.querySelector("#reset");
 let download = document.querySelector("#download");
 let urlInput = document.getElementById("image-url");
 
-// for url input
-urlInput.addEventListener("input",(e)=>{
-    previewImage.src = e.target.value;
+urlInput.addEventListener("change", (e) => {
+
+    const img = new Image();
+
+    img.crossOrigin = "anonymous";
+
+    img.src = e.target.value;
+
+    img.onload = () => {
+
+        const displayWidth = canvasImg.clientWidth;
+        const displayHeight = canvasImg.clientHeight;
+
+        const dpr = window.devicePixelRatio || 1;
+
+        canvasImg.width = displayWidth * dpr;
+        canvasImg.height = displayHeight * dpr;
+
+        ctx.scale(dpr, dpr);
+
+        ctx.clearRect(0, 0, displayWidth, displayHeight);
+
+        // keep aspect ratio
+        const imgRatio = img.width / img.height;
+        const canvasRatio = displayWidth / displayHeight;
+
+        let drawWidth;
+        let drawHeight;
+
+        if (imgRatio > canvasRatio) {
+            drawWidth = displayWidth;
+            drawHeight = displayWidth / imgRatio;
+        } else {
+            drawHeight = displayHeight;
+            drawWidth = displayHeight * imgRatio;
+        }
+
+        const x = (displayWidth - drawWidth) / 2;
+        const y = (displayHeight - drawHeight) / 2;
+
+        ctx.drawImage(img, x, y, drawWidth, drawHeight);
+    };
+
+    img.onerror = () => {
+        alert("Image failed to load");
+    };
+
     urlInput.value = "";
 });
 
