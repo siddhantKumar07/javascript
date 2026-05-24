@@ -190,7 +190,7 @@ margin-left: var(--margin-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--margin-sm);
+    margin-top: var(--margin-sm);
 }
 .adjust input[type="range"]{
     appearance: none;

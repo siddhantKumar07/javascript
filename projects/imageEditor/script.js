@@ -45,7 +45,7 @@ try{
 // for filters 
 const filters={
     brightness:{
-        name:"Brightness",
+        name:"Brightness :",
         unit:"%",
         default:100,
         min:0,
@@ -53,7 +53,7 @@ const filters={
         step:1
     },
     contrast:{
-        name:"Contrast",
+        name:"Contrast :",
         unit:"%",
         default:100,    
         min:0,
@@ -61,7 +61,7 @@ const filters={
         step:1
     },
     exposure:{
-        name:"Exposure",
+        name:"Exposure :",
         unit:"%",
         default:100,
         min:0,
@@ -69,7 +69,7 @@ const filters={
         step:1
     },
     saturation:{
-        name:"Saturation",
+        name:"Saturation :",
         unit:"%",
         default:100,
         min:0,
@@ -77,7 +77,7 @@ const filters={
         step:1
     },
     grayscale:{
-        name:"Grayscale",
+        name:"Grayscale :",
         unit:"%",
         default:0,
         min:0,
@@ -85,7 +85,7 @@ const filters={
         step:1
     },
     sepia:{
-        name:"Sepia",
+        name:"Sepia :",
         unit:"%",
         default:0,
         min:0,
@@ -93,7 +93,7 @@ const filters={
         step:1
     },
     invert:{
-        name:"Invert",
+        name:"Invert :",
         unit:"%",
         default:0,
         min:0,
@@ -101,7 +101,7 @@ const filters={
         step:1
     },
     blur:{  
-    name:"Blur",
+    name:"Blur :",
     unit:"px",
     default:0,
     min:0,
@@ -109,7 +109,7 @@ const filters={
     step:0.1
 },
     hueRotation:{
-        name:"Hue Rotation",
+        name:"Hue Rotation :",
         unit:"deg",
         default:0,
         min:0,
