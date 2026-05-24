@@ -118,3 +118,27 @@ const filters={
     }
 
 }
+
+function createFilter(name,unit,defaultValue,min,max,step){
+    let filterContainer = document.createElement("div");
+    filterContainer.classList.add("filter");
+    let label = document.createElement("label");
+    label.textContent = name;
+    let input = document.createElement("input");
+    input.type = "range";
+    input.min = min;
+    input.max = max;
+    input.value = defaultValue;
+    input.step = step;
+    filterContainer.appendChild(label);
+    filterContainer.appendChild(input);
+    return filterContainer;
+}
+
+let adjustContainer = document.querySelector(".adjust");
+for(let key in filters){
+    let filter = filters[key];
+    let filterElement = createFilter(filter.name,filter.unit,filter.default,filter.min,filter.max,filter.step);
+    adjustContainer.appendChild(filterElement);
+}
+
