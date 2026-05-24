@@ -259,7 +259,7 @@ for(let key in filters){
 
 
 function applyFilters(){
-   ctx.filter='blur(5px'
+   ctx.filter='blur(5px)'
    ctx.drawImage(image,x,y,drawWidth,drawHeight);
 }
 
