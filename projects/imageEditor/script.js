@@ -111,7 +111,17 @@ inputImage.addEventListener("change", (e) => {
 
 // for reset button
 reset.addEventListener("click",()=>{
-    image.src = " ";
+
+    // remove filters
+    ctx.filter = "none";
+
+    // clear canvas
+    ctx.clearRect(0,0,canvasImg.width,canvasImg.height);
+
+    // reset filters object
+    for(let key in filterForApply){
+        delete filterForApply[key];
+    }
 });
 
 // for download the image 
