@@ -2,7 +2,8 @@
 let reset =document.querySelector("#reset");
 let download = document.querySelector("#download");
 let urlInput = document.getElementById("image-url");
-
+let file =null;
+let image=null;
 urlInput.addEventListener("change", (e) => {
 
     const img = new Image();
@@ -60,14 +61,14 @@ let ctx = canvasImg.getContext("2d");
 
 inputImage.addEventListener("change", (e) => {
 
-    const file = e.target.files[0];
+    file = e.target.files[0];
 
     const img = new Image();
 
     img.src = URL.createObjectURL(file);
 
     img.onload = () => {
-
+  image = img;
     const displayWidth = canvasImg.clientWidth;
     const displayHeight = canvasImg.clientHeight;
 
@@ -256,4 +257,18 @@ for(let key in filters){
     adjustcontainer.append(building);
 }
 
+
+function applyFilters(){
+    let filterString = "";
+    let inputs = adjustcontainer.querySelectorAll("input");
+    inputs.forEach(input=>{
+        let value = input.value;
+        let unit = input.unit;
+        let name = input.previousSibling.textContent.split(":")[0].toLowerCase();
+        filterString += `${name}(${value}${unit}) `;
+    });
+    image.style.filter = filterString;
+}
+
+adjustcontainer.addEventListener("input",applyFilters);
 
