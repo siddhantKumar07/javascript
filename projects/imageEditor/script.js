@@ -10,7 +10,7 @@ urlInput.addEventListener("input",(e)=>{
     urlInput.value = "";
 });
 
-// for to select the image fro the local coputer
+// for to select the image from the local coputer
 inputImage.addEventListener("input",(e)=>{
 previewImage.src = URL.createObjectURL(e.target.files[0]);
 inputImage.value = "";

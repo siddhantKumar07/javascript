@@ -191,7 +191,17 @@ margin-left: var(--margin-lg);
     justify-content: space-between;
     align-items: center;
 }
-.adjust input[type="range"]{
+.adjust input{
     width: 90%;
+    cursor: grab;
+    appearance: none;
+}
+.adjust input::-webkit-slider-thumb {
+    appearance: none !important;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var( --top);
+    cursor: pointer;
 }
 
