@@ -34,10 +34,10 @@ main {
     border: 1px solid black;
     grid-area: buttons;
     display: flex;
-    justify-content: space-between;
+    justify-content:center ;
     align-items: center;
     gap: var(--gap-xxl);
-    background: var(--medium);
+    background: var(--lowest);
 }
 .button-group button{
     padding: var(--padding-sm) var(--padding-md);
@@ -69,8 +69,8 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    padding: var(--padding-sm) var(--padding-lg);
+margin-left: var(--margin-lg);
+    padding: var(--padding-md) var(--padding-lg);
 
     font-size: var(--font-size-md);
     font-weight: 500;
@@ -104,6 +104,24 @@ main {
     transform: scale(0.97);
 }
 
+#reset{
+    background-color: #d82e2e;
+}
+#reset:hover{
+    background-color: #d82e2e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    border: none;
+}
+#download{
+    background-color: #2ed84e;
+}
+#download:hover{
+    background-color: #2ed84e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    border: none;
+}
 
 .preview{
     height: 100%;
