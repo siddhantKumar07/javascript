@@ -23,11 +23,28 @@ reset.addEventListener("click",()=>{
 });
 
 // for download the image 
-download.addEventListener("click",()=>{
-    if(previewImage.src){
-        let a = document.createElement("a");
-        a.href = previewImage.src;
+download.addEventListener("click", async () => {
+
+    const imageURL = previewImage.src;
+
+    try {
+
+        const response = await fetch(imageURL);
+        const blob = await response.blob();
+
+        const blobURL = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = blobURL;
         a.download = "image.jpg";
+
+        document.body.appendChild(a);
         a.click();
+        document.body.removeChild(a);
+
+        URL.revokeObjectURL(blobURL);
+
+    } catch (error) {
+        console.log("Download failed", error);
     }
 });
