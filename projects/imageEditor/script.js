@@ -10,7 +10,7 @@ urlInput.addEventListener("input",(e)=>{
     urlInput.value = "";
 });
 
-// for to select the image from the local coputer
+// for to select the image from the local computer
 inputImage.addEventListener("input",(e)=>{
 previewImage.src = URL.createObjectURL(e.target.files[0]);
 inputImage.value = "";
@@ -28,8 +28,8 @@ download.addEventListener("click", async()=>{
     let url = previewImage.src;
 try{
     let response = await fetch(url);
-    let blob = await response.blob();
-     let blobUrl = URL.createObjectURL(blob);
+    let blob = await response.blob();// it will convert the response into the blob data which is used to download the image
+     let blobUrl = URL.createObjectURL(blob);// it will create a temporary url for the blob data which can be used to download the image
 
      let a = document.createElement("a");
      a.href = blobUrl;
