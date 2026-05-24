@@ -256,7 +256,7 @@ container.appendChild(input);
 return container;
 }
 
-let adjustcontainer = document.querySelector(".adjust")
+let adjustcontainer = document.querySelector("#range-buttons");
 
 // selecting the data from the objects
 
@@ -266,7 +266,7 @@ for(let key in filters){
        console.dir(building);
     // storing the returned element in to the adjust container
 
-    adjustcontainer.append(building);
+    adjustcontainer.prepend(building);
 }
 
 
@@ -417,5 +417,5 @@ for(let key in prebuiltFilters){
         ctx.clearRect(0, 0, canvasImg.width, canvasImg.height);
         ctx.drawImage(image, x, y, drawWidth, drawHeight);
     });
-    prebuiltButtonsContainer.appendChild(button);
+    prebuiltButtonsContainer.append(button);
 }
