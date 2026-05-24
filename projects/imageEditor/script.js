@@ -151,7 +151,7 @@ let adjustcontainer = document.querySelector(".adjust")
 for(let key in filters){
     let filter = filters[key];
     let building = createfilters(filter.name,filter.unit,filter.default,filter.min,filter.max,filter.step);
-
+       console.dir(building);
     // storing the returned element in to the adjust container
 
     adjustcontainer.append(building);
