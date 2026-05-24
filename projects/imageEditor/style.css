@@ -248,3 +248,7 @@ margin-left: var(--margin-lg);
     color: var(--primary-color);
     cursor: pointer;
 }
+
+#prebuiltButtons button:hover{
+    background: var(--button-color-hover);
+}
