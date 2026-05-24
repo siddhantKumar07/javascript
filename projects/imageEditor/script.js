@@ -1,5 +1,4 @@
-let inputImage = document.getElementById("file-input");
-let previewImage = document.getElementById("preview-image");
+
 let reset =document.querySelector("#reset");
 let download = document.querySelector("#download");
 let urlInput = document.getElementById("image-url");
@@ -10,12 +9,60 @@ urlInput.addEventListener("input",(e)=>{
     urlInput.value = "";
 });
 
-// for to select the image from the local computer
-inputImage.addEventListener("input",(e)=>{
-previewImage.src = URL.createObjectURL(e.target.files[0]);
-inputImage.value = "";
-})
+//canvas 
+let inputImage = document.getElementById("file-input");
+let canvasImg = document.getElementById("preview-image");
+let ctx = canvasImg.getContext("2d");
 
+inputImage.addEventListener("change", (e) => {
+
+    const file = e.target.files[0];
+
+    const img = new Image();
+
+    img.src = URL.createObjectURL(file);
+
+    img.onload = () => {
+
+    const displayWidth = canvasImg.clientWidth;
+    const displayHeight = canvasImg.clientHeight;
+
+    const dpr = window.devicePixelRatio || 1;
+
+    canvasImg.width = displayWidth * dpr;
+    canvasImg.height = displayHeight * dpr;
+
+    ctx.scale(dpr, dpr);
+
+    ctx.clearRect(0, 0, displayWidth, displayHeight);
+
+    // image original size
+    const imgWidth = img.width;
+    const imgHeight = img.height;
+
+    // aspect ratios
+    const imgRatio = imgWidth / imgHeight;
+    const canvasRatio = displayWidth / displayHeight;
+
+    let drawWidth;
+    let drawHeight;
+
+    // contain behavior
+    if (imgRatio > canvasRatio) {
+        drawWidth = displayWidth;
+        drawHeight = displayWidth / imgRatio;
+    } else {
+        drawHeight = displayHeight;
+        drawWidth = displayHeight * imgRatio;
+    }
+
+    // center image
+    const x = (displayWidth - drawWidth) / 2;
+    const y = (displayHeight - drawHeight) / 2;
+
+    ctx.drawImage(img, x, y, drawWidth, drawHeight);
+};
+});
 
 // for reset button
 reset.addEventListener("click",()=>{
@@ -115,6 +162,14 @@ const filters={
         min:0,
         max:360,
         step:1
+    },
+    opacity:{
+        name:"Opacity :",
+        unit:"%",
+        default:100,
+        min:0,
+        max:100,
+        step:1
     }
 
 }
@@ -157,6 +212,4 @@ for(let key in filters){
     adjustcontainer.append(building);
 }
 
-//canvas 
 
-let canvasImg = document.querySelector("#canvas");

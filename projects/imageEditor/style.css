@@ -167,13 +167,12 @@ margin-left: var(--margin-lg);
     justify-content: center;
     align-items: center;
 }
-.preview img{
-    min-width: 50%;
-    max-width: 100%;
+.preview canvas{
+    width: 90%;
     height: 75vh;
-    object-fit: fill;
     background-color: #ccc;
 }
+
 .adjust{
     background: var(--low);
     /* border: 1px solid black; */
