@@ -142,3 +142,25 @@ for(let key in filters){
     adjustContainer.appendChild(filterElement);
 }
 
+function createfilters(name,unit,defaultValue,min,max,step){
+
+    // creating the container;
+let container = document.createElement("div");
+
+//creating the label for the name;
+let label = document.createElement("label");
+label.name=name;
+
+// creating the input type range according to the parameter
+let input = document.createElement("input");
+input.type="range"
+input.value =defaultValue;
+input.unit=unit;
+input.min=min;
+input.max=max;
+input.step=step;
+
+container.appendChild(label);
+container.appendChild(input);
+
+}
