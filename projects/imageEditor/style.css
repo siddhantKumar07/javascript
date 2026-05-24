@@ -223,3 +223,10 @@ margin-left: var(--margin-lg);
     margin-bottom: var(--margin-sm);
     font-size: var(--font-size-xl);
 }
+
+#prebuiltButtons{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    flex-wrap: wrap;
+}

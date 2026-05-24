@@ -347,3 +347,75 @@ function applyExposure(value){
     filterForApply.contrast = `${100 + value/5}%`;
 }
 
+
+
+// for prebuilt feature buttons 
+const prebuiltFilters = {
+    normal: "none",
+
+    vintage: "sepia(0.6) contrast(1.1) brightness(0.9)",
+
+    oldFilm: "grayscale(0.4) sepia(0.7) contrast(1.3)",
+
+    retroWarm: "sepia(0.5) saturate(1.4) hue-rotate(-10deg)",
+
+    classicBW: "grayscale(1)",
+
+    softGray: "grayscale(0.7) brightness(1.1)",
+
+    highContrastMono: "grayscale(1) contrast(1.5)",
+
+    vibrant: "saturate(2)",
+
+    brightPop: "brightness(1.2) saturate(1.8)",
+
+    coolVibrance: "saturate(1.8) hue-rotate(15deg)",
+
+    moody: "brightness(0.8) contrast(1.3)",
+
+    darkCinema: "brightness(0.7) contrast(1.4) saturate(0.8)",
+
+    tealOrange: "contrast(1.2) saturate(1.4) hue-rotate(-15deg)",
+
+    warm: "sepia(0.3) saturate(1.3)",
+
+    cool: "hue-rotate(180deg)",
+
+    ice: "brightness(1.1) hue-rotate(160deg) saturate(1.2)",
+
+    dreamy: "blur(1px) brightness(1.1) saturate(1.3)",
+
+    neon: "contrast(1.5) saturate(2) brightness(1.2)",
+
+    ghost: "grayscale(1) opacity(0.7)",
+
+    inverted: "invert(1)",
+
+    clarendon: "contrast(1.2) saturate(1.35)",
+
+    juno: "contrast(1.15) saturate(1.4) sepia(0.15)",
+
+    lark: "brightness(1.1) contrast(0.9) saturate(1.2)",
+
+    cyberpunk: "contrast(1.4) saturate(2) hue-rotate(290deg)",
+
+    sunset: "sepia(0.4) saturate(1.8) hue-rotate(-20deg)",
+
+    horror: "grayscale(0.8) contrast(2) brightness(0.6)",
+
+    matrix: "grayscale(1) sepia(1) hue-rotate(50deg) saturate(5)"
+};
+
+let prebuiltButtonsContainer = document.getElementById("prebuiltButtons");
+
+for(let key in prebuiltFilters){
+    let button = document.createElement("button");
+    button.textContent = key;
+    button.addEventListener("click",()=>{
+        const filterValue = prebuiltFilters[key];
+        ctx.filter = filterValue;
+        ctx.clearRect(0, 0, canvasImg.width, canvasImg.height);
+        ctx.drawImage(image, x, y, drawWidth, drawHeight);
+    });
+    prebuiltButtonsContainer.appendChild(button);
+}
