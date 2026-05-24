@@ -111,33 +111,30 @@ inputImage.addEventListener("change", (e) => {
 
 // for reset button
 reset.addEventListener("click",()=>{
-    previewImage.src = "";
+    image.src = " ";
 });
 
 // for download the image 
 
-download.addEventListener("click", async()=>{
-    let url = previewImage.src;
-try{
-    let response = await fetch(url);
-    let blob = await response.blob();// it will convert the response into the blob data which is used to download the image
-     let blobUrl = URL.createObjectURL(blob);// it will create a temporary url for the blob data which can be used to download the image
+download.addEventListener("click", ()=>{
 
-     let a = document.createElement("a");
-     a.href = blobUrl;
-        a.download = "image.jpg";
-        a.click();
-        URL.revokeObjectURL(blobUrl);
-}catch(error){
-    console.error("Error downloading the image:", error);
-}
+    // convert canvas into image url
+    const url = canvasImg.toDataURL("image/png");
 
-})
+    // create download link
+    const a = document.createElement("a");
+
+    a.href = url;
+
+    a.download = "filtered-image.png";
+
+    a.click();
+});
 
 // for filters 
 const filters={
     brightness:{
-        name:"Brightness :",
+        name:"Brightness",
         unit:"%",
         default:100,
         min:0,
@@ -145,7 +142,7 @@ const filters={
         step:1
     },
     contrast:{
-        name:"Contrast :",
+        name:"Contrast",
         unit:"%",
         default:100,    
         min:0,
@@ -153,7 +150,7 @@ const filters={
         step:1
     },
     exposure:{
-        name:"Exposure :",
+        name:"exposure",
         unit:"%",
         default:100,
         min:0,
@@ -161,7 +158,7 @@ const filters={
         step:1
     },
     saturation:{
-        name:"Saturation :",
+        name:"Saturate",
         unit:"%",
         default:100,
         min:0,
@@ -169,7 +166,7 @@ const filters={
         step:1
     },
     grayscale:{
-        name:"Grayscale :",
+        name:"Grayscale",
         unit:"%",
         default:0,
         min:0,
@@ -177,7 +174,7 @@ const filters={
         step:1
     },
     sepia:{
-        name:"Sepia :",
+        name:"Sepia",
         unit:"%",
         default:0,
         min:0,
@@ -185,7 +182,7 @@ const filters={
         step:1
     },
     invert:{
-        name:"Invert :",
+        name:"Invert",
         unit:"%",
         default:0,
         min:0,
@@ -193,7 +190,7 @@ const filters={
         step:1
     },
     blur:{  
-    name:"Blur :",
+    name:"Blur",
     unit:"px",
     default:0,
     min:0,
@@ -201,7 +198,7 @@ const filters={
     step:0.1
 },
     hueRotation:{
-        name:"Hue Rotation :",
+        name:"hue-rotate",
         unit:"deg",
         default:0,
         min:0,
@@ -209,7 +206,7 @@ const filters={
         step:1
     },
     opacity:{
-        name:"Opacity :",
+        name:"opacity",
         unit:"%",
         default:100,
         min:0,
@@ -237,6 +234,11 @@ input.min=min;
 input.max=max;
 input.step=step;
 
+input.addEventListener("input",(e)=>{
+    let value = input.value;
+    applyFilters(name.toLowerCase(),value,unit);
+
+});
 container.appendChild(label);
 container.appendChild(input);
 
@@ -258,49 +260,80 @@ for(let key in filters){
 }
 
 
-// function applyFilters(){
-//    ctx.filter='blur(5px)'
-//    ctx.drawImage(image,x,y,drawWidth,drawHeight);
-// }
-function applyFilters() {
+const filterForApply = {};
 
-    let filterString = "";
+function applyFilters(name, value, unit) {
+  name = name.toLowerCase().trim();
+    // store filter value
+    // example:
+    // filterForApply["brightness"] = "120%"
+    if(name !== "exposure"){
+    filterForApply[name] = `${value}${unit}`;
+    }
 
-    adjustcontainer.querySelectorAll("input").forEach((input) => {
 
-        const filterName = input.parentElement
-            .querySelector("label")
-            .textContent
-            .replace(":", "")
-            .trim()
-            .toLowerCase();
 
-        const filterValue = input.value;
+      // exposure filter
+    if(name === "exposure"){
+        applyExposure(value);
+    }
+    else{
+        // store filter
+        filterForApply[name] = `${value}${unit}`;
+    }
 
-        const filterUnit = input.dataset.unit || "";
 
-        filterString += `${filterName}(${filterValue}${filterUnit}) `;
+
+    // convert object into array
+    // example:
+    // [
+    //   ["brightness","120%"],
+    //   ["contrast","150%"]
+    // ]
+    const filterArray = Object.entries(filterForApply);
+
+
+    // convert every array item into filter string
+    // example:
+    // "brightness(120%)"
+    const filterStrings = filterArray.map((item) => {
+
+        // item[0] = filter name
+        // item[1] = filter value
+        return `${item[0]}(${item[1]})`;
     });
 
+
+    // join all filters into one string
+    // example:
+    // "brightness(120%) contrast(150%)"
+    const finalFilter = filterStrings.join(" ");
+
+
+    // apply filters
+    try{
+ ctx.filter = finalFilter;
+ console.log("Applied filter:", finalFilter);
+    }
+    catch(error){
+        console.error("Error applying filter:", error);
+    }
+   
+
+
+    // clear old image
     ctx.clearRect(0, 0, canvasImg.width, canvasImg.height);
 
-    ctx.save();
 
-    ctx.filter = filterString.trim();
-
+    // redraw image
     ctx.drawImage(image, x, y, drawWidth, drawHeight);
-
-    ctx.restore();
 }
 
+// separate exposure function
+function applyExposure(value){
 
-adjustcontainer.forEach((key)=>{
-    console.log(key);
-})
-adjustcontainer.addEventListener("input",(e)=>{
-    if(e.target.tagName.toLowerCase()==="input"){
-        applyFilters();
-    }
-});
+    filterForApply.brightness = `${value}%`;
 
+    filterForApply.contrast = `${100 + value/5}%`;
+}
 
