@@ -258,10 +258,49 @@ for(let key in filters){
 }
 
 
-function applyFilters(){
-   ctx.filter='blur(5px)'
-   ctx.drawImage(image,x,y,drawWidth,drawHeight);
+// function applyFilters(){
+//    ctx.filter='blur(5px)'
+//    ctx.drawImage(image,x,y,drawWidth,drawHeight);
+// }
+function applyFilters() {
+
+    let filterString = "";
+
+    adjustcontainer.querySelectorAll("input").forEach((input) => {
+
+        const filterName = input.parentElement
+            .querySelector("label")
+            .textContent
+            .replace(":", "")
+            .trim()
+            .toLowerCase();
+
+        const filterValue = input.value;
+
+        const filterUnit = input.dataset.unit || "";
+
+        filterString += `${filterName}(${filterValue}${filterUnit}) `;
+    });
+
+    ctx.clearRect(0, 0, canvasImg.width, canvasImg.height);
+
+    ctx.save();
+
+    ctx.filter = filterString.trim();
+
+    ctx.drawImage(image, x, y, drawWidth, drawHeight);
+
+    ctx.restore();
 }
 
+
+adjustcontainer.forEach((key)=>{
+    console.log(key);
+})
+adjustcontainer.addEventListener("input",(e)=>{
+    if(e.target.tagName.toLowerCase()==="input"){
+        applyFilters();
+    }
+});
 
 
