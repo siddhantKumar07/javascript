@@ -1,13 +1,12 @@
-
 let reset =document.querySelector("#reset");
 let download = document.querySelector("#download");
 let urlInput = document.getElementById("image-url");
 let file =null;
 let image=null;
-        let drawWidth =null;
-        let drawHeight =null;
-        let x =null;
-        let y =null;
+let drawWidth =null;
+let drawHeight =null;
+let x =null;
+let y =null;
 urlInput.addEventListener("change", (e) => {
 
     const img = new Image();
