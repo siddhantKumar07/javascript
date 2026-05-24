@@ -4,6 +4,10 @@ let download = document.querySelector("#download");
 let urlInput = document.getElementById("image-url");
 let file =null;
 let image=null;
+        let drawWidth =null;
+        let drawHeight =null;
+        let x =null;
+        let y =null;
 urlInput.addEventListener("change", (e) => {
 
     const img = new Image();
@@ -30,8 +34,7 @@ urlInput.addEventListener("change", (e) => {
         const imgRatio = img.width / img.height;
         const canvasRatio = displayWidth / displayHeight;
 
-        let drawWidth;
-        let drawHeight;
+
 
         if (imgRatio > canvasRatio) {
             drawWidth = displayWidth;
@@ -41,8 +44,8 @@ urlInput.addEventListener("change", (e) => {
             drawWidth = displayHeight * imgRatio;
         }
 
-        const x = (displayWidth - drawWidth) / 2;
-        const y = (displayHeight - drawHeight) / 2;
+        x = (displayWidth - drawWidth) / 2;
+         y = (displayHeight - drawHeight) / 2;
 
         ctx.drawImage(img, x, y, drawWidth, drawHeight);
     };
@@ -89,9 +92,6 @@ inputImage.addEventListener("change", (e) => {
     const imgRatio = imgWidth / imgHeight;
     const canvasRatio = displayWidth / displayHeight;
 
-    let drawWidth;
-    let drawHeight;
-
     // contain behavior
     if (imgRatio > canvasRatio) {
         drawWidth = displayWidth;
@@ -102,8 +102,8 @@ inputImage.addEventListener("change", (e) => {
     }
 
     // center image
-    const x = (displayWidth - drawWidth) / 2;
-    const y = (displayHeight - drawHeight) / 2;
+     x = (displayWidth - drawWidth) / 2;
+     y = (displayHeight - drawHeight) / 2;
 
     ctx.drawImage(img, x, y, drawWidth, drawHeight);
 };
@@ -259,16 +259,9 @@ for(let key in filters){
 
 
 function applyFilters(){
-    let filterString = "";
-    let inputs = adjustcontainer.querySelectorAll("input");
-    inputs.forEach(input=>{
-        let value = input.value;
-        let unit = input.unit;
-        let name = input.previousSibling.textContent.split(":")[0].toLowerCase();
-        filterString += `${name}(${value}${unit}) `;
-    });
-    image.style.filter = filterString;
+   ctx.filter='blur(5px'
+   ctx.drawImage(image,x,y,drawWidth,drawHeight);
 }
 
-adjustcontainer.addEventListener("input",applyFilters);
+
 
