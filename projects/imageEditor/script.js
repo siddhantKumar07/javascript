@@ -41,3 +41,80 @@ try{
 }
 
 })
+
+// for filters 
+const filters={
+    brightness:{
+        name:"Brightness",
+        unit:"%",
+        default:100,
+        min:0,
+        max:200,
+        step:1
+    },
+    contrast:{
+        name:"Contrast",
+        unit:"%",
+        default:100,    
+        min:0,
+        max:200,
+        step:1
+    },
+    exposure:{
+        name:"Exposure",
+        unit:"%",
+        default:100,
+        min:0,
+        max:200,
+        step:1
+    },
+    saturation:{
+        name:"Saturation",
+        unit:"%",
+        default:100,
+        min:0,
+        max:200,    
+        step:1
+    },
+    grayscale:{
+        name:"Grayscale",
+        unit:"%",
+        default:0,
+        min:0,
+        max:100,
+        step:1
+    },
+    sepia:{
+        name:"Sepia",
+        unit:"%",
+        default:0,
+        min:0,
+        max:100,
+        step:1
+    },
+    invert:{
+        name:"Invert",
+        unit:"%",
+        default:0,
+        min:0,
+        max:100,
+        step:1
+    },
+    blur:{  
+        name:"Blur",
+        unit:"px",
+        default:0,
+        min:0,
+        max:20,
+        step:0.1
+    },
+    hueRotation:{
+        name:"Hue Rotation",
+        unit:"deg",
+        default:0,
+        min:0,
+        max:360,
+        step:1
+    }
+
+}

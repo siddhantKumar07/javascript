@@ -168,10 +168,11 @@ margin-left: var(--margin-lg);
     align-items: center;
 }
 .preview img{
-    min-width: 70%;
-    max-width: 100%;
+    min-width: 50%;
+    max-width: 90%;
     height: 75vh;
-    object-fit: contain;
+    object-fit: fill;
+    background-color: #ccc;
 }
 .adjust{
     background: var(--low);
@@ -195,9 +196,9 @@ margin-left: var(--margin-lg);
 .adjust input[type="range"]{
     appearance: none;
     width: 100%;
-    height: 5px;
+    height: 4px;
     background: #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .adjust input[type="range"]::-webkit-slider-thumb{
@@ -218,4 +219,9 @@ margin-left: var(--margin-lg);
     border: none;
 
     cursor: pointer;
+}
+.adjust h2{
+    text-align: center;
+    margin-bottom: var(--margin-sm);
+    font-size: var(--font-size-xl);
 }
