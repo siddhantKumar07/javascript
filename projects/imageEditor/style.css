@@ -36,7 +36,7 @@ main {
     display: flex;
     justify-content:center ;
     align-items: center;
-    gap: var(--gap-xxl);
+    gap: var(--gap-md);
     background: var(--lowest);
 }
 .button-group button{
@@ -99,6 +99,26 @@ margin-left: var(--margin-lg);
 
 #reset{
     background-color: #d82e2e;
+     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+margin-left: var(--margin-lg);
+    padding: var(--padding-md) var(--padding-lg);
+
+    font-size: var(--font-size-md);
+    font-weight: 500;
+
+    border-radius: var(--border-radius-md);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 #reset:hover{
     background-color: #d82e2e;
