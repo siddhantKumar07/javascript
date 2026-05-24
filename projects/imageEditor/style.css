@@ -116,9 +116,9 @@ main {
 }
 .preview img{
     min-width: 70%;
-    max-width: 100%;
+    max-width: 90%;
     height: 75vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 .adjust{
     background: var(--top);
