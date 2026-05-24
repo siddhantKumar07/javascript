@@ -7,6 +7,8 @@ let drawWidth =null;
 let drawHeight =null;
 let x =null;
 let y =null;
+let currentImage = null;
+
 urlInput.addEventListener("change", (e) => {
 
     const img = new Image();
@@ -17,6 +19,8 @@ urlInput.addEventListener("change", (e) => {
 
     img.onload = () => {
 
+        currentImage = img;
+
         const displayWidth = canvasImg.clientWidth;
         const displayHeight = canvasImg.clientHeight;
 
@@ -25,28 +29,32 @@ urlInput.addEventListener("change", (e) => {
         canvasImg.width = displayWidth * dpr;
         canvasImg.height = displayHeight * dpr;
 
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+
         ctx.scale(dpr, dpr);
 
         ctx.clearRect(0, 0, displayWidth, displayHeight);
 
-        // keep aspect ratio
         const imgRatio = img.width / img.height;
         const canvasRatio = displayWidth / displayHeight;
 
-
+        // let drawWidth, drawHeight, x, y;
 
         if (imgRatio > canvasRatio) {
+
             drawWidth = displayWidth;
             drawHeight = displayWidth / imgRatio;
+
         } else {
+
             drawHeight = displayHeight;
             drawWidth = displayHeight * imgRatio;
         }
 
         x = (displayWidth - drawWidth) / 2;
-         y = (displayHeight - drawHeight) / 2;
+        y = (displayHeight - drawHeight) / 2;
 
-        ctx.drawImage(img, x, y, drawWidth, drawHeight);
+        ctx.drawImage(currentImage, x, y, drawWidth, drawHeight);
     };
 
     img.onerror = () => {
@@ -71,6 +79,7 @@ inputImage.addEventListener("change", (e) => {
 
     img.onload = () => {
   image = img;
+currentImage = img;
     const displayWidth = canvasImg.clientWidth;
     const displayHeight = canvasImg.clientHeight;
 
@@ -79,7 +88,9 @@ inputImage.addEventListener("change", (e) => {
     canvasImg.width = displayWidth * dpr;
     canvasImg.height = displayHeight * dpr;
 
-    ctx.scale(dpr, dpr);
+   ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+ctx.scale(dpr, dpr);
 
     ctx.clearRect(0, 0, displayWidth, displayHeight);
 
@@ -335,7 +346,7 @@ function applyFilters(name, value, unit) {
 
 
     // redraw image
-    ctx.drawImage(image, x, y, drawWidth, drawHeight);
+  ctx.drawImage(currentImage, x, y, drawWidth, drawHeight);
 }
 
 // separate exposure function
@@ -414,7 +425,7 @@ for(let key in prebuiltFilters){
         const filterValue = prebuiltFilters[key];
         ctx.filter = filterValue;
         ctx.clearRect(0, 0, canvasImg.width, canvasImg.height);
-        ctx.drawImage(image, x, y, drawWidth, drawHeight);
+ctx.drawImage(currentImage, x, y, drawWidth, drawHeight);
     });
     prebuiltButtonsContainer.append(button);
 }

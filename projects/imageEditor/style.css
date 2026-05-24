@@ -170,7 +170,7 @@ margin-left: var(--margin-lg);
 }
 .preview canvas{
     width: 90%;
-    height: 75vh;
+    height: 80vh;
     background-color: #ccc;
 }
 
