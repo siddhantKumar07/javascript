@@ -9,8 +9,8 @@ currenttime.innerHTML = currentTime;
 
 // for to create the cells 
 
-let rows = 45;
-let columns = 21.5;
+let rows = 35;
+let columns = 20;
 for(let i=0; i<rows*columns; i++){
     let cell = document.createElement("div");
     cell.classList.add("cell");

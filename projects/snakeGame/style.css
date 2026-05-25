@@ -61,8 +61,8 @@ section {
   height: 40vw;
 
   display: grid;
-  grid-template-columns: repeat(44, 1fr);
-  grid-template-rows: repeat(22, 1fr);
+  grid-template-columns: repeat(35, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 
   gap: 1px;
   background: #222;
