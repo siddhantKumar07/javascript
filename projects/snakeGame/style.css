@@ -35,6 +35,16 @@ font-size: 1.2rem;
 font-weight: bold;
 }
 
+#highScoreContainer{
+    border: 2px solid rgb(0, 0, 0);
+}
+#scoreContainer{
+    border: 2px solid rgb(0, 0, 0);
+}
+#timeContainer{
+    border: 2px solid rgb(0, 0, 0);
+}
+
 .game-board{
     height: 77vh;
     width: 75vw;
