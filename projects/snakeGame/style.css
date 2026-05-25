@@ -55,11 +55,8 @@ section {
   height: fit-content;
   width: 75vw;
   display: grid;
-
-  /* 20 x 20 grid */
   grid-template-columns: repeat(44, 25px);
   grid-template-rows: repeat(21.5, 25px);
-
   gap: 1.2px;
   background: #222;
 }
