@@ -6,6 +6,9 @@ let cells = document.querySelectorAll(".cell");
 //for to retrieve the current date and time
 let currentTime = new Date().toLocaleTimeString();
 currenttime.innerHTML = currentTime;
+
+// blocks to store the each cell as an arrar
+const blocks =[];
 // for to create the cells
 function setupGrid(){
 
@@ -32,6 +35,8 @@ function setupGrid(){
         gameBooard.appendChild(cell);
 
         cell.innerText= `${i} - ${j}`
+
+        blocks[`${i}-${j}`]=cell;
         }
     }
 }
