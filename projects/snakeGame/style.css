@@ -15,15 +15,17 @@ main{
     justify-content: center;
     align-items: center;
     border: 2px solid;
+    background-color: #055b80;
 }
 section{
-    height: 80vh;
-    width: 80vw;
+    height: 85vh;
+    width: 75vw;
     border: 2px solid;
+    background-color: #fff;
 }
 .infos{
 height:8vh ;
-width: 80vw;
+width: 75vw;
 padding: 0 2vw;
 border: 2px solid;
 display:flex;
@@ -34,7 +36,7 @@ font-weight: bold;
 }
 
 .game-board{
-    height: 72vh;
-    width: 80vw;
+    height: 77vh;
+    width: 75vw;
     border: 2px solid;
 }
