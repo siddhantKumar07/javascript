@@ -37,12 +37,15 @@ font-weight: bold;
 
 #highScoreContainer{
     border: 2px solid rgb(0, 0, 0);
+    padding: 1.2vh 1.2vw;
 }
 #scoreContainer{
     border: 2px solid rgb(0, 0, 0);
+    padding: 1.2vh 1.2vw;
 }
 #timeContainer{
     border: 2px solid rgb(0, 0, 0);
+    padding: 1.2vh 1.2vw;
 }
 
 .game-board{
