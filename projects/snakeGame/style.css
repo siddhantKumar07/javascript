@@ -18,11 +18,10 @@ main {
   border: 2px solid;
   background-color: #EDE9E6;
 }
-section {
-  height: 85vh;
-  width: fit-content;
-  background-color: #fff;
-  margin-bottom: 3.5vh;
+section{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 .infos {
   height: 8vh;
@@ -57,15 +56,19 @@ section {
 }
 
 .game-board {
-  width: 75vw;
-  height: 40vw;
-  display: grid;
-  grid-template-columns: repeat(44, 1fr);
-  grid-template-rows: repeat(22, 1fr);
-  gap: 1px;
-  background: #222;
-}
 
+  width: 75vw;
+
+  aspect-ratio: 2 / 1;
+
+  display: grid;
+
+  gap: 1px;
+
+  background: #222;
+
+  border: 2px solid black;
+}
 .cell {
   background: #111;
   border: 1px solid #333;
