@@ -16,7 +16,7 @@ main {
   justify-content: center;
   align-items: center;
   border: 2px solid;
-  background-color: #ede9e6;
+  background-color: #EDE9E6;
 }
 section {
   height: 85vh;
@@ -34,33 +34,32 @@ section {
   align-items: center;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #5c766d;
+  background-color: #5C766D;
 }
 
 #highScoreContainer {
   border: 2px solid rgb(0, 0, 0);
-  padding: 1.2vw 1.2vw;
+  padding: 1.2vh 1.2vw;
   border-radius: 10px;
   background-color: #fff;
 }
 #scoreContainer {
   border: 2px solid rgb(0, 0, 0);
-  padding: 1.2vw 1.2vw;
+  padding: 1.2vh 1.2vw;
   border-radius: 10px;
   background-color: #fff;
 }
 #timeContainer {
-    height: 5vh;
   border: 2px solid rgb(0, 0, 0);
-  padding: 1vw 1.2vw;
+  padding: 1.2vh 1.2vw;
   border-radius: 10px;
   background-color: #fff;
-  text-align: center;
 }
 
 .game-board {
   width: 75vw;
   height: 40vw;
+  
 
   display: grid;
 
