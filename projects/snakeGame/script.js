@@ -9,6 +9,23 @@ currenttime.innerHTML = currentTime;
 
 // for to create the cells 
 
+
+window.addEventListener("resize",()=>{
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+console.log(width, height);
+if(height>1000 && width>1000){
+gameBooard.style.width = "75vw";
+gameBooard.style.height = "40vh";
+
+gameBooard.style.display = "grid";
+gameBooard.style.gridTemplateColumns = "repeat(35, 1fr)";
+gameBooard.style.gridTemplateRows = "repeat(20, 1fr)";
+gameBooard.style.gap = "1px";
+gameBooard.style.backgroundColor = "#222";
+
+// for to create the cells
 let rows = 35;
 let columns = 20;
 for(let i=0; i<rows*columns; i++){
@@ -16,3 +33,5 @@ for(let i=0; i<rows*columns; i++){
     cell.classList.add("cell");
     gameBooard.appendChild(cell);
 }
+}
+});
