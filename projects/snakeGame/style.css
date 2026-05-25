@@ -21,3 +21,14 @@ section{
     width: 80vw;
     border: 2px solid;
 }
+.infos{
+height:10vh ;
+width: 80vw;
+border: 2px solid;
+}
+
+.game-board{
+    height: 70vh;
+    width: 80vw;
+    border: 2px solid;
+}
