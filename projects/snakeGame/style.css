@@ -59,14 +59,14 @@ section {
 .game-board {
   display: grid;
 
-  gap: 1.4px;
+  gap: 1px;
 
   background: #222;
 }
 
 .cell {
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   border: 1px solid #dcdcdc;
 }
 
@@ -79,7 +79,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   background-color: #5C766D;
 }
