@@ -57,8 +57,6 @@ section {
 }
 
 .game-board {
-    /* height: 77vh;
-    width: 65vw; */
   display: grid;
 
   gap: 1.4px;
@@ -69,6 +67,5 @@ section {
 .cell {
   width: 32px;
   height: 32px;
-
   border: 1px solid #dcdcdc;
 }
