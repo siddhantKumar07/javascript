@@ -7,10 +7,31 @@ let cells = document.querySelectorAll(".cell");
 let currentTime = new Date().toLocaleTimeString();
 currenttime.innerHTML = currentTime;
 // for to create the cells
-let columns = 33;
-let rows = 20;
-for(let i=0; i<rows*columns; i++){
-    let cell = document.createElement("div");
-    cell.classList.add("cell");
-    gameBooard.appendChild(cell);
+function setupGrid(){
+
+    let columns = Math.floor(window.innerWidth / 40);
+
+    let rows =Math.floor(window.innerHeight / 40)-5;
+      console.log(columns,rows)
+
+    gameBooard.style.gridTemplateColumns =
+      `repeat(${columns}, 32.5px)`;
+
+    gameBooard.style.gridTemplateRows =
+      `repeat(${rows}, 32px)`;
+
+    gameBooard.innerHTML = "";
+
+    for(let i = 0; i < rows * columns; i++){
+
+        let cell = document.createElement("div");
+
+        cell.classList.add("cell");
+
+        gameBooard.appendChild(cell);
+    }
 }
+
+setupGrid();
+
+window.addEventListener("resize", setupGrid);
