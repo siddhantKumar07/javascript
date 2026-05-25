@@ -30,6 +30,8 @@ function setupGrid(){
         cell.classList.add("cell");
 
         gameBooard.appendChild(cell);
+
+        cell.innerText= `${i} - ${j}`
         }
     }
 }
