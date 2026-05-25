@@ -9,13 +9,13 @@ currenttime.innerHTML = currentTime;
 // for to create the cells
 function setupGrid(){
 
-    let columns = Math.floor(window.innerWidth / 40);
+    let columns = Math.floor(window.innerWidth / 50);
 
-    let rows =Math.floor(window.innerHeight / 40)-5;
+    let rows =Math.floor(window.innerHeight / 45);
       console.log(columns,rows)
 
     gameBooard.style.gridTemplateColumns =
-      `repeat(${columns}, 32.5px)`;
+      `repeat(${columns}, 32px)`;
 
     gameBooard.style.gridTemplateRows =
       `repeat(${rows}, 32px)`;
