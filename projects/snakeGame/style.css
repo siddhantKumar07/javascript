@@ -20,7 +20,7 @@ main {
 }
 section {
   height: 85vh;
-  width: 75vw;
+  width: fit-content;
   background-color: #fff;
 }
 .infos {
@@ -51,20 +51,22 @@ section {
   border-radius: 10px;
 }
 
-.gameBoard{
-      display:grid;
+.game-board {
+  height: fit-content;
+  width: 75vw;
+  display: grid;
 
-      /* 20 x 20 grid */
-      grid-template-columns: repeat(20, 25px);
-      grid-template-rows: repeat(20, 25px);
+  /* 20 x 20 grid */
+  grid-template-columns: repeat(44, 25px);
+  grid-template-rows: repeat(21.5, 25px);
 
-      gap:1px;
-      background:#222;
-    }
+  gap: 1.2px;
+  background: #222;
+}
 
-    .cell{
-      width:25px;
-      height:25px;
-      background:#111;
-      border:1px solid #333;
-    }
+.cell {
+  width: 25px;
+  height: 25px;
+  background: #111;
+  border: 1px solid #333;
+}
