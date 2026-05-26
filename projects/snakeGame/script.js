@@ -62,7 +62,7 @@ setupGrid();
 window.addEventListener("resize", setupGrid);
 
 //snakes logics 
-
+// this is an array which stores the coordinates 
 let snake =[
   {x:1,y:2}
 ]
@@ -81,7 +81,7 @@ function randomFood() {
     y: Math.floor(Math.random() * columns)
   };
 
-  // add new food
+  // add new food at the random block 
   blocks[`${food.x}-${food.y}`].classList.add("food");
 }
 randomFood();
@@ -96,7 +96,8 @@ function render(){
 //calling the render function every 300 ms;
 
 let interval =setInterval(()=>{
- let head = null;
+
+ let head = null; // this is the new coordinates which stores later  the new object into the snake array
  if(direction=="ArrowLeft"){
  head ={
   x:snake[0].x,
@@ -133,7 +134,7 @@ head={
   clearInterval(interval);
  }
 
- 
+
  // consuming the food 
 if (food.x == head.x && food.y == head.y) {
   snake.unshift(food);
