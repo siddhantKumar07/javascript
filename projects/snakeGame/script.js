@@ -34,6 +34,7 @@ columns = Math.floor(window.innerWidth / 72);
  rows =Math.floor(window.innerHeight / 58);
       console.log(columns,rows)
 
+      // this is used to create  a dynamic columns at run time according to the windows size
     gameBooard.style.gridTemplateColumns =
       `repeat(${columns}, 50px)`;
 
