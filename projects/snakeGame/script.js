@@ -6,7 +6,6 @@ let cells = document.querySelectorAll(".cell");
 let columns;
  let rows;
  let gameSpeed=700;
- currenntHighScore.innerText=0;
 
 
 
@@ -25,7 +24,6 @@ window.addEventListener("keydown",(e)=>{
   if(e.key=="ArrowUp"||e.key=="ArrowDown"||e.key=="ArrowLeft"||e.key=="ArrowRight"){
      direction=e.key;
   }
-  console.log(e)
 })
 // for to create the cells
 function setupGrid(){
@@ -150,11 +148,6 @@ if (food.x == head.x && food.y == head.y) {
 // current score 
 currentScore.innerText= snake.length;
 
+
 render()
 },gameSpeed)
-
-// for high score 
-currenntHighScore.innerText = Math.max(
-  currentScore,
-  Number(currenntHighScore.innerText)
-);
