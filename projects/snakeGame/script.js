@@ -9,14 +9,16 @@ currenttime.innerHTML = currentTime;
 
 // blocks to store the each cell as an arrar
 const blocks =[];
-let direction;
+let direction ="down";
 
-window.addEventListener("keydown",(e)=>{
-  if(e.key=="ArrowUp"||e.key=="ArrowDown"||e.key=="ArrowLeft"||e.key=="ArrowRight"){
-     direction=e.key;
-  }
-  console.log(direction)
-})
+
+// this is for to take the direction from the input;
+// window.addEventListener("keydown",(e)=>{
+//   if(e.key=="ArrowUp"||e.key=="ArrowDown"||e.key=="ArrowLeft"||e.key=="ArrowRight"){
+//      direction=e.key;
+//   }
+//   console.log(direction)
+// })
 // for to create the cells
 function setupGrid(){
 
@@ -71,6 +73,29 @@ function render(){
 
 setInterval(()=>{
  let head = null;
- head
+ if(direction=="left"){
+ head ={
+  x:snake[0].x,
+  y:snake[0].y-1
+}
+ }
+ if(direction=="right"){
+
+ }
+ if(direction=="down"){
+  head={
+    x:snake[0].x+1,
+    y:snake[0].y
+  }
+ } 
+ if(direction=="up"){
+head={
+  x:snake[0].x-1,
+  y:snake[0].y
+}
+ } 
+ snake.unshift(head);
+snake.pop()
+
 render()
-},300)
+},3000)
