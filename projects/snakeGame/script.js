@@ -9,10 +9,7 @@ let columns;
  let rows;
  let gameSpeed=700;
 
-// for to remove the start button and welcome text 
-startbtn.addEventListener('click', ()=>{
-  module.style.display="none";
-})
+
 
 //for to retrieve the current date and time
 let currentTime = new Date().toLocaleTimeString();
@@ -97,9 +94,10 @@ randomFood();
 
 // this function will add the class which is fill according to the coordinates which stored into the snake array
 function render(){
-  snake.forEach((segmament)=>{
-    blocks[`${segmament.x}-${segmament.y}`].classList.add("fill");
-  })
+
+  snake.forEach((segment)=>{
+  blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
+});
 
    let head = null; // this is the new coordinates which stores later  the new object into the snake array
 
@@ -128,11 +126,6 @@ head={
 }
  } 
 
-// it is use to remove the old one class (fill)
- snake.forEach((segment)=>{
-    blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
- })
-
  // gameover logics 
  if(head.x<0||head.x>=rows || head.y<0||head.y>=columns){
   alert("game over!!!!!");
@@ -141,18 +134,23 @@ head={
 
 
  // consuming the food 
-if (food.x == head.x && food.y == head.y) {
-  snake.unshift(food);
 
-  randomFood(); // generate new food
+if (food.x == head.x && food.y == head.y) {
+
+  snake.unshift(head);
+
+  randomFood();
+
+} else {
+
+  snake.unshift(head);
+
+  snake.pop();
 }
 
-
-// adding the new coordinates as an object inside the snake which is an array
- snake.unshift(head)
-
- // removing the last element from the array
- snake.pop()
+snake.forEach((segment)=>{
+  blocks[`${segment.x}-${segment.y}`].classList.add("fill");
+});
 
 // current score 
 currentScore.innerText= snake.length;
@@ -163,11 +161,14 @@ currentScore.innerText= snake.length;
 
 //calling the render function every 300 ms;
 
-let interval =setInterval(()=>{
-
-
+// for to remove the start button and welcome text 
+startbtn.addEventListener('click', ()=>{
+  module.style.display="none";
+  let interval =setInterval(()=>{
 
 // calling the render function which adds the fill class to the new object which is storec into the snake arrays
 render()
 
-},gameSpeed)
+},300)
+})
+
