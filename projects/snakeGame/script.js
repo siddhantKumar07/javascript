@@ -9,6 +9,13 @@ currenttime.innerHTML = currentTime;
 
 // blocks to store the each cell as an arrar
 const blocks =[];
+let direction;
+
+window.addEventListener("keydown",(e)=>{
+  if(e.key=="ArrowUp"||e.key=="ArrowDown"||e.key=="ArrowLeft"||e.key=="ArrowRight"){
+     direction=e.key;
+  }
+})
 // for to create the cells
 function setupGrid(){
 
@@ -34,7 +41,7 @@ function setupGrid(){
 
         gameBooard.appendChild(cell);
 
-        // cell.innerText= `${i} - ${j}`
+        cell.innerText= `${i} - ${j}`
 
         blocks[`${i}-${j}`]=cell;
         }
