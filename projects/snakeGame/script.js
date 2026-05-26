@@ -125,6 +125,7 @@ head={
 }
  } 
 
+ 
  snake.forEach((segment)=>{
   
     blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
