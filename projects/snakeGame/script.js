@@ -7,11 +7,7 @@ let columns;
  let rows;
  let gameSpeed=700;
 
-// for random food
-let food={
-  x:Math.floor(Math.random()*rows),
-  y:Math.floor(Math.random()*columns)
-}
+
 
 
 //for to retrieve the current date and time
@@ -74,6 +70,16 @@ let snake =[
   {x:1,y:2}
 ]
 
+// for random food and for to add food blocks
+function randomeFood(){
+let food={
+  x:Math.floor(Math.random()*rows),
+  y:Math.floor(Math.random()*columns)
+}
+blocks[`${food.x}-${food.y}`].classList.add("food")
+}
+
+
 function render(){
   snake.forEach((segmament)=>{
     blocks[`${segmament.x}-${segmament.y}`].classList.add("fill");
@@ -119,8 +125,13 @@ head={
   alert("game over!!!!!");
   clearInterval(interval);
  }
+ // consuming the food 
+ if(food.x==head.x&&food.y==head.y){
+  snake.unshift(food);
+ }
 
  snake.unshift(head)
  snake.pop()
 render()
 },gameSpeed)
+
