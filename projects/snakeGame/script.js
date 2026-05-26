@@ -30,6 +30,7 @@ function setupGrid(){
 // this will set the columns according to the width
 columns = Math.floor(window.innerWidth / 72);
 
+// this is used to set the rows according to the height
  rows =Math.floor(window.innerHeight / 58);
       console.log(columns,rows)
 
