@@ -27,7 +27,7 @@ window.addEventListener("keydown",(e)=>{
 })
 // for to create the cells
 function setupGrid(){
-// this 
+// this will set the columns according to the width
 columns = Math.floor(window.innerWidth / 72);
 
  rows =Math.floor(window.innerHeight / 58);
