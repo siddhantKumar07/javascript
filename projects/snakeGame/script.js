@@ -44,3 +44,17 @@ function setupGrid(){
 setupGrid();
 
 window.addEventListener("resize", setupGrid);
+
+//snakes logics 
+
+let snake =[
+  {x:1,y:2},
+  {x:1,y:3},
+  {x:1,y:4}
+]
+
+function render(){
+  snake.forEach((segmament)=>{
+    blocks[`${segmament.x}-${segmament.y}`].classList.add("fill");
+  })
+}
