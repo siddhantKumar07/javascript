@@ -55,8 +55,6 @@ columns = Math.floor(window.innerWidth / 72);
         blocks[`${i}-${j}`]=cell;
         }
     }
-
-    //
 }
 
 setupGrid();
@@ -77,7 +75,6 @@ function randomFood() {
   if (food) {
     blocks[`${food.x}-${food.y}`].classList.remove("food");
   }
-
   // create new food
   food = {
     x: Math.floor(Math.random() * rows),
@@ -135,6 +132,8 @@ head={
   alert("game over!!!!!");
   clearInterval(interval);
  }
+
+ 
  // consuming the food 
 if (food.x == head.x && food.y == head.y) {
   snake.unshift(food);
@@ -142,12 +141,18 @@ if (food.x == head.x && food.y == head.y) {
   randomFood(); // generate new food
 }
 
+
+// adding the new coordinates as an object inside the snake which is an array
  snake.unshift(head)
+
+ // removing the last element from the array
  snake.pop()
 
 // current score 
 currentScore.innerText= snake.length;
 
 
+// calling the render function which adds the fill class to the new object which is storec into the snake arrays
 render()
+
 },gameSpeed)
