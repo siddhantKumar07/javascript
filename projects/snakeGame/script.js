@@ -27,7 +27,7 @@ window.addEventListener("keydown",(e)=>{
 })
 // for to create the cells
 function setupGrid(){
-
+// this 
 columns = Math.floor(window.innerWidth / 72);
 
  rows =Math.floor(window.innerHeight / 58);
@@ -41,6 +41,8 @@ columns = Math.floor(window.innerWidth / 72);
 
     gameBooard.innerHTML = "";
 
+
+    // the loops generates the new cell according to the rows and columns
     for(let i = 0; i < rows; i++){
         for(let j =0;j<columns ;j++){
 
@@ -50,8 +52,9 @@ columns = Math.floor(window.innerWidth / 72);
 
         gameBooard.appendChild(cell);
 
+        // this will gives cells to the current value 
         cell.innerText= `${i} - ${j}`
-
+  // blocks is an array which stores all the cells according to the indexes 
         blocks[`${i}-${j}`]=cell;
         }
     }
@@ -125,13 +128,12 @@ head={
 }
  } 
 
- 
+// it is use to remove the old one class (fill)
  snake.forEach((segment)=>{
-  
     blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
  })
 
- // gameover logiics ;
+ // gameover logics 
  if(head.x<0||head.x>=rows || head.y<0||head.y>=columns){
   alert("game over!!!!!");
   clearInterval(interval);
