@@ -6,6 +6,7 @@ let cells = document.querySelectorAll(".cell");
 let columns;
  let rows;
  let gameSpeed=700;
+ currenntHighScore.innerText=0;
 
 
 
@@ -145,6 +146,15 @@ if (food.x == head.x && food.y == head.y) {
 
  snake.unshift(head)
  snake.pop()
+
+// current score 
+currentScore.innerText= snake.length;
+
 render()
 },gameSpeed)
 
+// for high score 
+currenntHighScore.innerText = Math.max(
+  currentScore,
+  Number(currenntHighScore.innerText)
+);
