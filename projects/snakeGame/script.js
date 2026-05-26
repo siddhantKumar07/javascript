@@ -86,6 +86,7 @@ function randomFood() {
 }
 randomFood();
 
+// this function will add the class which is fill according to the coordinates which stored into the snake array
 function render(){
   snake.forEach((segmament)=>{
     blocks[`${segmament.x}-${segmament.y}`].classList.add("fill");
@@ -98,10 +99,11 @@ function render(){
 let interval =setInterval(()=>{
 
  let head = null; // this is the new coordinates which stores later  the new object into the snake array
- if(direction=="ArrowLeft"){
+
+ if(direction=="ArrowLeft"){// if the user press left arrow then it generates the new object coordinates accoording to the older coordinates which is stored inside the snake array 
  head ={
-  x:snake[0].x,
-  y:snake[0].y-1
+  x:snake[0].x,// this X will store the new coordinates according to the main one which is inside the snake array if user press left then the row will be same 
+  y:snake[0].y-1 // this y will stored the new column according to the main coordinates the y will changes and it will become the -1
 }
  }
  else if(direction=="ArrowRight"){
