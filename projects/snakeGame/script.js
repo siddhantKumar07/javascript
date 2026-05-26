@@ -15,6 +15,7 @@ window.addEventListener("keydown",(e)=>{
   if(e.key=="ArrowUp"||e.key=="ArrowDown"||e.key=="ArrowLeft"||e.key=="ArrowRight"){
      direction=e.key;
   }
+  console.log(direction)
 })
 // for to create the cells
 function setupGrid(){
@@ -65,3 +66,11 @@ function render(){
     blocks[`${segmament.x}-${segmament.y}`].classList.add("fill");
   })
 }
+
+//calling the render function every 300 ms;
+
+setInterval(()=>{
+ let head = null;
+ head
+render()
+},300)
