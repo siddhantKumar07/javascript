@@ -24,7 +24,7 @@ window.addEventListener("keydown",(e)=>{
   if(e.key=="ArrowUp"||e.key=="ArrowDown"||e.key=="ArrowLeft"||e.key=="ArrowRight"){
      direction=e.key;
   }
-  console.log(direction)
+  console.log(e)
 })
 // for to create the cells
 function setupGrid(){
@@ -71,14 +71,24 @@ let snake =[
 ]
 
 // for random food and for to add food blocks
-function randomeFood(){
-let food={
-  x:Math.floor(Math.random()*rows),
-  y:Math.floor(Math.random()*columns)
-}
-blocks[`${food.x}-${food.y}`].classList.add("food")
-}
+let food;
+function randomFood() {
 
+  // remove old food
+  if (food) {
+    blocks[`${food.x}-${food.y}`].classList.remove("food");
+  }
+
+  // create new food
+  food = {
+    x: Math.floor(Math.random() * rows),
+    y: Math.floor(Math.random() * columns)
+  };
+
+  // add new food
+  blocks[`${food.x}-${food.y}`].classList.add("food");
+}
+randomFood();
 
 function render(){
   snake.forEach((segmament)=>{
@@ -115,6 +125,7 @@ head={
   y:snake[0].y
 }
  } 
+
  snake.forEach((segment)=>{
   
     blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
@@ -126,9 +137,11 @@ head={
   clearInterval(interval);
  }
  // consuming the food 
- if(food.x==head.x&&food.y==head.y){
+if (food.x == head.x && food.y == head.y) {
   snake.unshift(food);
- }
+
+  randomFood(); // generate new food
+}
 
  snake.unshift(head)
  snake.pop()
