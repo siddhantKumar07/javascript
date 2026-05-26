@@ -34,7 +34,7 @@ function setupGrid(){
 
         gameBooard.appendChild(cell);
 
-        cell.innerText= `${i} - ${j}`
+        // cell.innerText= `${i} - ${j}`
 
         blocks[`${i}-${j}`]=cell;
         }
