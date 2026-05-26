@@ -5,6 +5,15 @@ let gameBooard= document.querySelector(".game-board");
 let cells = document.querySelectorAll(".cell");
 let columns;
  let rows;
+ let gameSpeed=700;
+
+// for random food
+let food={
+  x:Math.floor(Math.random()*rows),
+  y:Math.floor(Math.random()*columns)
+}
+
+
 //for to retrieve the current date and time
 let currentTime = new Date().toLocaleTimeString();
 currenttime.innerHTML = currentTime;
@@ -71,12 +80,10 @@ function render(){
   })
 }
 
-// gameover logics;
-
 
 //calling the render function every 300 ms;
 
-setInterval(()=>{
+let interval =setInterval(()=>{
  let head = null;
  if(direction=="ArrowLeft"){
  head ={
@@ -103,10 +110,17 @@ head={
 }
  } 
  snake.forEach((segment)=>{
+  
     blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
  })
+
+ // gameover logiics ;
+ if(head.x<0||head.x>=rows || head.y<0||head.y>=columns){
+  alert("game over!!!!!");
+  clearInterval(interval);
+ }
 
  snake.unshift(head)
  snake.pop()
 render()
-},700)
+},gameSpeed)
