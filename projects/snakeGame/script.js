@@ -3,11 +3,12 @@ let currentScore = document.getElementById("currentScore");
 let currenntHighScore = document.getElementById("currentHighScore");
 let gameBooard= document.querySelector(".game-board");
 let cells = document.querySelectorAll(".cell");
+let module = document.querySelector("#module")
 let columns;
  let rows;
  let gameSpeed=700;
 
-
+// for to remove the start button and welcome text 
 
 
 //for to retrieve the current date and time
