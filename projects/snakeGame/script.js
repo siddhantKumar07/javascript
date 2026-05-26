@@ -100,14 +100,8 @@ function render(){
   snake.forEach((segmament)=>{
     blocks[`${segmament.x}-${segmament.y}`].classList.add("fill");
   })
-}
 
-
-//calling the render function every 300 ms;
-
-let interval =setInterval(()=>{
-
- let head = null; // this is the new coordinates which stores later  the new object into the snake array
+   let head = null; // this is the new coordinates which stores later  the new object into the snake array
 
  if(direction=="ArrowLeft"){// if the user press left arrow then it generates the new object coordinates accoording to the older coordinates which is stored inside the snake array 
  head ={
@@ -162,6 +156,15 @@ if (food.x == head.x && food.y == head.y) {
 
 // current score 
 currentScore.innerText= snake.length;
+
+
+}
+
+
+//calling the render function every 300 ms;
+
+let interval =setInterval(()=>{
+
 
 
 // calling the render function which adds the fill class to the new object which is storec into the snake arrays
