@@ -182,7 +182,13 @@ render()
 },300)
 })
 restartbtn.addEventListener('click', ()=>{
+  direction="ArrowRight"
   module.style.display="none"
+ snake =[]
+ snake=
+  [
+     {x:3,y:5}
+  ]
 
    interval =setInterval(()=>{
 
