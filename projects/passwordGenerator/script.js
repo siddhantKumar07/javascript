@@ -2,6 +2,7 @@ let displayPass = document.querySelector(".display")
 let passRange = document.querySelector("input[data-lengthSlider]");
 let checkBoxes = document.querySelectorAll("input[type='checkbox']");
 let checkedArray;
+let generateBtn = document.querySelector("#passGen");
 
 
 let upperCaseActive=false;
@@ -34,13 +35,13 @@ console.log(lengthOfPass)
 checkBoxes.forEach((check)=>{
 check.addEventListener("input",(e)=>{
    if(e.target.id=="uppercase"){
-  upperCaseActive==e.target.checked;
+  upperCaseActive=e.target.checked;
    }
    else if(e.target.id=="lowercase"){
-  lowerCaseActive==e.target.checked;
+  lowerCaseActive=e.target.checked;
    }
    else if(e.target.id=="symbol"){
-   symbolActive ==e.target.checked;
+   symbolActive =e.target.checked;
    }
    else if(e.target.id=="number"){
     numberActive=e.target.checked;
@@ -49,6 +50,7 @@ check.addEventListener("input",(e)=>{
 checkedArray = [...checkBoxes].filter((box) => {
     return box.checked;// this will store only the true value
 }).length;
+
 })
 
 
@@ -56,51 +58,47 @@ checkedArray = [...checkBoxes].filter((box) => {
 // random password generator
 let generated=[];
 let totalIndex =Math.floor(lengthOfPass/checkedArray);
-function randomPass(){
-    uppercases();
-    lowercases();
-    numbers();
-    symbols()
 
-}
-randomPass();
 function uppercases(){
 
     if(upperCaseActive){
-let random;
     for(let i=0;i<totalIndex;i++){
-      random=Math.random();
-       generated.push(uppercaseArray[random])
+       generated.push(uppercaseArray[Math.random()*uppercaseArray.length])
     }
     }
 }
 function lowercases(){
 
     if(lowerCaseActive){
-let random;
+
     for(let i=0;i<totalIndex;i++){
-      random=Math.random();
-       generated.push(lowercaseArray[random])
+
+       generated.push(lowercaseArray[Math.random()*lowercaseArray.length])
     }
     }
 }
 function numbers(){
 
     if(numberActive){
-let random;
     for(let i=0;i<totalIndex;i++){
-      random=Math.random();
-       generated.push(numberArray[random])
+       generated.push(numberArray[Math.random()*numberArray.length])
     }
     }
 }
 function symbols(){
 
     if(symbolActive){
-let random;
     for(let i=0;i<totalIndex;i++){
-      random=Math.random();
-       generated.push(symbolsArray[random])
+       generated.push(symbolsArray[Math.random()*symbolsArray.length])
     }
     }
 }
+
+
+generateBtn.addEventListener("click",()=>{
+     uppercases();
+    lowercases();
+    numbers();
+    symbols()
+
+})
