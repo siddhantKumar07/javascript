@@ -5,9 +5,13 @@ let gameBooard= document.querySelector(".game-board");
 let cells = document.querySelectorAll(".cell");
 let module = document.querySelector("#module")
 let startbtn = document.querySelector("#startBtn");
+let restartbtn = document.querySelector("#restartBtn");
+let startgameblock = document.querySelector("#startGame")
+let restartgameblock =document.querySelector("#gameOver")
 let columns;
  let rows;
  let gameSpeed=700;
+  let interval;
 
 
 
@@ -129,6 +133,11 @@ head={
  // gameover logics 
  if(head.x<0||head.x>=rows || head.y<0||head.y>=columns){
   alert("game over!!!!!");
+   module.style.display="block"
+  restartgameblock.style.display="block";
+  restartbtn.style.margin ="0 4vw"
+  startgameblock.style.display="none";
+ 
   clearInterval(interval);
  }
 
@@ -163,8 +172,19 @@ currentScore.innerText= snake.length;
 
 // for to remove the start button and welcome text 
 startbtn.addEventListener('click', ()=>{
-  module.style.display="none";
-  let interval =setInterval(()=>{
+  module.style.display="none"
+
+   interval =setInterval(()=>{
+
+// calling the render function which adds the fill class to the new object which is storec into the snake arrays
+render()
+
+},300)
+})
+restartbtn.addEventListener('click', ()=>{
+  module.style.display="none"
+
+   interval =setInterval(()=>{
 
 // calling the render function which adds the fill class to the new object which is storec into the snake arrays
 render()
