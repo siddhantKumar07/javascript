@@ -202,12 +202,12 @@ render()
 
 
 // for highscore storing logics 
-localStorage.setItem("highscore",7)
-currenntHighScore.innerText =localStorage.getItem("highscore");
+let highscore = Number(localStorage.getItem("highscore")) || 0;
+currenntHighScore.innerText = highscore;
 
-if(Number(currentScore.innerText)>Number(currenntHighScore.innerText)){
-  localStorage.removeItem("highscore");
-  localStorage.setItem("highscore",currentScore.innerText);
+if (Number(currentScore.innerText) > highscore) {
 
-  currenntHighScore.innerText = localStorage.getItem("highscore");
+  localStorage.setItem("highscore", currentScore.innerText);
+
+  currenntHighScore.innerText = currentScore.innerText;
 }
