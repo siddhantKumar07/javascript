@@ -10,14 +10,12 @@ let startgameblock = document.querySelector("#startGame")
 let restartgameblock =document.querySelector("#gameOver")
 let columns;
  let rows;
- let gameSpeed=700;
+ let gameSpeed=300;
   let interval;
 
 
 
-//for to retrieve the current date and time
-let currentTime = new Date().toLocaleTimeString();
-currenttime.innerHTML = currentTime;
+
 
 // blocks to store the each cell as an arrar
 const blocks =[];
@@ -181,21 +179,48 @@ if(Number(currentScore.innerText) > highscore){
 }
 }
 
+// timer which counts seconds 
+let timerInterval;
+let startTime;
+
+function startTimer(){
+
+    startTime = Date.now();
+
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(() => {
+
+        let elapsed = Date.now() - startTime;
+
+         let minutes = Math.floor(elapsed / 60000);
+
+      let seconds = Math.floor((elapsed % 60000) / 1000);
+
+currenttime.innerText = `${minutes}:${seconds}`;
+
+
+    }, 1000);
+}
 
 // this is used to start the game
 startbtn.addEventListener('click', ()=>{
+  
   module.style.display="none"
 
-   interval =setInterval(()=>{
+    startTimer();
 
+   interval =setInterval(()=>{
+  
 // calling the render function which adds the fill class to the new object which is storec into the snake arrays
 render()
 
-},300)
+},gameSpeed)
 })
 
 // this is used to restart the game again 
 restartbtn.addEventListener('click', ()=>{
+
   direction="ArrowRight"
   module.style.display="none"
  snake=
@@ -203,12 +228,14 @@ restartbtn.addEventListener('click', ()=>{
      {x:3,y:5}
   ]
 randomFood()
+
+    startTimer();
    interval =setInterval(()=>{
 
 // calling the render function which adds the fill class to the new object which is storec into the snake arrays
 render()
 
-},300)
+},gameSpeed)
 })
 
 
