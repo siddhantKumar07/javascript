@@ -71,27 +71,45 @@ window.addEventListener("resize", setupGrid);
 // this is an array which stores the coordinates
 let snake = [{ x: 1, y: 2 }];
 
- function randomrows(){
-  snake.forEach((seg)=>{
-   let oldrandomRow =Math.random()*rows;
-    return oldrandomRow== seg.x ? Math.random() :oldrandomRow;
-  })
-}
+
 // for random food and for to add food blocks
 let food;
-function randomFood() {
-  // remove old food
+
+ function randomFood(){
+let newrow;
+let newcolumn;
+
+snake.forEach((seg) => {
+
+   let oldrandomRow = Math.floor(Math.random() * rows);
+
+   let newrandomColumn = Math.floor(Math.random() * columns);
+
+   newrow =
+      oldrandomRow === seg.x
+      ? Math.floor(Math.random() * rows)
+      : oldrandomRow;
+
+   newcolumn =
+      newrandomColumn === seg.y
+      ? Math.floor(Math.random() * columns)
+      : newrandomColumn;
+
+});
+
+   // remove old food
   if (food) {
     blocks[`${food.x}-${food.y}`].classList.remove("food");
   }
   // create new food
   food = {
-    x: Math.floor(Math.random() * rows),
-    y: Math.floor(Math.random() * columns),
+    x: Math.floor(Math.random() * newrow),
+    y: Math.floor(Math.random() * newcolumn),
   };
 
   // add new food at the random block
   blocks[`${food.x}-${food.y}`].classList.add("food");
+
 }
 randomFood();
 
@@ -175,7 +193,10 @@ snake.forEach((segment, index) => {
     localStorage.setItem("highscore", currentScore.innerText);
 
     currenntHighScore.innerText = currentScore.innerText;
+
   }
+
+  
 }
 
 // timer which counts seconds
