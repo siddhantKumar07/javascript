@@ -199,3 +199,13 @@ render()
 },300)
 })
 
+
+
+// for highscore storing logics 
+currenntHighScore.innerText =localStorage.getItem("highscore");
+
+// if(currentScore.innerText>currenntHighScore.innerText){
+//   localStorage.setItem("highscore",currentScore.innerText);
+
+//   currenntHighScore.innerText = localStorage.getItem("highscore");
+// }
