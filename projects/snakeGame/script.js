@@ -181,10 +181,11 @@ render()
 
 },300)
 })
+
+// this is used to restart the game again 
 restartbtn.addEventListener('click', ()=>{
   direction="ArrowRight"
   module.style.display="none"
- snake =[]
  snake=
   [
      {x:3,y:5}
