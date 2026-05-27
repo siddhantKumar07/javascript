@@ -60,7 +60,8 @@ columns = Math.floor(window.innerWidth / 72);
         gameBooard.appendChild(cell);
 
         // this will gives cells to the current value 
-        cell.innerText= `${i} - ${j}`
+        // cell.innerText= `${i} - ${j}`
+
   // blocks is an array which stores all the cells according to the indexes 
         blocks[`${i}-${j}`]=cell;
         }
@@ -135,7 +136,7 @@ head={
   alert("game over!!!!!");
    module.style.display="block"
   restartgameblock.style.display="block";
-  restartbtn.style.margin ="0 4vw"
+  restartbtn.style.margin ="1vh 2vw"
   startgameblock.style.display="none";
  
   clearInterval(interval);
@@ -179,8 +180,6 @@ if(Number(currentScore.innerText) > highscore){
     currenntHighScore.innerText = currentScore.innerText;
 }
 }
-
-
 
 
 // this is used to start the game
