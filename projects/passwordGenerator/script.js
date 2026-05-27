@@ -2,10 +2,10 @@ let displayPass = document.querySelector(".display")
 let passRange = document.querySelector("input[data-lengthSlider]");
 let checkBoxes = document.querySelectorAll("input[type='checkbox']");
 
-let upperCaseActive;
-let lowerCaseActive;
-let numberActive;
-let symbolActive;
+let upperCaseActive=false;
+let lowerCaseActive=true;
+let numberActive=true;
+let symbolActive=false;
 // for uppercase
 let uppercase =[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 // Lowercase letters
@@ -31,6 +31,19 @@ console.log(lengthOfPass)
 
 checkBoxes.forEach((check)=>{
 check.addEventListener("input",(e)=>{
-    console.log(e)
+   if(e.target.id=="uppercase"){
+  upperCaseActive==e.target.checked;
+   }
+   else if(e.target.id=="lowercase"){
+  lowerCaseActive==e.target.checked;
+   }
+   else if(e.target.id=="symbol"){
+   symbolActive ==e.target.checked;
+   }
+   else if(e.target.id=="number"){
+    numberActive=e.target.checked;
+   }
 })
 })
+
+// 
