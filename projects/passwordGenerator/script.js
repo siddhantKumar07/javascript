@@ -2,6 +2,12 @@ let displayPass = document.querySelector(".display")
 let passRange = document.querySelector("input[data-lengthSlider]");
 let checkBoxes = document.querySelectorAll("input[type='checkbox']");
 
+let checkedArray = [...checkBoxes].filter((box) => {
+    return box.checked;// this will store only the true value
+}).length;
+
+console.log(checkedCount);
+console.log(checkedCount);
 let upperCaseActive=false;
 let lowerCaseActive=true;
 let numberActive=true;
@@ -46,4 +52,10 @@ check.addEventListener("input",(e)=>{
 })
 })
 
-// 
+
+
+// random password generator
+
+function randomPass(){
+
+}
