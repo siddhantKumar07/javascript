@@ -256,20 +256,34 @@ button{
   content: "";
   position: absolute;
 
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
 
-  background: #111;
+  background: white;
 
   border-radius: 50%;
 
-  top: 14px;
+  top: 12px;
+
+  box-shadow:
+    inset -2px -2px 0 rgba(0,0,0,0.25);
 }
 
+/* black pupil */
 .head::before{
-  left: 11px;
+  left: 9px;
+
+  background:
+    radial-gradient(circle at 60% 40%,
+      #fff 0 15%,
+      #111 35% 100%);
 }
 
 .head::after{
-  right: 11px;
+  right: 9px;
+
+  background:
+    radial-gradient(circle at 60% 40%,
+      #fff 0 15%,
+      #111 35% 100%);
 }
