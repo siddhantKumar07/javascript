@@ -10,8 +10,9 @@ let startgameblock = document.querySelector("#startGame");
 let restartgameblock = document.querySelector("#gameOver");
 let columns;
 let rows;
-let gameSpeed = 300;
+let gameSpeed = 400;
 let interval;
+
 
 // blocks to store the each cell as an arrar
 const blocks = [];
@@ -141,6 +142,13 @@ snake.forEach((segment) => {
     snake.unshift(head);
 
     snake.pop();
+
+      // increase speed
+    if(gameSpeed > 60){
+        gameSpeed -= 10;
+    }
+
+    startGameLoop();
   }
 
 snake.forEach((segment, index) => {
@@ -191,16 +199,23 @@ function startTimer() {
   }, 1000);
 }
 
+function startGameLoop(){
+
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+    // calling the render function which adds the fill class to the new object which is storec into the snake arrays
+        render();
+
+    }, gameSpeed);
+}
+
 // this is used to start the game
 startbtn.addEventListener("click", () => {
   module.style.display = "none";
 
   startTimer();
-
-  interval = setInterval(() => {
-    // calling the render function which adds the fill class to the new object which is storec into the snake arrays
-    render();
-  }, gameSpeed);
+startGameLoop();
 });
 
 // this is used to restart the game again
@@ -211,8 +226,5 @@ restartbtn.addEventListener("click", () => {
   randomFood();
 
   startTimer();
-  interval = setInterval(() => {
-    // calling the render function which adds the fill class to the new object which is storec into the snake arrays
-    render();
-  }, gameSpeed);
+startGameLoop();
 });
