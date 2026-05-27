@@ -164,7 +164,20 @@ snake.forEach((segment)=>{
 // current score 
 currentScore.innerText= snake.length;
 
+// for highscore storing logics 
+if(localStorage.getItem("highscore") === null){
+    localStorage.setItem("highscore", 7);
+}
+let highscore = Number(localStorage.getItem("highscore"));
 
+currenntHighScore.innerText = highscore;
+
+if(Number(currentScore.innerText) > highscore){
+
+    localStorage.setItem("highscore", currentScore.innerText);
+
+    currenntHighScore.innerText = currentScore.innerText;
+}
 }
 
 
@@ -201,13 +214,3 @@ render()
 
 
 
-// for highscore storing logics 
-let highscore = Number(localStorage.getItem("highscore")) || 0;
-currenntHighScore.innerText = highscore;
-
-if (Number(currentScore.innerText) > highscore) {
-
-  localStorage.setItem("highscore", currentScore.innerText);
-
-  currenntHighScore.innerText = currentScore.innerText;
-}
