@@ -4,8 +4,6 @@ let checkBoxes = document.querySelectorAll("input[type='checkbox']");
 let checkedArray;
 
 
-console.log(checkedCount);
-console.log(checkedCount);
 let upperCaseActive=false;
 let lowerCaseActive=true;
 let numberActive=true;
@@ -59,14 +57,13 @@ checkedArray = [...checkBoxes].filter((box) => {
 let generated=[];
 let totalIndex =Math.floor(lengthOfPass/checkedArray);
 function randomPass(){
-    
-     
-    if(upperCaseActive){
-        
-    }
+    uppercases();
+    lowercases();
+    numbers();
+    symbols()
 
 }
-
+randomPass();
 function uppercases(){
 
     if(upperCaseActive){
@@ -89,11 +86,21 @@ let random;
 }
 function numbers(){
 
-    if(lowerCaseActive){
+    if(numberActive){
 let random;
     for(let i=0;i<totalIndex;i++){
       random=Math.random();
        generated.push(numberArray[random])
+    }
+    }
+}
+function symbols(){
+
+    if(symbolActive){
+let random;
+    for(let i=0;i<totalIndex;i++){
+      random=Math.random();
+       generated.push(symbolsArray[random])
     }
     }
 }
