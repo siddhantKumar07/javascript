@@ -71,6 +71,12 @@ window.addEventListener("resize", setupGrid);
 // this is an array which stores the coordinates
 let snake = [{ x: 1, y: 2 }];
 
+ function randomrows(){
+  snake.forEach((seg)=>{
+   let oldrandomRow =Math.random()*rows;
+    return oldrandomRow== seg.x ? Math.random() :oldrandomRow;
+  })
+}
 // for random food and for to add food blocks
 let food;
 function randomFood() {
