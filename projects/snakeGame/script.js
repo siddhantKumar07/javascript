@@ -75,42 +75,41 @@ let snake = [{ x: 1, y: 2 }];
 // for random food and for to add food blocks
 let food;
 
- function randomFood(){
-let newrow;
-let newcolumn;
+function randomFood(){
 
-snake.forEach((seg) => {
+    // remove old food
+    if(food){
+        blocks[`${food.x}-${food.y}`]
+        .classList.remove("food");
+    }
 
-   let oldrandomRow = Math.floor(Math.random() * rows);
+    let validFood = false;
 
-   let newrandomColumn = Math.floor(Math.random() * columns);
+    while(!validFood){
 
-   newrow =
-      oldrandomRow === seg.x
-      ? Math.floor(Math.random() * rows)
-      : oldrandomRow;
+        food = {
+            x: Math.floor(Math.random() * rows),
+            y: Math.floor(Math.random() * columns),
+        };
 
-   newcolumn =
-      newrandomColumn === seg.y
-      ? Math.floor(Math.random() * columns)
-      : newrandomColumn;
+        validFood = true;
 
-});
+        snake.forEach((seg) => {
 
-   // remove old food
-  if (food) {
-    blocks[`${food.x}-${food.y}`].classList.remove("food");
-  }
-  // create new food
-  food = {
-    x: Math.floor(Math.random() * newrow),
-    y: Math.floor(Math.random() * newcolumn),
-  };
+            if(seg.x === food.x &&
+               seg.y === food.y){
 
-  // add new food at the random block
-  blocks[`${food.x}-${food.y}`].classList.add("food");
+                validFood = false;
+            }
 
+        });
+    }
+
+    // add new food
+    blocks[`${food.x}-${food.y}`]
+    .classList.add("food");
 }
+
 randomFood();
 
 // this function will add the class which is fill according to the coordinates which stored into the snake array
