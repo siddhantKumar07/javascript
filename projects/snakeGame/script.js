@@ -170,7 +170,7 @@ currentScore.innerText= snake.length;
 
 //calling the render function every 300 ms;
 
-// for to remove the start button and welcome text 
+// this is used to start the game
 startbtn.addEventListener('click', ()=>{
   module.style.display="none"
 
