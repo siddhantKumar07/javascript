@@ -32,6 +32,7 @@ console.log(lengthOfPass)
 //     console.log(e)
 // })
 
+function activeCheckboxes(){
 checkBoxes.forEach((check)=>{
 check.addEventListener("input",(e)=>{
    if(e.target.id=="uppercase"){
@@ -47,23 +48,24 @@ check.addEventListener("input",(e)=>{
     numberActive=e.target.checked;
    }
 })
-checkedArray = [...checkBoxes].filter((box) => {
-    return box.checked;// this will store only the true value
-}).length;
+
 
 })
+}
+    activeCheckboxes()
+
 
 
 
 // random password generator
+let totalIndex;
 let generated=[];
-let totalIndex =Math.floor(lengthOfPass/checkedArray);
-
 function uppercases(){
 
     if(upperCaseActive){
     for(let i=0;i<totalIndex;i++){
-       generated.push(uppercaseArray[Math.random()*uppercaseArray.length])
+       generated.push(uppercaseArray[Math.floor(Math.random()*uppercaseArray.length)])
+       console.log(uppercaseArray[Math.random()*uppercaseArray.length])
     }
     }
 }
@@ -73,7 +75,7 @@ function lowercases(){
 
     for(let i=0;i<totalIndex;i++){
 
-       generated.push(lowercaseArray[Math.random()*lowercaseArray.length])
+       generated.push(lowercaseArray[Math.floor(Math.random()*lowercaseArray.length)])
     }
     }
 }
@@ -81,7 +83,7 @@ function numbers(){
 
     if(numberActive){
     for(let i=0;i<totalIndex;i++){
-       generated.push(numberArray[Math.random()*numberArray.length])
+       generated.push(numberArray[Math.floor(Math.random()*numberArray.length)])
     }
     }
 }
@@ -89,16 +91,33 @@ function symbols(){
 
     if(symbolActive){
     for(let i=0;i<totalIndex;i++){
-       generated.push(symbolsArray[Math.random()*symbolsArray.length])
+       generated.push(symbolsArray[Math.floor(Math.random()*symbolsArray.length)])
     }
     }
 }
 
 
 generateBtn.addEventListener("click",()=>{
+    generated=[];
+
+    checkedArray = [...checkBoxes].filter((box) => {
+    return box.checked;// this will store only the true value
+}).length;
+
+if(checkedArray==0){
+    alert("select at least one box")
+    return;
+}
+
+totalIndex =Math.floor(lengthOfPass/checkedArray);
      uppercases();
     lowercases();
     numbers();
     symbols()
+    console.log(generated)
+    console.log(upperCaseActive)
+    console.log(lowerCaseActive)
+    console.log(numberActive)
+    console.log(symbolActive)
 
 })
