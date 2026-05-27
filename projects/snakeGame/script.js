@@ -168,7 +168,7 @@ currentScore.innerText= snake.length;
 }
 
 
-//calling the render function every 300 ms;
+
 
 // this is used to start the game
 startbtn.addEventListener('click', ()=>{
@@ -190,7 +190,7 @@ restartbtn.addEventListener('click', ()=>{
   [
      {x:3,y:5}
   ]
-
+randomFood()
    interval =setInterval(()=>{
 
 // calling the render function which adds the fill class to the new object which is storec into the snake arrays
