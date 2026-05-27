@@ -68,12 +68,15 @@ section {
 .cell {
   width: 50px;
   height: 50px;
-  border: 1px solid #dcdcdc;
+  /* border: 1px solid #dcdcdc; */
   color: #e8e8e8;
 }
 
 .food{
-  background-color: rgb(216, 10, 10);
+  /* background-color: rgb(216, 10, 10); */
+  background: radial-gradient(circle, #ff6b6b, #ff0000);
+    border-radius: 50%;
+    box-shadow: 0 0 10px red;
 }
 
 #module{
@@ -158,5 +161,12 @@ button{
 }
 
 .fill{
-  background-color: #e8e8e8;
+background: linear-gradient(145deg, #32cd32, #228b22);
+    border-radius: 12px;
+    border: 2px solid #ffffff33;
+}
+.head{
+   background: linear-gradient(145deg, #7CFC00, #32CD32);
+    border-radius: 16px;
+    border: 2px solid white;
 }

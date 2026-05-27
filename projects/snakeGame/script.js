@@ -90,9 +90,10 @@ randomFood();
 
 // this function will add the class which is fill according to the coordinates which stored into the snake array
 function render() {
-  snake.forEach((segment) => {
-    blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
-  });
+snake.forEach((segment) => {
+  blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
+  blocks[`${segment.x}-${segment.y}`].classList.remove("head");
+});
 
   let head = null; // this is the new coordinates which stores later  the new object into the snake array
 
@@ -142,9 +143,15 @@ function render() {
     snake.pop();
   }
 
-  snake.forEach((segment) => {
-    blocks[`${segment.x}-${segment.y}`].classList.add("fill");
-  });
+snake.forEach((segment, index) => {
+
+  blocks[`${segment.x}-${segment.y}`].classList.add("fill");
+
+  if(index === 0){
+      blocks[`${segment.x}-${segment.y}`].classList.add("head");
+  }
+
+});
 
   // current score
   currentScore.innerText = snake.length;
