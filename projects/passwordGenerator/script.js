@@ -4,7 +4,7 @@ let checkBoxes = document.querySelectorAll("input[type='checkbox']");
 let checkedArray;
 let generateBtn = document.querySelector("#passGen");
 let length = document.querySelector("p[data-lengthnumber]");
-
+let strength =document.querySelector(".stregth")
 let upperCaseActive = false;
 let lowerCaseActive = true;
 let numberActive = true;
