@@ -27,10 +27,6 @@ passRange.addEventListener("input", (e) => {
   length.innerText = passwordLength;
 });
 
-// checkBoxes.addEventListener('input', (e)=>{ // this will work only on single element
-//     console.log(e)
-// })
-
 function activeCheckboxes() {
   checkBoxes.forEach((check) => {
     check.addEventListener("change", (e) => {
@@ -91,7 +87,11 @@ function shufflePassword() {
   for (let i = generated.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
 
-    [generated[i], generated[j]] = [generated[j], generated[i]];
+    let temp = generated[i];
+
+    generated[i] = generated[j];
+
+    generated[j] = temp;
   }
 }
 
