@@ -47,9 +47,10 @@ function activeCheckboxes() {
 activeCheckboxes();
 
 // random password generator
-let totalIndex;
 let generated = [];
 function uppercases() {
+let totalIndex = Math.floor(length / checkedArray);
+
   if (upperCaseActive) {
     for (let i = 0; i < totalIndex; i++) {
       generated.push(
@@ -92,7 +93,6 @@ function symbols() {
 
 generateBtn.addEventListener("click", () => {
   generated = [];
-
   checkedArray = [...checkBoxes].filter((box) => {
     return box.checked; // this will store only the true value
   }).length;
@@ -102,7 +102,7 @@ generateBtn.addEventListener("click", () => {
     return;
   }
 
-  totalIndex = Math.floor(length / checkedArray);
+  
   uppercases();
   lowercases();
   numbers();
