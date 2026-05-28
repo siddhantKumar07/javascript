@@ -59,7 +59,6 @@ function uppercases() {
     for (let i = 0; i < totalIndex; i++) {
       generated.push(
         uppercaseArray[Math.floor(Math.random() * uppercaseArray.length)],
-        console.log(Math.floor(Math.random() * uppercaseArray.length))
       );
     }
   }
@@ -69,7 +68,6 @@ function lowercases() {
     for (let i = 0; i < totalIndex; i++) {
       generated.push(
         lowercaseArray[Math.floor(Math.random() * lowercaseArray.length)],
-        console.log(Math.floor(Math.random() * lowercaseArray.length))
       );
     }
   }
@@ -79,7 +77,6 @@ function numbers() {
     for (let i = 0; i < totalIndex; i++) {
       generated.push(
         numberArray[Math.floor(Math.random() * numberArray.length)],
-        console.log(Math.floor(Math.random() * numberArray.length))
       );
     }
   }
@@ -89,10 +86,20 @@ function symbols() {
     for (let i = 0; i < totalIndex; i++) {
       generated.push(
         symbolsArray[Math.floor(Math.random() * symbolsArray.length)],
-        console.log(Math.floor(Math.random() * symbolsArray.length))
       );
     }
   }
+}
+ function shufflePassword(){
+
+    for(let i = generated.length - 1; i > 0; i--){
+
+        let j = Math.floor(Math.random() * (i + 1));
+
+        [generated[i], generated[j]] =
+        [generated[j], generated[i]];
+    }
+
 }
 
 generateBtn.addEventListener("click", () => {
@@ -106,11 +113,12 @@ generateBtn.addEventListener("click", () => {
     return;
   }
 
-  totalIndex = Math.floor(length.innerText / checkedArray);
+totalIndex = Math.floor(passwordLength / checkedArray);
   uppercases();
   lowercases();
   numbers();
   symbols();
+   shufflePassword()
   console.log(generated);
   console.log(upperCaseActive);
   console.log(lowerCaseActive);
@@ -125,4 +133,6 @@ generateBtn.addEventListener("click", () => {
   lowerCaseActive = false;
   numberActive = false;
   symbolActive = false;
+
+  displayPass.value = generated.join("");
 });
