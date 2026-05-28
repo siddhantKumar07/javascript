@@ -22,7 +22,11 @@ const symbolsArray = [..."!@#$%^&*()_+-={}[]|:;<>?,./"];
 
 length.innerText = 6;
 passRange.addEventListener("input", (e) => {
-  length.innerText = e.target.value;
+
+  passwordLength = Number(e.target.value);
+
+  length.innerText = passwordLength;
+
 });
 
 // checkBoxes.addEventListener('input', (e)=>{ // this will work only on single element
