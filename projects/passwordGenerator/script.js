@@ -126,8 +126,8 @@ generateBtn.addEventListener("click", () => {
   passRange.value = 0;
 
    // strength logics 
-  if(checkedArray==4&&length>7){
-    strength.style.backgroundColor ="rgb(17, 255, 17);"
+  if(checkedArray==4){
+    strength.style.backgroundColor ="rgb(17, 255, 17)"
   }
   else if(checkedArray==3){
     strength.style.backgroundColor ="rgb(8, 112, 8)"
@@ -139,6 +139,7 @@ generateBtn.addEventListener("click", () => {
     strength.style.backgroundColor ="rgb(255, 50, 50)"
   }
 
+  console.log("checked : "+checkedArray)
   length.innerText = 0;
 
   passwordLength = 0;
@@ -153,5 +154,5 @@ copybtn.addEventListener("click",()=>{
 })
 window.addEventListener("load", () => {
   displayPass.value = "";
-  strength.style.backgroundColor ="rgb(6, 6, 6)"
+  // strength.style.backgroundColor ="rgb(6, 6, 6)"
 });
