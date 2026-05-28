@@ -22,11 +22,9 @@ const symbolsArray = [..."!@#$%^&*()_+-={}[]|:;<>?,./"];
 
 length.innerText = 6;
 passRange.addEventListener("input", (e) => {
-
   passwordLength = Number(e.target.value);
 
   length.innerText = passwordLength;
-
 });
 
 // checkBoxes.addEventListener('input', (e)=>{ // this will work only on single element
@@ -52,9 +50,8 @@ activeCheckboxes();
 
 // random password generator
 let generated = [];
-let totalIndex ;
+let totalIndex;
 function uppercases() {
-
   if (upperCaseActive) {
     for (let i = 0; i < totalIndex; i++) {
       generated.push(
@@ -90,16 +87,12 @@ function symbols() {
     }
   }
 }
- function shufflePassword(){
+function shufflePassword() {
+  for (let i = generated.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
 
-    for(let i = generated.length - 1; i > 0; i--){
-
-        let j = Math.floor(Math.random() * (i + 1));
-
-        [generated[i], generated[j]] =
-        [generated[j], generated[i]];
-    }
-
+    [generated[i], generated[j]] = [generated[j], generated[i]];
+  }
 }
 
 generateBtn.addEventListener("click", () => {
@@ -113,17 +106,12 @@ generateBtn.addEventListener("click", () => {
     return;
   }
 
-totalIndex = Math.floor(passwordLength / checkedArray);
+  totalIndex = Math.floor(passwordLength / checkedArray);
   uppercases();
   lowercases();
   numbers();
   symbols();
-   shufflePassword()
-  console.log(generated);
-  console.log(upperCaseActive);
-  console.log(lowerCaseActive);
-  console.log(numberActive);
-  console.log(symbolActive);
+  shufflePassword();
 
   checkBoxes.forEach((box) => {
     box.checked = false;
@@ -133,6 +121,15 @@ totalIndex = Math.floor(passwordLength / checkedArray);
   lowerCaseActive = false;
   numberActive = false;
   symbolActive = false;
+  passRange.value = 0;
+
+  length.innerText = 0;
+
+  passwordLength = 0;
 
   displayPass.value = generated.join("");
+});
+
+window.addEventListener("load", () => {
+  displayPass.value = "";
 });
