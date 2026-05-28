@@ -4,7 +4,7 @@ let checkBoxes = document.querySelectorAll("input[type='checkbox']");
 let checkedArray;
 let generateBtn = document.querySelector("#passGen");
 let length = document.querySelector("p[data-lengthnumber]");
-let strength =document.querySelector(".stregth")
+let strength =document.querySelector("#strengthIndicator")
 let upperCaseActive = false;
 let lowerCaseActive = true;
 let numberActive = true;
@@ -123,11 +123,27 @@ generateBtn.addEventListener("click", () => {
   symbolActive = false;
   passRange.value = 0;
 
+   // strength logics 
+  if(checkedArray==4&&length>7){
+    strength.style.backgroundColor ="rgb(17, 255, 17);"
+  }
+  else if(checkedArray==3){
+    strength.style.backgroundColor ="rgb(8, 112, 8)"
+  }
+  else if(checkedArray==2){
+    strength.style.backgroundColor ="rgb(241, 52, 22)"
+  }
+  else if(checkedArray==1){
+    strength.style.backgroundColor ="rgb(255, 50, 50)"
+  }
+
   length.innerText = 0;
 
   passwordLength = 0;
 
   displayPass.value = generated.join("");
+
+ 
 });
 
 window.addEventListener("load", () => {
