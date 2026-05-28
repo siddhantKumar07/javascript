@@ -48,8 +48,8 @@ activeCheckboxes();
 
 // random password generator
 let generated = [];
+let totalIndex ;
 function uppercases() {
-let totalIndex = Math.floor(length / checkedArray);
 
   if (upperCaseActive) {
     for (let i = 0; i < totalIndex; i++) {
@@ -102,7 +102,7 @@ generateBtn.addEventListener("click", () => {
     return;
   }
 
-  
+  totalIndex = Math.floor(length.innerText / checkedArray);
   uppercases();
   lowercases();
   numbers();
