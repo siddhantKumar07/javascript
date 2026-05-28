@@ -9,6 +9,8 @@ let upperCaseActive = false;
 let lowerCaseActive = true;
 let numberActive = true;
 let symbolActive = false;
+let copybtn = document.querySelector(".copy");
+
 // for uppercase
 let uppercaseArray = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 // Lowercase letters
@@ -145,7 +147,11 @@ generateBtn.addEventListener("click", () => {
 
  
 });
-
+//for to copy 
+copybtn.addEventListener("click",()=>{
+  navigator.clipboard.writeText(generated.join(""));
+})
 window.addEventListener("load", () => {
   displayPass.value = "";
+  strength.style.backgroundColor ="rgb(6, 6, 6)"
 });
