@@ -86,6 +86,10 @@ cursor: pointer;
     top: 4%;
     border-radius: 50%;
     border: none;
+    cursor: pointer;
+}
+.back:active{
+    scale: 0.97;
 }
 .back i{
     color: black;
