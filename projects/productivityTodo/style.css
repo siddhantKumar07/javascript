@@ -78,9 +78,13 @@ cursor: pointer;
     top: 0;
 }
 .back{
-    padding: 15px 25px;
+    padding: 15px 15px;
     background-color: #00668e;
     color: black;
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    border-radius: 50%;
 }
 .back i{
     color: black;
