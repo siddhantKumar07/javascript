@@ -40,25 +40,32 @@ background-color: var(--tri2);
 display: flex;
 align-items: flex-start;
 flex-wrap: wrap;
-gap: 40px;
+gap: 20px;
 }
 
 .elem{
 background-color: var(--tri);
-padding: 30px 40px;
 border-radius: 20px;
-height: 400px;
-width: 330px;
+height: 350px;
+width: 270px;
 position: relative;
-transition: all 0.5s ease-in;
+transition: all 0.2s ease-in;
+cursor: pointer;
+
 }
 .elem img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: inherit;
 }
 .elem h2{
     position: absolute;
     bottom: 0;
     right: 4%;
+    color: #74512d;
+    font-size: 20px;
+}
+.elem:active{
+    scale: 0.90;
 }
