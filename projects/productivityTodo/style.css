@@ -74,4 +74,16 @@ cursor: pointer;
     width:100%;
     background-color: var(--sec);
     display: none;
+    position: absolute;
+    top: 0;
+}
+.back{
+    padding: 15px 25px;
+    background-color: #00668e;
+    color: black;
+}
+.back i{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
 }
