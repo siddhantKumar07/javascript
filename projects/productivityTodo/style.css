@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+--pri:#f8f4e1;
+--sec:#4e1f00;
+--tri:#feba17;
+--tri2:#74512d;
+}
 html, body{
     height: 100%;
     width: 100%;
@@ -14,4 +20,5 @@ html, body{
 
 main{
     font-family: Aeonika;
+    background-color: var(--sec);
 }
