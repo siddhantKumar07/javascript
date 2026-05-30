@@ -32,4 +32,6 @@ nav{
 section.allElems{/* it means select the section which has allElems class*/
 height: 100%;
 width:100%;
+padding: 40px;
+padding-top: 80px;
 }
