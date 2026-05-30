@@ -1,19 +1,16 @@
 let elems = document.querySelectorAll(".elem");
+let fullelem =document.querySelectorAll(".fullelem")
 let backbtn = document.querySelectorAll(".back");
 
-let active;
 elems.forEach((element)=>{
     element.addEventListener("click",(e)=>{
-       console.log(e) 
-       console.log(element)
-       active= document.querySelectorAll(".fullelem")[element.id];
-       active.style.display ="block"
-console.log("active"+active)
+       fullelem[element.id].style.display ="block"
+
 
     })
 })
 backbtn.forEach((btn)=>{
-    btn.addEventListener("click",(e)=>{
-        document.querySelectorAll(".fullelem")[active].style.display ="none";
+    btn.addEventListener("click",()=>{
+        fullelem[btn.id].style.display ="none";
     })
 })
