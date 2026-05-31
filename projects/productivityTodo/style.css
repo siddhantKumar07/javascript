@@ -80,7 +80,7 @@ cursor: pointer;
     top: 0;
 }
 .back{
-    padding: 15px 15px;
+    padding: 25px 19px;
     background-color: #00668e;
     color: black;
     position: absolute;
@@ -89,6 +89,8 @@ cursor: pointer;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    font-size: larger;
+    font-weight: bold;
 }
 .back:active{
     scale: 0.97;
