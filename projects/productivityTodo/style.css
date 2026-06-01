@@ -98,7 +98,7 @@ section.allElems {
 }
 
 .todo-fullpage {
-  display: block;
+  /* display: block; */
   padding: 25px;
 }
 .todo-fullpage h2 {
@@ -223,4 +223,9 @@ font-size: 20px;
 }
 .allTask .tasks h2 span.false{
     display: none;
+}
+
+.dailyPlanner-fullpage{
+    display: block;
+    padding: 20px;
 }

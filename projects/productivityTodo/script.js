@@ -21,7 +21,6 @@ function openFeature() {
   });
 }
 openFeature();
-
 function renderTask() {
   let sum = "";
 
@@ -37,22 +36,29 @@ function renderTask() {
         <p>${task.desc}</p>
         <button id=${index}>Mark As Completed</button>
       </div>
-    `;
+    `;});
+  alltaskCont.innerHTML = sum;
 
+ document.querySelectorAll(".tasks button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tasks.splice(btn.id, 1);
 
+    localStorage.setItem("currentTask", JSON.stringify(tasks));
+
+    renderTask();
+});
   });
 
-  alltaskCont.innerHTML = sum;
 }
-let taskArr = JSON.parse(localStorage.getItem("currentTask")) || [];
 
+let taskArr = JSON.parse(localStorage.getItem("currentTask")) || [];
 
 
 
 renderTask();
 
 taskSubmitBtn.addEventListener("click", (e) => {
-
+e.preventDefault();
   if (!taskName.value.trim() || !taskArea.value.trim()) {
     alert("Please fill all fields");
     return;
@@ -73,14 +79,3 @@ taskSubmitBtn.addEventListener("click", (e) => {
   check.checked = false;
 });
 
-let deleteBtns = document.querySelectorAll(".tasks button");
-
-    deleteBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-    let tasks = JSON.parse(localStorage.getItem("currentTask")) || [];
-    tasks.splice(btn.id, 1);
-    localStorage.setItem("currentTask", JSON.stringify(tasks));
-    renderTask();
-    location.reload();
-    });
-});
