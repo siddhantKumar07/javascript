@@ -97,3 +97,10 @@ cursor: pointer;
     scale: 0.97;
 }
 
+.todo-fullpage{
+    display: block;
+    padding: 25px;
+}
+.todo-fullpage h2{
+    font-size: 30px;
+}
