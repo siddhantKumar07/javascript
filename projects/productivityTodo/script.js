@@ -22,12 +22,17 @@ backbtn.forEach((btn)=>{
 openFeature();
 
 taskSubmitBtn.addEventListener("click",(e)=>{
-    e.preventdefault();
+    e.preventDefault()
     console.log(taskName.value)
     console.log(taskArea.value)
-    alltaskCont+=`<div class="tasks">
+    let div = document.createElement("div");
+    div.classList.add("tasks");
+    div.innerHTML+=`
                 <h2>${taskName.value}</h2>
                 <p>${taskArea.value}</p>
-                <button>Delete</button>
-              </div>`
+                <button>Delete</button>`;
+    alltaskCont.append(div);
+    taskName.value="";
+    taskArea.value="";
+        
 })
