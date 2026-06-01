@@ -1,3 +1,5 @@
+const { json } = require("node:stream/consumers");
+
 let elems = document.querySelectorAll(".elem");
 let fullelem =document.querySelectorAll(".fullelem")
 let backbtn = document.querySelectorAll(".back");
@@ -52,6 +54,16 @@ function renderTask(){
 }
 renderTask();
 
+// for storing data into local storage 
+
+function local(){
+    taskArr.forEach((tasks)=>{
+     localStorage.setItem(task, JSON.stringify(tasks))
+    })
+    
+}
+
+
 taskSubmitBtn.addEventListener("click",(e)=>{
     e.preventDefault()
    if (!taskName.value.trim() || !taskArea.value.trim()) {
@@ -59,9 +71,11 @@ taskSubmitBtn.addEventListener("click",(e)=>{
         return;
     }
   taskArr.push({name:taskName.value,desc:taskArea.value,imp:check.checked})
-
+  renderTask()
+  local();
       taskName.value="";
     taskArea.value="";
+    check.checked =false;
     })
 
         
