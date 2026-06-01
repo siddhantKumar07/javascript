@@ -123,6 +123,7 @@ section.allElems {
   width: 65%;
   background-color: var(--tri2);
   border-radius: 20px;
+  overflow: scroll;
 }
 .todoContainer .addTask form {
   display: flex;
@@ -165,38 +166,41 @@ section.allElems {
   font-size: 17px;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 }
 .addTask form button:active {
   scale: 0.9;
 }
-.todoContainer .allTask .tasks{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 15px;
-    border: 2px solid black;
-    border-radius: inherit;
-    margin-top: 4px;
-    background-color: var(--tri);
-    margin: 10px;
+
+.todoContainer .allTask .tasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  border: 2px solid black;
+  border-radius: inherit;
+  margin-top: 4px;
+  background-color: var(--tri);
+  margin: 10px;
 }
-.todoContainer .allTask .tasks button{
-      padding: 12px 20px;
-  background-color: #00668e;
+.todoContainer .allTask .tasks button {
+  padding: 12px 20px;
+  background-color: #1f8e00;
   align-self: center;
-  margin-top: 10px;
-  border-radius: 15px;
+  margin-top: 5px;
+  border-radius: 10px;
   color: black;
   outline: none;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: bold;
   border: none;
-  
+  cursor: pointer;
 }
-.todoContainer .allTask .tasks button:active{
-    scale: 0.90;
+.todoContainer .allTask .tasks button:active {
+  scale: 0.9;
 }
-.todoContainer .allTask .tasks h2{
-    font-size: 20px;
-    font-weight: bold;
+.todoContainer .allTask .tasks h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(2, 99, 99);
 }
