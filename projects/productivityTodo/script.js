@@ -26,15 +26,15 @@ function renderTask() {
 
   const tasks = JSON.parse(localStorage.getItem("currentTask")) || [];
 
-  tasks.forEach((task) => {
+  tasks.forEach((task,index) => {
     sum += `
       <div class="tasks">
         <h2>
           ${task.name}
-          ${task.imp ? '<span class="important">imp</span>' : ''}
+         <span class=${task.imp}>imp</span>
         </h2>
         <p>${task.desc}</p>
-        <button>Mark As Completed</button>
+        <button id=${index}>Mark As Completed</button>
       </div>
     `;
   });
@@ -70,3 +70,4 @@ taskSubmitBtn.addEventListener("click", (e) => {
   taskArea.value = "";
   check.checked = false;
 });
+
