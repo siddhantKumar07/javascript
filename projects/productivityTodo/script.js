@@ -36,7 +36,7 @@ taskSubmitBtn.addEventListener("click",(e)=>{
     div.innerHTML+=`
                 <h2>${taskName.value}</h2>
                 <p>${taskArea.value}</p>
-                <button>Delete</button>`;
+                <button>Mark As Completed</button>`;
     alltaskCont.append(div);
     taskArr.push(div);
     taskName.value="";

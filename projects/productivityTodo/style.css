@@ -131,7 +131,7 @@ section.allElems {
   align-items: flex-start;
   padding: 30px;
 }
-.todoContainer .addTask form input {
+.todoContainer .addTask form input#taskName {
   padding: 10px 25px;
   width: 100%;
 
@@ -171,7 +171,16 @@ section.allElems {
 .addTask form button:active {
   scale: 0.9;
 }
-
+#imp{
+display: flex;
+align-items: center;
+gap: 20px;
+justify-content: flex-start;
+}
+/* #imp label{
+    width: 30vw;
+    background-color: #fff;
+} */
 .todoContainer .allTask .tasks {
   display: flex;
   align-items: center;
