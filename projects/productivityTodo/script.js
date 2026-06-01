@@ -6,6 +6,7 @@ let taskArea = document.querySelector("#taskArea");
 let taskSubmitBtn = document.querySelector("#taskSubmitBtn");
 let alltaskCont = document.querySelector(".allTask");
 let check = document.querySelector("#check");
+
 function openFeature() {
   elems.forEach((element) => {
     element.addEventListener("click", (e) => {
@@ -23,19 +24,27 @@ openFeature();
 function renderTask() {
   let sum = "";
 
-  JSON.parse(localStorage.getItem("currentTask")).forEach((task) => {
-    sum += `<div class ="tasks">
-                <h2>${task.name}<span class=${task.imp}>imp</span></h2>
-                <p>${task.desc}</p>
-                <button>Mark As Completed</button>
-                </div>`;
+  const tasks = JSON.parse(localStorage.getItem("currentTask")) || [];
+
+  tasks.forEach((task) => {
+    sum += `
+      <div class="tasks">
+        <h2>
+          ${task.name}
+          ${task.imp ? '<span class="important">imp</span>' : ''}
+        </h2>
+        <p>${task.desc}</p>
+        <button>Mark As Completed</button>
+      </div>
+    `;
   });
 
   alltaskCont.innerHTML = sum;
 }
-renderTask();
-
 let taskArr = JSON.parse(localStorage.getItem("currentTask")) || [];
+
+
+
 
 renderTask();
 
