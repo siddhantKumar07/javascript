@@ -5,6 +5,7 @@ let taskName =document.querySelector("#taskName");
 let taskArea =document.querySelector("#taskArea")
 let taskSubmitBtn =document.querySelector("#taskSubmitBtn");
 let alltaskCont= document.querySelector(".allTask");
+let check = document.querySelector("#check");
 function openFeature(){
     elems.forEach((element)=>{
     element.addEventListener("click",(e)=>{
@@ -56,11 +57,16 @@ taskSubmitBtn.addEventListener("click",(e)=>{
     let div = document.createElement("div");
     div.classList.add("tasks");
     div.innerHTML+=`
-                <h2>${taskName.value}</h2>
+                <h2>${taskName.value}<span class=${task.imp}>imp</span></h2>
                 <p>${taskArea.value}</p>
                 <button>Mark As Completed</button>`;
     alltaskCont.append(div);
-    taskArr.push(div);
+    let obj = {
+        name:taskName.value,
+        desc:taskArea.value,
+        imp:check.checked
+    }
+    taskArr.push(obj);
     taskName.value="";
     taskArea.value="";
         
