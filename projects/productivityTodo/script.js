@@ -46,6 +46,7 @@ taskSubmitBtn.addEventListener("click",(e)=>{
         alert("Please fill all fields");
         return;
     }
+    // let div = document.createElement("div");
   
     let obj = {
         name:taskName.value,
@@ -67,3 +68,17 @@ taskSubmitBtn.addEventListener("click",(e)=>{
     taskArea.value="";
         
 })
+
+function renderTask(){
+    let sum ='';
+
+    taskArr.forEach((task)=>{
+        sum+=`<div class ='task'>
+                <h2>${taskName.value}<span class=${task.imp}>imp</span></h2>
+                <p>${taskArea.value}</p>
+                <button>Mark As Completed</button>
+                </div>`;
+    })
+    
+    alltaskCont.innerHTML=sum;
+}
