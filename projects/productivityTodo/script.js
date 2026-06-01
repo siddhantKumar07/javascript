@@ -27,6 +27,10 @@ taskSubmitBtn.addEventListener("click",(e)=>{
     e.preventDefault()
     console.log(taskName.value)
     console.log(taskArea.value)
+   if (!taskName.value.trim() || !taskArea.value.trim()) {
+        alert("Please fill all fields");
+        return;
+    }
     let div = document.createElement("div");
     div.classList.add("tasks");
     div.innerHTML+=`
