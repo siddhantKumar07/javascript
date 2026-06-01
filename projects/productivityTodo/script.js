@@ -1,6 +1,9 @@
 let elems = document.querySelectorAll(".elem");
 let fullelem =document.querySelectorAll(".fullelem")
 let backbtn = document.querySelectorAll(".back");
+let taskName =document.querySelector("#taskName");
+let taskArea =document.querySelector("#taskArea")
+let taskSubmitBtn =document.querySelector("#taskSubmitBtn");
 
 function openFeature(){
     elems.forEach((element)=>{
@@ -18,4 +21,4 @@ backbtn.forEach((btn)=>{
 }
 openFeature();
 
-//
+taskName.addEventListener("input")
