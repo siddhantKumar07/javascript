@@ -215,3 +215,6 @@ font-size: 20px;
   font-weight: bold;
   color: rgb(2, 99, 99);
 }
+.allTask .tasks h2 span{
+    background-color: red;
+}
