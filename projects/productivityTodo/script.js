@@ -59,8 +59,9 @@ taskSubmitBtn.addEventListener("click",(e)=>{
         return;
     }
   taskArr.push({name:taskName.value,desc:taskArea.value,imp:check.checked})
-    taskArr.push(obj);
-    })
-    taskName.value="";
+
+      taskName.value="";
     taskArea.value="";
+    })
+
         
