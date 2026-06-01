@@ -21,6 +21,8 @@ backbtn.forEach((btn)=>{
 }
 openFeature();
 
+
+let taskArr=[];
 taskSubmitBtn.addEventListener("click",(e)=>{
     e.preventDefault()
     console.log(taskName.value)
@@ -32,6 +34,7 @@ taskSubmitBtn.addEventListener("click",(e)=>{
                 <p>${taskArea.value}</p>
                 <button>Delete</button>`;
     alltaskCont.append(div);
+    taskArr.push(div);
     taskName.value="";
     taskArea.value="";
         
