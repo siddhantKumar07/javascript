@@ -215,9 +215,12 @@ font-size: 20px;
   font-weight: bold;
   color: rgb(2, 99, 99);
 }
-.allTask .tasks h2 span{
+.allTask .tasks h2 span.true{
     background-color: red;
     padding: 7px 8px;
     font-size: 10px;
     border-radius: 25px 15px;
+}
+.allTask .tasks h2 span.false{
+    display: none;
 }
