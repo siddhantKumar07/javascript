@@ -24,15 +24,11 @@ backbtn.forEach((btn)=>{
 openFeature();
 
 
-let taskArr=[
-  
-];
-
 
 function renderTask(){
     let sum ='';
 
-    taskArr.forEach((task)=>{
+    JSON.parse(localStorage.getItem("currentTask")).forEach((task)=>{
         sum+=`<div class ="tasks">
                 <h2>${task.name}<span class=${task.imp}>imp</span></h2>
                 <p>${task.desc}</p>
@@ -45,19 +41,31 @@ function renderTask(){
 renderTask();
 
 
+let taskArr = JSON.parse(localStorage.getItem("currentTask")) || [];
 
-taskSubmitBtn.addEventListener("click",(e)=>{
-    e.preventDefault()
-   if (!taskName.value.trim() || !taskArea.value.trim()) {
+renderTask();
+
+taskSubmitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (!taskName.value.trim() || !taskArea.value.trim()) {
         alert("Please fill all fields");
         return;
     }
-  taskArr.push({name:taskName.value,desc:taskArea.value,imp:check.checked})
-  localStorage.setItem("currentTask", JSON.stringify(taskArr));
-  renderTask()
-      taskName.value="";
-    taskArea.value="";
-    check.checked =false;
-    })
+
+    taskArr.push({
+        name: taskName.value,
+        desc: taskArea.value,
+        imp: check.checked
+    });
+
+    localStorage.setItem("currentTask", JSON.stringify(taskArr));
+
+    renderTask();
+
+    taskName.value = "";
+    taskArea.value = "";
+    check.checked = false;
+});
 
         
