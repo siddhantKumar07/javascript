@@ -1,4 +1,3 @@
-const { json } = require("node:stream/consumers");
 
 let elems = document.querySelectorAll(".elem");
 let fullelem =document.querySelectorAll(".fullelem")
@@ -26,16 +25,7 @@ openFeature();
 
 
 let taskArr=[
-    {
-        name:"hello",
-        desc:"ye kaaam kr lo ",
-        imp:true
-    },
-    {
-        name:"heyyy",
-        desc:"ye kaaam nhi kro  ",
-        imp:false
-    }
+  
 ];
 
 
@@ -54,14 +44,6 @@ function renderTask(){
 }
 renderTask();
 
-// for storing data into local storage 
-
-function local(){
-    taskArr.forEach((tasks)=>{
-     localStorage.setItem(task, JSON.stringify(tasks))
-    })
-    
-}
 
 
 taskSubmitBtn.addEventListener("click",(e)=>{
@@ -71,8 +53,8 @@ taskSubmitBtn.addEventListener("click",(e)=>{
         return;
     }
   taskArr.push({name:taskName.value,desc:taskArea.value,imp:check.checked})
+  localStorage.setItem("currentTask", JSON.stringify(taskArr));
   renderTask()
-  local();
       taskName.value="";
     taskArea.value="";
     check.checked =false;
