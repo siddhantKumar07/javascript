@@ -21,4 +21,7 @@ backbtn.forEach((btn)=>{
 }
 openFeature();
 
-taskName.addEventListener("input")
+taskSubmitBtn.addEventListener("click",()=>{
+    console.log(taskName.value)
+    console.log(taskArea.value)
+})

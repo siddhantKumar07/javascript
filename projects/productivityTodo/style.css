@@ -169,3 +169,24 @@ section.allElems {
 .addTask form button:active {
   scale: 0.9;
 }
+.todoContainer .allTask .tasks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    border: 2px solid black;
+    border-radius: inherit;
+    margin-top: 4px;
+    background-color: var(--tri);
+}
+.todoContainer .allTask .tasks button{
+      padding: 15px 20px;
+  background-color: #00668e;
+  align-self: center;
+  margin-top: 10px;
+  border-radius: 15px;
+  color: black;
+  outline: none;
+  font-size: 17px;
+  font-weight: bold;
+}
