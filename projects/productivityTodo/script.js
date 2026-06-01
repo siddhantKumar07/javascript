@@ -24,26 +24,18 @@ openFeature();
 
 
 let taskArr=[
-    {
-        name:"hello",
-        desc:"ye kaaam kr lo ",
-        imp:true
-    },
-    {
-        name:"heyyy",
-        desc:"ye kaaam nhi kro  ",
-        imp:false
-    }
+    // {
+    //     name:"hello",
+    //     desc:"ye kaaam kr lo ",
+    //     imp:true
+    // },
+    // {
+    //     name:"heyyy",
+    //     desc:"ye kaaam nhi kro  ",
+    //     imp:false
+    // }
 ];
-taskArr.forEach((task)=>{
-         let div = document.createElement("div");
-    div.classList.add("tasks");
-    div.innerHTML+=`
-                <h2>${task.name} <span class=${task.imp}>imp</span></h2>
-                <p>${task.desc}</p>
-                <button>Mark As Completed</button>`;
-    alltaskCont.append(div);
-    })
+
 
 taskSubmitBtn.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -54,19 +46,23 @@ taskSubmitBtn.addEventListener("click",(e)=>{
         alert("Please fill all fields");
         return;
     }
-    let div = document.createElement("div");
-    div.classList.add("tasks");
-    div.innerHTML+=`
-                <h2>${taskName.value}<span class=${task.imp}>imp</span></h2>
-                <p>${taskArea.value}</p>
-                <button>Mark As Completed</button>`;
-    alltaskCont.append(div);
+  
     let obj = {
         name:taskName.value,
         desc:taskArea.value,
         imp:check.checked
     }
     taskArr.push(obj);
+
+    taskArr.forEach((task)=>{
+         let div = document.createElement("div");
+    div.classList.add("tasks");
+    div.innerHTML+=`
+                <h2>${task.name} <span class=${task.imp}>imp</span></h2>
+                <p>${task.desc}</p>
+                <button>Mark As Completed</button>`;
+    alltaskCont.append(div);
+    })
     taskName.value="";
     taskArea.value="";
         
