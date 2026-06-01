@@ -71,3 +71,13 @@ taskSubmitBtn.addEventListener("click", (e) => {
   check.checked = false;
 });
 
+let deleteBtns = document.querySelectorAll(".tasks button");
+
+deleteBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+    let tasks = JSON.parse(localStorage.getItem("currentTask")) || [];
+    tasks.splice(btn.id, 1);
+    localStorage.setItem("currentTask", JSON.stringify(tasks));
+    renderTask();
+    });
+});
