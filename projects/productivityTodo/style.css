@@ -104,3 +104,9 @@ cursor: pointer;
 .todo-fullpage h2{
     font-size: 30px;
 }
+.todo-fullpage .todoContainer{
+    height: 80%;
+    width: 100%;
+    background-color: var(--tri2);
+    margin-top: 30px;
+}
