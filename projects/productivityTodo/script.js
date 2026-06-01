@@ -21,7 +21,8 @@ backbtn.forEach((btn)=>{
 }
 openFeature();
 
-taskSubmitBtn.addEventListener("click",()=>{
+taskSubmitBtn.addEventListener("click",(e)=>{
+    e.preventdefault();
     console.log(taskName.value)
     console.log(taskArea.value)
     alltaskCont+=`<div class="tasks">
