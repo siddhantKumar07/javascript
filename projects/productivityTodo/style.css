@@ -1,169 +1,171 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:Aeonika;
-    color: var(--pri);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Aeonika;
+  color: var(--pri);
 }
-:root{
---pri:#f8f4e1;
---sec:#4e1f00;
---tri:#feba17;
---tri2:#74512d;
+:root {
+  --pri: #f8f4e1;
+  --sec: #4e1f00;
+  --tri: #feba17;
+  --tri2: #74512d;
 }
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 @font-face {
-  font-family: 'Aeonika';
-  src: url('./aeonika-font/Aeonika-BF66fcc5a8cc5db.otf') format('opentype');
+  font-family: "Aeonika";
+  src: url("./aeonika-font/Aeonika-BF66fcc5a8cc5db.otf") format("opentype");
 }
 
-main{
-    height: 100%;
-    width: 100%;
-    font-family: Aeonika;
-    background-color: var(--sec);
+main {
+  height: 100%;
+  width: 100%;
+  font-family: Aeonika;
+  background-color: var(--sec);
 }
-nav{
-    width: 100%;
-    height: 60px;
-    background-color: var(--tri);
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: var(--tri);
 }
-section.allElems{/* it means select the section which has allElems class*/
-height: 100%;
-width:100%;
-padding: 40px;
-padding-top: 80px;
-background-color: var(--tri2);
-display: flex;
-align-items: flex-start;
-flex-wrap: wrap;
-gap: 20px;
-}
-
-.elem{
-background-color: var(--tri);
-border-radius: 20px;
-height: 350px;
-width: 270px;
-position: relative;
-transition: all 0.2s ease-in;
-cursor: pointer;
-    box-shadow: 2px 5px 10px var(--sec);
-
-
-}
-.elem img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-}
-.elem h2{
-    position: absolute;
-    bottom: 0;
-    right: 4%;
-    color: #74512d;
-    font-size: 20px;
-}
-.elem:active{
-    scale: 0.90;
-}
-.fullelem{
-    height:100%;
-    width:100%;
-    background-color: var(--sec);
-    display: none;
-    position: absolute;
-    top: 0;
-}
-.back{
-    height: 4.5vh;
-    width: 6vw;
-    border-radius: 10px;
-    background-color: #00668e;
-    color: black;
-    position: absolute;
-    right: 4%;
-    top: 4%;
-    border: none;
-    cursor: pointer;
-    font-size: larger;
-    font-weight: bold;
-}
-.back:active{
-    scale: 0.97;
+section.allElems {
+  /* it means select the section which has allElems class*/
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  padding-top: 80px;
+  background-color: var(--tri2);
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.todo-fullpage{
-    display: block;
-    padding: 25px;
+.elem {
+  background-color: var(--tri);
+  border-radius: 20px;
+  height: 350px;
+  width: 270px;
+  position: relative;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  box-shadow: 2px 5px 10px var(--sec);
 }
-.todo-fullpage h2{
-    font-size: 30px;
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
-.todo-fullpage .todoContainer{
-    height: 80%;
-    width: 100%;
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    gap: 2%;
+.elem h2 {
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+  color: #74512d;
+  font-size: 20px;
 }
-.todo-fullpage .todoContainer .addTask{
-    height: 100%;
-    width: 33%;
-    background-color:var(--tri2);
-    border-radius: 20px;
+.elem:active {
+  scale: 0.9;
 }
-.todo-fullpage .todoContainer .allTask{
-    height: 100%;
-    width: 65%;
-    background-color:var(--tri2);
-        border-radius: 20px;
+.fullelem {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.back {
+  height: 4.5vh;
+  width: 6vw;
+  border-radius: 10px;
+  background-color: #00668e;
+  color: black;
+  position: absolute;
+  right: 4%;
+  top: 4%;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bold;
+}
+.back:active {
+  scale: 0.97;
+}
 
+.todo-fullpage {
+  display: block;
+  padding: 25px;
 }
- .todoContainer .addTask form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px;
- }
- .todoContainer .addTask form input{
-    padding: 10px 25px;
-    width: 100%;
+.todo-fullpage h2 {
+  font-size: 30px;
+}
+.todo-fullpage .todoContainer {
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+.todo-fullpage .todoContainer .addTask {
+  height: 100%;
+  width: 33%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+.todo-fullpage .todoContainer .allTask {
+  height: 100%;
+  width: 65%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+.todoContainer .addTask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+.todoContainer .addTask form input {
+  padding: 10px 25px;
+  width: 100%;
 
-    font-size:25px ;
-    background-color: var(--sec);
-    border-radius: 5px;
-    border: none;
-    outline: none;
- }
- .todoContainer .addTask form textarea{
-    margin-top: 7px;
-    padding: 10px 25px;
-    width: 100%;
+  font-size: 25px;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.todoContainer .addTask form textarea {
+  margin-top: 7px;
+  padding: 10px 25px;
+  font-size: 25px;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 150px;
+  max-width: 100%;
+  max-height: 300px;
 
-    font-size:25px ;
-    background-color: var(--sec);
-    border-radius: 5px;
-    border: none;
-    outline: none;
- }
- .todoContainer .addTask form button{
-    padding: 20px 35px;
-    background-color: #00668e;
-    align-self: center;
-    margin-top: 10px;
-    border-radius: 20px;
-    color: black;
-    outline: none;
-    font-size: 17px;
-    font-weight: bold;
-    
- }
-  .addTask form button:active{
-    scale: 0.90;
-  }
+  resize: both;
+}
+.todoContainer .addTask form button {
+  padding: 20px 35px;
+  background-color: #00668e;
+  align-self: center;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: black;
+  outline: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+.addTask form button:active {
+  scale: 0.9;
+}
