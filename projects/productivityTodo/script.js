@@ -24,61 +24,43 @@ openFeature();
 
 
 let taskArr=[
-    // {
-    //     name:"hello",
-    //     desc:"ye kaaam kr lo ",
-    //     imp:true
-    // },
-    // {
-    //     name:"heyyy",
-    //     desc:"ye kaaam nhi kro  ",
-    //     imp:false
-    // }
+    {
+        name:"hello",
+        desc:"ye kaaam kr lo ",
+        imp:true
+    },
+    {
+        name:"heyyy",
+        desc:"ye kaaam nhi kro  ",
+        imp:false
+    }
 ];
 
-
-taskSubmitBtn.addEventListener("click",(e)=>{
-    e.preventDefault()
-    
-    console.log(taskName.value)
-    console.log(taskArea.value)
-   if (!taskName.value.trim() || !taskArea.value.trim()) {
-        alert("Please fill all fields");
-        return;
-    }
-    // let div = document.createElement("div");
-  
-    let obj = {
-        name:taskName.value,
-        desc:taskArea.value,
-        imp:check.checked
-    }
-    taskArr.push(obj);
-
-    taskArr.forEach((task)=>{
-         let div = document.createElement("div");
-    div.classList.add("tasks");
-    div.innerHTML+=`
-                <h2>${task.name} <span class=${task.imp}>imp</span></h2>
-                <p>${task.desc}</p>
-                <button>Mark As Completed</button>`;
-    alltaskCont.append(div);
-    })
-    taskName.value="";
-    taskArea.value="";
-        
-})
 
 function renderTask(){
     let sum ='';
 
     taskArr.forEach((task)=>{
-        sum+=`<div class ='task'>
-                <h2>${taskName.value}<span class=${task.imp}>imp</span></h2>
-                <p>${taskArea.value}</p>
+        sum+=`<div class ="tasks">
+                <h2>${task.name}<span class=${task.imp}>imp</span></h2>
+                <p>${task.desc}</p>
                 <button>Mark As Completed</button>
                 </div>`;
     })
     
     alltaskCont.innerHTML=sum;
 }
+renderTask();
+
+taskSubmitBtn.addEventListener("click",(e)=>{
+    e.preventDefault()
+   if (!taskName.value.trim() || !taskArea.value.trim()) {
+        alert("Please fill all fields");
+        return;
+    }
+  taskArr.push({name:taskName.value,desc:taskArea.value,imp:check.checked})
+    taskArr.push(obj);
+    })
+    taskName.value="";
+    taskArea.value="";
+        
