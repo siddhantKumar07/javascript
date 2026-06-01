@@ -7,6 +7,7 @@ let taskSubmitBtn = document.querySelector("#taskSubmitBtn");
 let alltaskCont = document.querySelector(".allTask");
 let check = document.querySelector("#check");
 
+
 function openFeature() {
   elems.forEach((element) => {
     element.addEventListener("click", (e) => {
@@ -37,6 +38,8 @@ function renderTask() {
         <button id=${index}>Mark As Completed</button>
       </div>
     `;
+
+
   });
 
   alltaskCont.innerHTML = sum;
@@ -49,7 +52,6 @@ let taskArr = JSON.parse(localStorage.getItem("currentTask")) || [];
 renderTask();
 
 taskSubmitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
 
   if (!taskName.value.trim() || !taskArea.value.trim()) {
     alert("Please fill all fields");
@@ -73,11 +75,12 @@ taskSubmitBtn.addEventListener("click", (e) => {
 
 let deleteBtns = document.querySelectorAll(".tasks button");
 
-deleteBtns.forEach((btn) => {
+    deleteBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
     let tasks = JSON.parse(localStorage.getItem("currentTask")) || [];
     tasks.splice(btn.id, 1);
     localStorage.setItem("currentTask", JSON.stringify(tasks));
     renderTask();
+    location.reload();
     });
 });
