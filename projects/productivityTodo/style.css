@@ -141,3 +141,29 @@ cursor: pointer;
     border: none;
     outline: none;
  }
+ .todoContainer .addTask form textarea{
+    margin-top: 7px;
+    padding: 10px 25px;
+    width: 100%;
+
+    font-size:25px ;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+ }
+ .todoContainer .addTask form button{
+    padding: 20px 35px;
+    background-color: #00668e;
+    align-self: center;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: black;
+    outline: none;
+    font-size: 17px;
+    font-weight: bold;
+    
+ }
+  .addTask form button:active{
+    scale: 0.90;
+  }
