@@ -227,16 +227,31 @@ font-size: 20px;
 
 .dailyPlanner-fullpage{
     display: block;
+    padding: 20px ;
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+    /* position: relative; */
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--sec);
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .time-container{
-    margin-top: 20px;
+    margin-top: 70px;
+    /* margin-bottom: 50px; */
     display: flex;
     justify-content: space-between;
   flex-wrap: wrap;
     height: 100%;
     width: 100%;
     overflow: scroll;
+    gap: 20px;
 }
 .planner-time{
     display: flex;
