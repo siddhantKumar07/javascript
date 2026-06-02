@@ -82,9 +82,22 @@ e.preventDefault();
 
 // for daily planner 
 
-let hours= Array.from({length:18},(elem ,idx)=>{
-   return `${idx+6} ${idx<11 ? "AM" : "PM"} - ${idx+7} ${idx<10 ? "AM" : "PM"}`;
-})
+// let hours= Array.from({length:18},(elem ,idx)=>{
+//    return `${idx+6} ${idx+6<12 ? "AM" : "PM"} - ${idx+7} ${idx+7>=12 ? "PM" : "AM"}`;
+// })
+
+let hours = Array.from({ length: 18 }, (_, idx) => {
+    let start = idx + 6;
+    let end = start + 1;
+
+    const formatTime = (hour) => {
+        const period = hour >= 12 ? "PM" : "AM";
+        const hour12 = ((hour - 1) % 12) + 1;
+        return `${hour12} ${period}`;
+    };
+
+    return `${formatTime(start)} - ${formatTime(end)}`;
+});
 
 let timecontainer =document.querySelector(".time-container")
 hours.forEach((hour)=>{
