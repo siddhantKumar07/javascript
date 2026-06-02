@@ -79,3 +79,6 @@ e.preventDefault();
   check.checked = false;
 });
 
+
+// for daily planner 
+
