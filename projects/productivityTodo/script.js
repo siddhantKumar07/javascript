@@ -127,3 +127,14 @@ DailyPlanner();
 
 
 // https://zenquotes.io/api/random
+
+
+// for motivation page
+async function fetchQuote(){
+    try {
+        let res = await fetch("https://zenquotes.io/api/random");
+        let data = await res.json();
+        document.querySelector(".quote").innerText = data[0].q;
+        document.querySelector(".author").innerText = `- ${data[0].a}`;
+    }
+}
