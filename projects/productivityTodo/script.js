@@ -132,9 +132,15 @@ DailyPlanner();
 // for motivation page
 async function fetchQuote(){
     try {
-        let res = await fetch("https://zenquotes.io/api/random");
+        let res = await fetch("https://motivational-spark-api.vercel.app/api/quotes/random");
         let data = await res.json();
-        document.querySelector(".quote").innerText = data[0].q;
-        document.querySelector(".author").innerText = `- ${data[0].a}`;
+        console.log(data);
+             document.querySelector(".quotes span").textContent = data.quote;
+        document.querySelector(".author span").textContent = `- ${data.author}`;
+       
+    }
+    catch(err){
+        console.log("Error fetching quote:", err);
     }
 }
+fetchQuote();
