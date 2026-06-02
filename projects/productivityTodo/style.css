@@ -305,11 +305,17 @@ font-size: 20px;
 }
 .motivation-fullpage .nav{
     border-bottom: 2px solid;
-    height: 7vh;
+    height: 8vh;
+
+}
+.motivation-fullpage .nav .back{
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4%;
 }
 .motivation-fullpage .container{
     margin-top: 40px;
-    background-color: #fff;
+    /* background-color: #fff; */
     height: 90%;
     width: 100%;
     display: flex;
@@ -324,14 +330,18 @@ font-size: 20px;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-  background-color: var(--tri2);
-  height: 60%;
+  background-color: blueviolet;
+  height: 55%;
   width: 70%;
   border-radius: 250px 0px;
+  border: 2px solid rgb(84, 0, 163);
+  padding: 20px;
+
 }
 .motivation-fullpage .container .card p{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    color: var(--tri);
+    color: rgb(0, 0, 0);
     text-align: center;
+    margin: 20px;
 }
