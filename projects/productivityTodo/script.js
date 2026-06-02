@@ -144,3 +144,50 @@ async function fetchQuote(){
     }
 }
 fetchQuote();
+
+
+// for Pomodoro timer
+let timer = document.querySelector(".timer #time")
+let startBtn = document.querySelector(".timer #start");
+let resetBtn = document.querySelector(".timer #reset");
+let pause = document.querySelector(".timer #pause")
+let isRunning = false;
+let timeLeft = 25 * 60;
+
+function updateTimer() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timer.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+let timerInterval;
+
+startBtn.addEventListener("click", () => {
+    if (!isRunning) {
+        timerInterval = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateTimer();
+            } else {
+                clearInterval(timerInterval);
+                alert("Time's up!");
+            }
+        }, 1000);
+        isRunning = true;
+    }
+});
+
+pause.addEventListener("click", () => {
+    if (isRunning) {
+        clearInterval(timerInterval);
+        isRunning = false;
+    }
+});
+
+resetBtn.addEventListener("click", () => {
+    clearInterval(timerInterval);
+    timeLeft = 25 * 60;
+    updateTimer();
+    isRunning = false;
+});
+
+
