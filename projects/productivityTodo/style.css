@@ -296,13 +296,35 @@ font-size: 20px;
 .motivation-fullpage{
     display: block;
     padding: 25px;
+    
 
 }
 .motivation-fullpage h1{
     font-size: 25px;
 
 }
-.motivation-fullpage div{
+.motivation-fullpage .nav{
     border-bottom: 2px solid;
     height: 7vh;
+}
+.motivation-fullpage .container{
+    margin-top: 40px;
+    background-color: #fff;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.motivation-fullpage .container .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  background-color: var(--tri2);
+  height: 60%;
+  width: 70%;
+  border-radius: 250px 0px;
 }
