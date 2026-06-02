@@ -239,7 +239,7 @@ font-size: 20px;
 }
 .planner-time input{
     padding: 10px 25px;
-    width: 50%;
+    width: 45%;
     font-size: 25px;
     background-color: var(--tri2);
     border-radius: 10px;
