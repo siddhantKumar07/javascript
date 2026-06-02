@@ -229,3 +229,31 @@ font-size: 20px;
     display: block;
     padding: 20px;
 }
+.planner-time{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+.planner-time input{
+    padding: 10px 25px;
+    width: 50%;
+    font-size: 25px;
+    background-color: var(--tri2);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}   
+.addTask form input#taskName:focus, .addTask form textarea:focus{
+    outline: 2px solid var(--tri);
+}
+.planner-time input:focus{
+    outline: 2px solid var(--tri);
+}
+.planner-time p{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--tri);
+}
