@@ -82,3 +82,17 @@ e.preventDefault();
 
 // for daily planner 
 
+let hours= Array.from({length:18},(elem ,idx)=>{
+   return `${idx+6} ${idx<11 ? "AM" : "PM"} - ${idx+7} ${idx<10 ? "AM" : "PM"}`;
+})
+
+let timecontainer =document.querySelector(".time-container")
+hours.forEach((hour)=>{
+    let div = document.createElement("div")
+    div.classList.add("planner-time")
+    div.innerHTML = `
+      <p>${hour}</p>
+      <input type="text" placeholder="Enter task">
+    `
+    timecontainer.append(div)
+})
