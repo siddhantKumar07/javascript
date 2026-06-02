@@ -340,7 +340,7 @@ font-size: 20px;
     flex-direction: column;
     gap: 10px;
   background-color: rgb(255, 166, 0);
-  height: 55%;
+  height: 60%;
   width: 65%;
   border-radius: 30px;
   padding: 20px;
@@ -366,12 +366,10 @@ box-shadow: -2px 9px 117px 57px rgba(255,166,0,0.64);
     margin: 15px;
 
   }
-.container .card p span{
+.container .card .quotesContainer p {
     font-size: 30px;
     font-weight: bold;
-  font-family: "Unkempt", cursive;
-  color: rgb(255, 255, 255);
-  
+  font-family: "Unkempt", cursive;  
 
 }
 
@@ -388,4 +386,10 @@ box-shadow: -2px 9px 117px 57px rgba(255,166,0,0.64);
   height: 20%;
   border-radius: 30px;
   font-size: 15px;
+}
+.quotesContainer .quotes span{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Unkempt", cursive;
+  color: black;
 }
