@@ -80,12 +80,17 @@ e.preventDefault();
 });
 
 
+
+
 // for daily planner 
+
+// this is for generating time slots from 6 AM to 11 PM in the format "6 AM - 7 AM", "7 AM - 8 AM", ..., "10 PM - 11 PM"
 
 // let hours= Array.from({length:18},(elem ,idx)=>{
 //    return `${idx+6} ${idx+6<12 ? "AM" : "PM"} - ${idx+7} ${idx+7>=12 ? "PM" : "AM"}`;
 // })
 
+function DailyPlanner(){
 let hours = Array.from({ length: 18 }, (_, idx) => {
     let start = idx + 6;
     let end = start + 1;
@@ -109,11 +114,12 @@ hours.forEach((hour)=>{
     `
     timecontainer.append(div)
 })
-let plannerTasks = JSON.parse(localStorage.getItem("plannerTasks")) || {};
-let plannerInputs = document.querySelectorAll(".planner-time input");
+ let plannerInputs = document.querySelectorAll(".planner-time input");
 plannerInputs.forEach((input, index) => {
     input.value = localStorage.getItem(`plannerTask${index}`) || "";
     input.addEventListener("change", () => {
         localStorage.setItem(`plannerTask${index}`, input.value);
     });
 });
+}
+DailyPlanner();
