@@ -123,3 +123,7 @@ plannerInputs.forEach((input, index) => {
 });
 }
 DailyPlanner();
+
+
+
+// https://zenquotes.io/api/random

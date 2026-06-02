@@ -87,7 +87,7 @@ section.allElems {
   color: black;
   position: absolute;
   right: 4%;
-  top: 4%;
+  top: 2%;
   border: none;
   cursor: pointer;
   font-size: larger;
@@ -288,4 +288,21 @@ font-size: 20px;
     transform: translateY(-50%);
     right: 4%;
     left: auto;
+}
+
+
+
+
+.motivation-fullpage{
+    display: block;
+    padding: 25px;
+
+}
+.motivation-fullpage h1{
+    font-size: 25px;
+
+}
+.motivation-fullpage div{
+    border-bottom: 2px solid;
+    height: 7vh;
 }
