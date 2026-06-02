@@ -109,3 +109,11 @@ hours.forEach((hour)=>{
     `
     timecontainer.append(div)
 })
+let plannerTasks = JSON.parse(localStorage.getItem("plannerTasks")) || {};
+let plannerInputs = document.querySelectorAll(".planner-time input");
+plannerInputs.forEach((input, index) => {
+    input.value = localStorage.getItem(`plannerTask${index}`) || "";
+    input.addEventListener("change", () => {
+        localStorage.setItem(`plannerTask${index}`, input.value);
+    });
+});
