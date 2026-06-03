@@ -399,11 +399,9 @@ height: 50px;
 
 .pomodoro-fullpage{
   padding: 25px;
-  display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: column;
-
 }
 .pomodoro-fullpage .back{
 top: 40px;
@@ -413,6 +411,7 @@ top: 40px;
 
 .pomodoro-fullpage .pomo-timer{
   margin-top: 7%;
+  margin-left: 30%;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -489,7 +488,6 @@ font-size: larger;
 /* for daily goals */
 
 .dailyGoals-fullpage{
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -504,7 +502,7 @@ font-size: larger;
   flex-direction: column;
   gap: 20px;
   height: 38%;
-  margin-top: 20px;
+  margin-top: 40px;
 
 }
 .dailyGoals-fullpage .inputsec h1{
@@ -535,6 +533,7 @@ font-size: larger;
 
 }
 .dailyGoals-fullpage .outputSec{
+  margin-left:25% ;
   padding: 15px;
   display: flex;
   align-items: start;
