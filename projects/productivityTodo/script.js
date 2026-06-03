@@ -151,7 +151,9 @@ let timer = document.querySelector(".timer #time")
 let startBtn = document.querySelector(".controls #start");
 let resetBtn = document.querySelector(".controls #reset");
 let pause = document.querySelector(".controls #pause")
-
+let shortBreakBtn = document.querySelector(".optionsBtn #shortBreak");
+let longBreakBtn = document.querySelector(".optionsBtn #longBreak");
+let pomodoroBtn = document.querySelector(".optionsBtn #pomodoro");
 let isRunning = false;
 let timeLeft = 25 * 60;
 
@@ -192,3 +194,21 @@ resetBtn.addEventListener("click", () => {
 });
 
 
+pomodoroBtn.addEventListener("click", () => {
+timeLeft = 25 * 60;
+updateTimer();
+timer.textContent = "25:00";
+});
+
+shortBreakBtn.addEventListener("click", () => {
+    timeLeft = 5 * 60;
+timer.textContent = "05:00";
+updateTimer();
+
+})
+
+longBreakBtn.addEventListener("click", () => {
+timeLeft = 15 * 60;
+timer.textContent = "15:00";
+updateTimer();
+})
