@@ -246,11 +246,11 @@ let goals = JSON.parse(localStorage.getItem("currentGoal")) || [];
 function renderGoals() {
     taskContainer.innerHTML = "";
 
-    goals.forEach((goal) => {
+    goals.forEach((goal,idx) => {
         taskContainer.innerHTML += `
             <div class="task">
-                <input type="checkbox" id="checks"class="checking">
-                <label for="checks">${goal.value}</label>
+                <input type="checkbox" id="checks${idx}" class="checking">
+                <label for="checks${idx}">${goal.value}</label>
             </div>
         `;
     });
@@ -269,9 +269,10 @@ inputBtn.addEventListener("click", () => {
 let checking = document.querySelectorAll(".checking");
 
 checking.forEach((check,idx) => {
+  console.log(checking[idx])
   check.addEventListener("change", () => {
     const label = check.nextElementSibling;
-console.log(goals[idx])
+// console.log(goals[idx])
     if (check.checked) {
       label.style.textDecoration = "line-through";
       label.style.color = "black";
