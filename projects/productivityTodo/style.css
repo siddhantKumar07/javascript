@@ -490,4 +490,17 @@ font-size: larger;
 
 .dailyGoals-fullpage{
   display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dailyGoals-fullpage .nav .back{
+  margin-top: 20px;
+}
+.dailyGoals-fullpage .inputsec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
