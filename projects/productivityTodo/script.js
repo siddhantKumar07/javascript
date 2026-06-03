@@ -249,8 +249,8 @@ function renderGoals() {
     goals.forEach((goal) => {
         taskContainer.innerHTML += `
             <div class="task">
-                <input type="checkbox">
-                <label>${goal.value}</label>
+                <input type="checkbox" id="checks"class="checking">
+                <label for="checks">${goal.value}</label>
             </div>
         `;
     });
@@ -265,4 +265,19 @@ inputBtn.addEventListener("click", () => {
     localStorage.setItem("currentGoal", JSON.stringify(goals));
 
     renderGoals();
+});
+let checking = document.querySelectorAll(".checking");
+
+checking.forEach((check) => {
+  check.addEventListener("change", () => {
+    const label = check.nextElementSibling;
+
+    if (check.checked) {
+      localStorage.removeItem()
+      label.style.textDecoration = "line-through";
+      label.style.color = "black";
+    } else {
+      label.style.textDecoration = "none";
+    }
+  });
 });
