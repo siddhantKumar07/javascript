@@ -354,4 +354,5 @@ return formatter.format(dateObj)
 }
 
 let theme = document.querySelector("nav #theme");
+console.log(theme)
 
