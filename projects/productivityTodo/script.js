@@ -265,6 +265,7 @@ inputBtn.addEventListener("click", () => {
     localStorage.setItem("currentGoal", JSON.stringify(goals));
 
     renderGoals();
+    location.reload()
      inputGoal.value = "";
 });
 let checking = document.querySelectorAll(".checking");
@@ -287,3 +288,9 @@ location.reload()
     },1000)
   });
 });
+
+let timeGoal = document.querySelector(".outputSec .top p");
+let dateGoal = new Date()
+const formatted =
+  `${dateGoal.getDate()}/${dateGoal.getMonth() + 1}/${dateGoal.getFullYear()}`;
+  timeGoal.textContent=formatted
