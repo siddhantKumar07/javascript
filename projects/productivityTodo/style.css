@@ -478,3 +478,7 @@ font-size: larger;
   border: none;
   cursor: pointer;
 }
+.pomodoro-fullpage .pomo-timer .optionsBtn button:selection{
+  scale: 0.9;
+  background-color: #00668e;
+}
