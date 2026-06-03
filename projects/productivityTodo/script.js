@@ -298,3 +298,36 @@ let dateGoal = new Date()
 const formatted =
   `${dateGoal.getDate()}/${dateGoal.getMonth() + 1}/${dateGoal.getFullYear()}`;
   timeGoal.textContent=formatted
+
+
+
+let headerBg = document.querySelector(".header img")
+  // Replace with your actual Access Key
+const accessKey = "_dwx7wiYZes4Z9ygb4talQbMG8wUtXVX6pKxL_chKvI";
+
+async function getRandomImage() {
+  try {
+    const response = await fetch(
+      "https://api.unsplash.com/photos/random",
+      {
+        headers: {
+          Authorization: `Client-ID ${accessKey}`,
+        },
+      }
+    );
+
+    console.log(response.status);
+
+    const data = await response.json();
+    console.log(data);
+
+    headerBg.src = data.urls.regular;
+  } catch (err) {
+    console.error(err);
+  }
+}
+// Call the function
+getRandomImage();
+
+
+

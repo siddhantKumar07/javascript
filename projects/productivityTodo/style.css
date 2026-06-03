@@ -34,18 +34,36 @@ nav {
 }
 section.allElems {
   /* it means select the section which has allElems class*/
-  display: block;
   height: 100%;
   width: 100%;
-  padding: 40px;
-  padding-top: 80px;
+  padding: 10px;
+  padding-left: 50px;
   background-color: var(--tri2);
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
+}
+section.allElems .allFeature{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
+section.allElems .header{
+  height: 45Jvh;
+  width: 97%;
+  background-color: var(--tri);
+  border-radius: 30px;
+}
 
+section.allElems .header img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
 .elem {
   background-color: var(--tri);
   border-radius: 20px;
