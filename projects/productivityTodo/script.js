@@ -244,7 +244,9 @@ let goals = JSON.parse(localStorage.getItem("currentGoal")) ||[];
 inputBtn.addEventListener("click",(e)=>{
   console.log(inputGoal.value)
 goals.push({"value":inputGoal.value})
+    localStorage.setItem("currentGoal", JSON.stringify(goals));
 
+console.log(JSON.parse(localStorage.getItem("currentGoal")))
   taskContainer.innerHTML+=` <div class="task">
           <input type="checkbox" id="isComplete">
           <label for="isComplete"> ${inputGoal.value}</label>
