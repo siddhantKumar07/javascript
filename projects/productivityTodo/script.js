@@ -308,7 +308,7 @@ const accessKey = "_dwx7wiYZes4Z9ygb4talQbMG8wUtXVX6pKxL_chKvI";
 async function getRandomImage() {
   try {
     const response = await fetch(
-      "https://api.unsplash.com/photos/random",
+      "https://api.unsplash.com/photos/random?orientation=landscape",
       {
         headers: {
           Authorization: `Client-ID ${accessKey}`,
