@@ -52,6 +52,9 @@ section.allElems .allFeature{
   gap: 20px;
 }
 section.allElems .header{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 49vh;
   width: 97%;
   background-color: var(--tri);

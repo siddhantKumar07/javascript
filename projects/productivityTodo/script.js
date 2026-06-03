@@ -134,7 +134,6 @@ async function fetchQuote(){
     try {
         let res = await fetch("https://motivational-spark-api.vercel.app/api/quotes/random");
         let data = await res.json();
-        console.log(data);
              document.querySelector(".quotes span").textContent = data.quote;
         document.querySelector(".author span").textContent = `- ${data.author}`;
        
@@ -301,33 +300,23 @@ const formatted =
 
 
 
-let headerBg = document.querySelector(".header img")
-  // Replace with your actual Access Key
-const accessKey = "_dwx7wiYZes4Z9ygb4talQbMG8wUtXVX6pKxL_chKvI";
+ const headerBg = document.querySelector(".header");
 
 async function getRandomImage() {
-  try {
-    const response = await fetch(
-      "https://api.unsplash.com/photos/random?orientation=landscape",
-      {
-        headers: {
-          Authorization: `Client-ID ${accessKey}`,
-        },
-      }
-    );
+  const header = document.querySelector(".header");
 
-    console.log(response.status);
-
-    const data = await response.json();
-    console.log(data);
-
-    headerBg.src = data.urls.regular;
-  } catch (err) {
-    console.error(err);
-  }
+  header.style.backgroundImage =
+    `url("https://picsum.photos/1600/600?random=${Date.now()}")`;
 }
-// Call the function
+
 getRandomImage();
+let apiKey ="84cef721240840588d9144054260306"
+let city = "gorakhpur"
+async function weather(){
+  let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+  let data = await response.json()
+  console.log(data)
+}
 
-
+weather()
 
