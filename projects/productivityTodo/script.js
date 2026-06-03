@@ -148,16 +148,16 @@ fetchQuote();
 
 // for Pomodoro timer
 let timer = document.querySelector(".timer #time")
-let startBtn = document.querySelector(".timer #start");
-let resetBtn = document.querySelector(".timer #reset");
-let pause = document.querySelector(".timer #pause")
+let startBtn = document.querySelector(".controls #start");
+let resetBtn = document.querySelector(".controls #reset");
+let pause = document.querySelector(".controls #pause")
 let isRunning = false;
-let timeLeft = 25 * 60;
+let timeLeft = 5 * 60;
 
 function updateTimer() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    timer.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    timer.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`; //padstart is used to add leading zeros if minutes or seconds are only one digit. For example, it will display "05:00" instead of "5:00". This ensures that the timer always shows two digits for minutes and seconds, making it easier to read.
 }
 let timerInterval;
 
