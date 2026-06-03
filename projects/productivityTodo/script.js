@@ -352,7 +352,16 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 });
 return formatter.format(dateObj)
 }
-
+let pallets = [
+"#9FA1FF","#B5BAFF","#AEE2FF","#D9F9DF"
+]
 let theme = document.querySelector("nav #theme");
-console.log(theme)
+let count =0;
+theme.addEventListener("click",()=>{
+  count++;
+pallets.forEach((pallet)=>{
+console.log(count)
+})
+})
+
 
