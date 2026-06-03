@@ -41,6 +41,7 @@ nav button{
   color: black;
   font-size: 18px;
   border-radius: 40px;
+  
 }
 section.allElems {
   /* it means select the section which has allElems class*/
