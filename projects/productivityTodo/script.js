@@ -317,6 +317,7 @@ let percipitation = document.querySelector(".mid #perci")
 let humidity = document.querySelector(".mid #humidity")
 let wind = document.querySelector(".mid #wind")
 let condition = document.querySelector(".right #condition")
+let currentTime = document.querySelector(".right #currentTime")
 let cloudImg = document.querySelector(".header .first img")
 async function weather(){
   let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
@@ -328,10 +329,26 @@ async function weather(){
   wind.textContent+=`${data.current.wind_kph}km/h`
   condition.textContent=data.current.condition.text
   cloudImg.src =`${data.current.condition.icon}`
-  console.log(data.current.condition.icon)
+  currentTime.textContent=timeFormat(data.current.last_updated)
+  console.log()
 }
 
 weather()
 
+function timeFormat(input){
+const dateTimeStr = input; 
+const dateObj = new Date(dateTimeStr);
 
+// Formats directly to "Wednesday, 2:30 PM"
+const formatter = new Intl.DateTimeFormat('en-US', {
+  weekday: 'long',
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true
+});
+return formatter.format(dateObj)
+}
+
+
+// console.log(formatter.format(dateObj));
 

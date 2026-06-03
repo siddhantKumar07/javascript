@@ -73,7 +73,7 @@ section.allElems .header .first{
 section.allElems .header .first img{
   height: 80px;
   width: 80px;
-  background-color: green;
+
 }
 section.allElems .header h2,h3{
   font-family: "Unkempt", cursive;
