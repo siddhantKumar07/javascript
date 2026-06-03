@@ -147,6 +147,8 @@ fetchQuote();
 
 
 // for Pomodoro timer
+let pomodorofullpage = document.querySelector(".pomodoro-fullpage");
+let contentSec = document.querySelector(".pomo-timer");
 let timer = document.querySelector(".timer #time")
 let startBtn = document.querySelector(".controls #start");
 let resetBtn = document.querySelector(".controls #reset");
@@ -195,12 +197,18 @@ resetBtn.addEventListener("click", () => {
 
 
 pomodoroBtn.addEventListener("click", () => {
+  pomodorofullpage.style.backgroundColor = "#AF4949";
+contentSec.style.backgroundColor = "#B75C5C";
+pomodoroBtn.style.backgroundColor = "#9C4E4E";
 timeLeft = 25 * 60;
 updateTimer();
 timer.textContent = "25:00";
 });
 
 shortBreakBtn.addEventListener("click", () => {
+  pomodorofullpage.style.backgroundColor = "#297479";
+  contentSec.style.backgroundColor="#3F8287"
+  shortBreakBtn.style.backgroundColor="#366F73"
     timeLeft = 5 * 60;
 timer.textContent = "05:00";
 updateTimer();
@@ -208,6 +216,9 @@ updateTimer();
 })
 
 longBreakBtn.addEventListener("click", () => {
+ pomodorofullpage.style.backgroundColor = "#2F6A95";
+  contentSec.style.backgroundColor="#4479A0"
+  longBreakBtn.style.backgroundColor="#3A6788"
 timeLeft = 15 * 60;
 timer.textContent = "15:00";
 updateTimer();
