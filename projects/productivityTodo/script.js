@@ -152,7 +152,7 @@ let startBtn = document.querySelector(".controls #start");
 let resetBtn = document.querySelector(".controls #reset");
 let pause = document.querySelector(".controls #pause")
 let isRunning = false;
-let timeLeft = 5 * 60;
+let timeLeft = 25 * 60;
 
 function updateTimer() {
     const minutes = Math.floor(timeLeft / 60);
