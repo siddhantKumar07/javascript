@@ -314,25 +314,27 @@ getRandomImage();
 // weather section (call api through-http://api.weatherapi.com )
 let apiKey ="84cef721240840588d9144054260306"
 let city = "gorakhpur"// this will give the weather report according to the city 
-let curweather = document.querySelector(".first h2");
-let percipitation = document.querySelector(".mid #perci")
-let humidity = document.querySelector(".mid #humidity")
-let wind = document.querySelector(".mid #wind")
+let curweather = document.querySelector(".right h2");
+let percipitation = document.querySelector(".right #perci")
+let humidity = document.querySelector(".right #humidity")
+let wind = document.querySelector(".right #wind")
 let condition = document.querySelector(".right #condition")
-let currentTime = document.querySelector(".right #currentTime")
-let cloudImg = document.querySelector(".header .first img")
+let currentTime = document.querySelector(".first #currentTime")
+let currentCity = document.querySelector(".first #city")
+let cloudImg = document.querySelector(".header .right img")
 async function weather(){
   let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
   let data = await response.json()
   console.log(data)
-  curweather.innerHTML=`${data.current.temp_c}<sup>°C|°F</sup>`
+  curweather.innerHTML=`${data.current.temp_c}<sup>°C</sup>`
   percipitation.textContent+=`${data.current.precip_in}%`
   humidity.textContent+=`${data.current.humidity}%`
   wind.textContent+=`${data.current.wind_kph}km/h`
   condition.textContent=data.current.condition.text
   cloudImg.src =`${data.current.condition.icon}`
+  currentCity.textContent=data.location.name
   currentTime.textContent=timeFormat(data.current.last_updated)
-  console.log()
+  // console.log(data.location.name)
 }
 
 weather()
