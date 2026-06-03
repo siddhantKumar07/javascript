@@ -332,9 +332,9 @@ async function weather(){
   wind.textContent+=`${data.current.wind_kph}km/h`
   condition.textContent=data.current.condition.text
   cloudImg.src =`${data.current.condition.icon}`
-  currentCity.textContent=data.location.name
+  currentCity.textContent=`${data.location.name} (${data.location.region=="Uttar Pradesh"?"up":"none"})`
   currentTime.textContent=timeFormat(data.current.last_updated)
-  // console.log(data.location.name)
+  console.log(data.location.region)
 }
 
 weather()
