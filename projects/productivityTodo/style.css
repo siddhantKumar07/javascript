@@ -416,9 +416,9 @@ top: 40px;
   margin-top: 7%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
-  gap: 20px;
+  gap: 80px;
   background-color: var(--tri2);
   height: 60%;
   width: 40%;
@@ -454,6 +454,26 @@ font-size: larger;
   color: black;
   outline: none;
   font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.pomodoro-fullpage .pomo-timer .optionsBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.pomodoro-fullpage .pomo-timer .optionsBtn button{
+  padding: 10px 20px;
+  width: fit-content;
+  background-color: #f5fff3;
+  align-self: center;
+  margin-top: 5px;
+  border-radius: 10px;
+  color: black;
+  outline: none;
+  font-size: 15px;
   font-weight: bold;
   border: none;
   cursor: pointer;

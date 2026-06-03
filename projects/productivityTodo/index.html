@@ -6,36 +6,54 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-  rel="stylesheet"
-/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
-</head>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Unkempt:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <main>
       <!-- <nav></nav> -->
       <section class="allElems">
         <div class="todo elem" id="0">
-            <img src="https://images.unsplash.com/photo-1648457257285-cfbc3781cc54?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8M2R8ZW58MHx8MHx8fDA%3D" alt="">
-            <h2>To do list</h2>
+          <img
+            src="https://images.unsplash.com/photo-1648457257285-cfbc3781cc54?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8M2R8ZW58MHx8MHx8fDA%3D"
+            alt=""
+          />
+          <h2>To do list</h2>
         </div>
         <div class="planner elem" id="1">
-            <img src="https://images.unsplash.com/photo-1677249490921-3246e81f19e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fDNkfGVufDB8fDB8fHww" alt="">
-            <h2>Daily Planner</h2>
+          <img
+            src="https://images.unsplash.com/photo-1677249490921-3246e81f19e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fDNkfGVufDB8fDB8fHww"
+            alt=""
+          />
+          <h2>Daily Planner</h2>
         </div>
         <div class="motivation elem" id="2">
-            <img src="https://images.unsplash.com/photo-1637416067365-2b5e7e8fe8fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fDNkfGVufDB8fDB8fHww" alt="">
-            <h2>Motivation</h2>
+          <img
+            src="https://images.unsplash.com/photo-1637416067365-2b5e7e8fe8fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fDNkfGVufDB8fDB8fHww"
+            alt=""
+          />
+          <h2>Motivation</h2>
         </div>
         <div class="pomodoro elem" id="3">
-            <img src="https://plus.unsplash.com/premium_photo-1671077420134-4cce62252a2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8M2R8ZW58MHx8MHx8fDA%3D" alt="">
-            <h2>Pomodoro timer</h2>
+          <img
+            src="https://plus.unsplash.com/premium_photo-1671077420134-4cce62252a2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8M2R8ZW58MHx8MHx8fDA%3D"
+            alt=""
+          />
+          <h2>Pomodoro timer</h2>
         </div>
         <div class="goals elem" id="4">
-            <img src="https://plus.unsplash.com/premium_photo-1728901512417-e4073abc0fe0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fDNkfGVufDB8fDB8fHww" alt="">
-            <h2>Daily Goals</h2>
+          <img
+            src="https://plus.unsplash.com/premium_photo-1728901512417-e4073abc0fe0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fDNkfGVufDB8fDB8fHww"
+            alt=""
+          />
+          <h2>Daily Goals</h2>
         </div>
       </section>
 
@@ -44,62 +62,66 @@
         <h2>Your Personalized Todo List</h2>
         <div class="todoContainer">
           <div class="addTask">
-            <form >
-              <input type="text"id="taskName" placeholder="Enter task name">
-              <textarea id="taskArea" placeholder="Enter the details"></textarea>
+            <form>
+              <input type="text" id="taskName" placeholder="Enter task name" />
+              <textarea
+                id="taskArea"
+                placeholder="Enter the details"
+              ></textarea>
               <div id="imp">
-                <input type="checkbox" id="check">
+                <input type="checkbox" id="check" />
                 <label for="check">Mark as Important</label>
               </div>
               <button id="taskSubmitBtn">Add Task</button>
             </form>
           </div>
           <div class="allTask">
-              <div class="tasks">
-                <h2>name<span class=true>imp</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur ?</p>
-                <button>Mark As completed</button>
-              </div>
-            
+            <div class="tasks">
+              <h2>name<span class="true">imp</span></h2>
+              <p>Lorem ipsum dolor sit amet consectetur ?</p>
+              <button>Mark As completed</button>
+            </div>
           </div>
         </div>
       </section>
 
-
-
       <section class="fullelem dailyPlanner-fullpage">
         <div class="nav">
           <button class="back" id="1">click</button>
-        <h1>Your Daily Planner </h1>
+          <h1>Your Daily Planner</h1>
         </div>
-        <div class="time-container">
-        </div>
+        <div class="time-container"></div>
       </section>
 
       <section class="fullelem motivation-fullpage">
         <div class="nav">
           <button class="back" id="2">click</button>
-        <h1>Enjoy The Every Day MOtivational Quotes</h1>
+          <h1>Enjoy The Every Day MOtivational Quotes</h1>
         </div>
-          <div class="container">
-            <div class="card">
-              <div class="detail">
-                <h2>Quote Of The Day</h2>
-              </div>
-             <img src="./icons8-get-quote-50.png" alt="Quotes icon">
-           <div class="quotesContainer">
-             <p class="quotes">Quotes : <span></span></p>
-           </div>
+        <div class="container">
+          <div class="card">
+            <div class="detail">
+              <h2>Quote Of The Day</h2>
+            </div>
+            <img src="./icons8-get-quote-50.png" alt="Quotes icon" />
+            <div class="quotesContainer">
+              <p class="quotes">Quotes : <span></span></p>
+            </div>
             <div class="authorContainer">
-              <p class="author"> <span></span></p>
+              <p class="author"><span></span></p>
             </div>
           </div>
-          </div>
+        </div>
       </section>
       <section class="fullelem pomodoro-fullpage">
         <button class="back" id="3">click</button>
         <h1>Study With Me !</h1>
         <div class="pomo-timer">
+          <div class="optionsBtn">
+            <button>Pomodoro</button>
+            <button>Short break</button>
+            <button>Long break</button>
+          </div>
           <div class="timer">
             <h2 id="time">25:00</h2>
           </div>
