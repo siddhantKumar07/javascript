@@ -317,6 +317,7 @@ let percipitation = document.querySelector(".mid #perci")
 let humidity = document.querySelector(".mid #humidity")
 let wind = document.querySelector(".mid #wind")
 let condition = document.querySelector(".right #condition")
+let cloudImg = document.querySelector(".header .first img")
 async function weather(){
   let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
   let data = await response.json()
@@ -326,7 +327,8 @@ async function weather(){
   humidity.textContent+=`${data.current.humidity}%`
   wind.textContent+=`${data.current.wind_kph}km/h`
   condition.textContent=data.current.condition.text
-  console.log(data.current.condition.text)
+  cloudImg.src =`${data.current.condition.icon}`
+  console.log(data.current.condition.icon)
 }
 
 weather()
