@@ -246,3 +246,7 @@ inputBtn.addEventListener("click",(e)=>{
         </div>`
 
 })
+
+// for local storage logics 
+
+let goals = JSON.parse(localStorage.getItem("currentGoal")) ||[];
