@@ -538,6 +538,7 @@ font-size: larger;
   height: 45%;
   width: 65%;
   background-color: #493131;
+  border-radius: 30px;
 }
 
 .dailyGoals-fullpage .outputSec .top{
@@ -551,6 +552,7 @@ font-size: larger;
   width: 100%;
   background-color: #ff7e7e;
   padding: 25px;
+  overflow: scroll;
 
 }
 .dailyGoals-fullpage .outputSec .taskCont .task{

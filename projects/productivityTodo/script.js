@@ -233,3 +233,16 @@ updateTimer();
 })
 
 
+// daily Goals 
+
+let inputGoal = document.querySelector(".inputsec input")
+let inputBtn = document.querySelector(".inputsec button")
+let taskContainer = document.querySelector(".taskCont")
+inputBtn.addEventListener("click",(e)=>{
+  console.log(inputGoal.value)
+  taskContainer.innerHTML+=` <div class="task">
+          <input type="checkbox" id="isComplete">
+          <label for="isComplete"> ${inputGoal.value}</label>
+        </div>`
+
+})
