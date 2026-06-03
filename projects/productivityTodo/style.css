@@ -64,7 +64,11 @@ section.allElems .header{
   justify-content: space-between;
   padding: 50px;
 }
-
+section.allElems .header .first{
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
 section.allElems .header h2,h3{
   font-family: "Unkempt", cursive;
   font-size: 30px;

@@ -312,11 +312,16 @@ async function getRandomImage() {
 getRandomImage();
 let apiKey ="84cef721240840588d9144054260306"
 let city = "gorakhpur"
+let curweather = document.querySelector(".first h2");
 async function weather(){
   let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
   let data = await response.json()
   console.log(data)
+  curweather.textContent=data.current.temp_c
+  console.log(data.current.temp_c)
 }
 
 weather()
+
+
 
