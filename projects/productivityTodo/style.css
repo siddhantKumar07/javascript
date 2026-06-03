@@ -59,8 +59,17 @@ section.allElems .header{
   width: 97%;
   background-color: var(--tri);
   border-radius: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 50px;
 }
 
+section.allElems .header h2,h3{
+  font-family: "Unkempt", cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
 section.allElems .header img{
   height: 100%;
   width: 100%;
