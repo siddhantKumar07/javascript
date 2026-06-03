@@ -458,6 +458,9 @@ font-size: larger;
   border: none;
   cursor: pointer;
 }
+.pomodoro-fullpage .pomo-timer .controls button:active{
+  scale: 0.90;
+}
 .pomodoro-fullpage .pomo-timer .optionsBtn {
   display: flex;
   align-items: center;
@@ -478,7 +481,6 @@ font-size: larger;
   border: none;
   cursor: pointer;
 }
-.pomodoro-fullpage .pomo-timer .optionsBtn button:selection{
-  scale: 0.9;
-  background-color: #00668e;
+.pomodoro-fullpage .pomo-timer .optionsBtn button:active{
+  scale: 0.90;
 }

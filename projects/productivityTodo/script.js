@@ -195,11 +195,15 @@ resetBtn.addEventListener("click", () => {
     isRunning = false;
 });
 
-
+window.addEventListener("DOMContentLoaded", () => {
+    pomodoroBtn.click();
+});
 pomodoroBtn.addEventListener("click", () => {
   pomodorofullpage.style.backgroundColor = "#AF4949";
 contentSec.style.backgroundColor = "#B75C5C";
 pomodoroBtn.style.backgroundColor = "#9C4E4E";
+shortBreakBtn.style.backgroundColor="white"
+  longBreakBtn.style.backgroundColor="white"
 timeLeft = 25 * 60;
 updateTimer();
 timer.textContent = "25:00";
@@ -209,6 +213,7 @@ shortBreakBtn.addEventListener("click", () => {
   pomodorofullpage.style.backgroundColor = "#297479";
   contentSec.style.backgroundColor="#3F8287"
   shortBreakBtn.style.backgroundColor="#366F73"
+  pomodoroBtn.style.backgroundColor="white"
     timeLeft = 5 * 60;
 timer.textContent = "05:00";
 updateTimer();
@@ -219,6 +224,9 @@ longBreakBtn.addEventListener("click", () => {
  pomodorofullpage.style.backgroundColor = "#2F6A95";
   contentSec.style.backgroundColor="#4479A0"
   longBreakBtn.style.backgroundColor="#3A6788"
+    pomodoroBtn.style.backgroundColor="white"
+   shortBreakBtn.style.backgroundColor="white"
+
 timeLeft = 15 * 60;
 timer.textContent = "15:00";
 updateTimer();
