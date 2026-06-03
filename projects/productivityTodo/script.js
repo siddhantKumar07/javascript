@@ -240,18 +240,29 @@ let inputBtn = document.querySelector(".inputsec button")
 let taskContainer = document.querySelector(".taskCont")
 // for local storage logics 
 
-let goals = JSON.parse(localStorage.getItem("currentGoal")) ||[];
-inputBtn.addEventListener("click",(e)=>{
-  console.log(inputGoal.value)
-goals.push({"value":inputGoal.value})
+
+let goals = JSON.parse(localStorage.getItem("currentGoal")) || [];
+
+function renderGoals() {
+    taskContainer.innerHTML = "";
+
+    goals.forEach((goal) => {
+        taskContainer.innerHTML += `
+            <div class="task">
+                <input type="checkbox">
+                <label>${goal.value}</label>
+            </div>
+        `;
+    });
+}
+
+// Render immediately when page loads
+renderGoals();
+
+inputBtn.addEventListener("click", () => {
+    goals.push({ value: inputGoal.value });
+
     localStorage.setItem("currentGoal", JSON.stringify(goals));
 
-console.log(JSON.parse(localStorage.getItem("currentGoal")))
-  taskContainer.innerHTML+=` <div class="task">
-          <input type="checkbox" id="isComplete">
-          <label for="isComplete"> ${inputGoal.value}</label>
-        </div>`
-
-})
-
-
+    renderGoals();
+});
