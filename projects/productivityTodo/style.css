@@ -504,3 +504,20 @@ font-size: larger;
   flex-direction: column;
   gap: 20px;
 }
+.dailyGoals-fullpage .inputsec input{
+  padding: 15px 30px;
+  font-size: 35px;
+  font-weight: bolder;
+  color: black;
+  border-radius: 25px;
+  font-family: "Unkempt", cursive;
+}
+
+.dailyGoals-fullpage .inputsec button{
+  padding: 15px 25px;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: rgb(7, 87, 47);
+  cursor: pointer;
+}
