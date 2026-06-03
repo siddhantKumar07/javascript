@@ -313,12 +313,20 @@ getRandomImage();
 let apiKey ="84cef721240840588d9144054260306"
 let city = "gorakhpur"
 let curweather = document.querySelector(".first h2");
+let percipitation = document.querySelector(".mid #perci")
+let humidity = document.querySelector(".mid #humidity")
+let wind = document.querySelector(".mid #wind")
+let condition = document.querySelector(".right #condition")
 async function weather(){
   let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
   let data = await response.json()
   console.log(data)
   curweather.textContent=data.current.temp_c
-  console.log(data.current.temp_c)
+  percipitation.textContent+=`${data.current.precip_in}%`
+  humidity.textContent+=`${data.current.humidity}%`
+  wind.textContent+=`${data.current.wind_kph}km/h`
+  condition.textContent=data.current.condition.text
+  console.log(data.current.condition.text)
 }
 
 weather()
