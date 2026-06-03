@@ -265,30 +265,34 @@ inputBtn.addEventListener("click", () => {
     localStorage.setItem("currentGoal", JSON.stringify(goals));
 
     renderGoals();
-    location.reload()
      inputGoal.value = "";
 });
-let checking = document.querySelectorAll(".checking");
+taskContainer.addEventListener("change", (e) => {
+    if (!e.target.classList.contains("checking")) return;
 
-checking.forEach((check,idx) => {
-  console.log(checking[idx])
-  check.addEventListener("change", () => {
-    const label = check.nextElementSibling;
-// console.log(goals[idx])
-    if (check.checked) {
-      label.style.textDecoration = "line-through";
-      label.style.color = "black";
-    } else {
-      label.style.textDecoration = "none";
+    const checkbox = e.target;
+    const label = checkbox.nextElementSibling;
+
+    if (checkbox.checked) {
+        label.style.textDecoration = "line-through";
+        label.style.color = "black";
+
+        const idx = Number(
+            checkbox.id.replace("checks", "")
+        );
+
+        setTimeout(() => {
+            goals.splice(idx, 1);
+
+            localStorage.setItem(
+                "currentGoal",
+                JSON.stringify(goals)
+            );
+
+            renderGoals();
+        }, 1000);
     }
-    setTimeout(()=>{
-goals.splice(idx,1)
-localStorage.setItem("currentGoal", JSON.stringify(goals));
-location.reload()
-    },1000)
-  });
 });
-
 let timeGoal = document.querySelector(".outputSec .top p");
 let dateGoal = new Date()
 const formatted =

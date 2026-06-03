@@ -34,6 +34,7 @@ nav {
 }
 section.allElems {
   /* it means select the section which has allElems class*/
+  display: block;
   height: 100%;
   width: 100%;
   padding: 40px;
@@ -98,7 +99,6 @@ section.allElems {
 }
 
 .todo-fullpage {
-  /* display: block; */
   padding: 25px;
 }
 .todo-fullpage h2 {
@@ -489,7 +489,6 @@ font-size: larger;
 /* for daily goals */
 
 .dailyGoals-fullpage{
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
