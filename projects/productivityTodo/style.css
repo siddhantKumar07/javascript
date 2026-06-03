@@ -48,6 +48,9 @@ nav button {
   cursor: pointer;
 
 }
+nav #theme:active{
+scale: 0.90;
+}
 nav button i{
 color: black;
 }
