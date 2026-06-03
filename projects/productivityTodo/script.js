@@ -271,9 +271,8 @@ let checking = document.querySelectorAll(".checking");
 checking.forEach((check) => {
   check.addEventListener("change", () => {
     const label = check.nextElementSibling;
-
+console.log(check)
     if (check.checked) {
-      localStorage.removeItem()
       label.style.textDecoration = "line-through";
       label.style.color = "black";
     } else {
