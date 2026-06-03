@@ -553,7 +553,11 @@ font-size: larger;
   background-color: #ff7e7e;
   padding: 25px;
   overflow: scroll;
-
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+gap: 10px;
 }
 .dailyGoals-fullpage .outputSec .taskCont .task{
   display: flex;

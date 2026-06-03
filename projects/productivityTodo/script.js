@@ -268,10 +268,10 @@ inputBtn.addEventListener("click", () => {
 });
 let checking = document.querySelectorAll(".checking");
 
-checking.forEach((check) => {
+checking.forEach((check,idx) => {
   check.addEventListener("change", () => {
     const label = check.nextElementSibling;
-console.log(check)
+console.log(goals[idx])
     if (check.checked) {
       label.style.textDecoration = "line-through";
       label.style.color = "black";
