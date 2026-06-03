@@ -265,6 +265,7 @@ inputBtn.addEventListener("click", () => {
     localStorage.setItem("currentGoal", JSON.stringify(goals));
 
     renderGoals();
+     inputGoal.value = "";
 });
 let checking = document.querySelectorAll(".checking");
 
@@ -279,5 +280,10 @@ checking.forEach((check,idx) => {
     } else {
       label.style.textDecoration = "none";
     }
+    setTimeout(()=>{
+goals.splice(idx,1)
+localStorage.setItem("currentGoal", JSON.stringify(goals));
+location.reload()
+    },1000)
   });
 });
