@@ -28,34 +28,45 @@ main {
   background-color: var(--sec);
 }
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
   width: 100%;
-  height: 60px;
-  background-color: var(--tri);
+  height: 45px;
+  background-color: var(--tri2);
+}
+nav button{
+  padding: 7px 20px;
+  color: black;
+  font-size: 18px;
+  border-radius: 40px;
 }
 section.allElems {
   /* it means select the section which has allElems class*/
   height: 100%;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   padding-left: 50px;
   background-color: var(--tri2);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  /* gap: 10px; */
 }
 section.allElems .allFeature{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 30px;
 }
 section.allElems .header{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 49vh;
+  height: 46vh;
   width: 97%;
   border-radius: 30px;
   display: flex;
@@ -79,6 +90,10 @@ section.allElems .header .right img{
   width: 80px;
 
 }
+section.allElems .header .right #perci,#humidity,#wind{
+  font-size: 20px;
+
+}
 .header .right .iconandweather{
   display: flex;
   align-items: center;
@@ -98,7 +113,7 @@ section.allElems .header img{
 .elem {
   background-color: var(--tri);
   border-radius: 20px;
-  height: 350px;
+  height: 320px;
   width: 270px;
   position: relative;
   transition: all 0.2s ease-in;
