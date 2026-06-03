@@ -353,6 +353,5 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 return formatter.format(dateObj)
 }
 
-
-// console.log(formatter.format(dateObj));
+let theme = document.querySelector("nav #theme");
 
