@@ -493,6 +493,7 @@ font-size: larger;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .dailyGoals-fullpage .nav .back{
   margin-top: 20px;
@@ -503,9 +504,11 @@ font-size: larger;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  height: 35%;
+
 }
 .dailyGoals-fullpage .inputsec input{
-  padding: 15px 30px;
+  padding: 10px 20px;
   font-size: 35px;
   font-weight: bolder;
   color: black;
@@ -514,7 +517,7 @@ font-size: larger;
 }
 
 .dailyGoals-fullpage .inputsec button{
-  padding: 15px 25px;
+  padding: 20px 25px;
   color: white;
   border-radius: 20px;
   font-weight: bold;
@@ -526,3 +529,33 @@ font-size: larger;
   scale: 0.90;
 
 }
+.dailyGoals-fullpage .outputSec{
+  padding: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  height: 45%;
+  width: 65%;
+  background-color: #493131;
+}
+
+.dailyGoals-fullpage .outputSec .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.dailyGoals-fullpage .outputSec .taskCont{
+  height: 80%;
+  width: 100%;
+  background-color: #ff7e7e;
+  padding: 25px;
+
+}
+.dailyGoals-fullpage .outputSec .taskCont .task{
+  display: flex;
+  align-items: start; 
+  gap: 20px;
+}
+.dailyGoals-fullpage .outputSec .taskCont .task 
