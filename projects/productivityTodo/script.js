@@ -323,7 +323,7 @@ let currentTime = document.querySelector(".first #currentTime")
 let currentCity = document.querySelector(".first #city")
 let cloudImg = document.querySelector(".header .right img")
 async function weather(){
-  let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+  let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
   let data = await response.json()
   console.log(data)
   curweather.innerHTML=`${data.current.temp_c}<sup>°C</sup>`
