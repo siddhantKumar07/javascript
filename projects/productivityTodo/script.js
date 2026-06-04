@@ -356,12 +356,18 @@ let pallets = [
 "#9FA1FF","#B5BAFF","#AEE2FF","#D9F9DF"
 ]
 let theme = document.querySelector("nav #theme");
+let allelem = document.querySelector(".allElems")
+let nav = document.querySelector("nav")
 let count =0;
 theme.addEventListener("click",()=>{
+  allelem.style.backgroundColor=pallets[count]
+  nav.style.backgroundColor=pallets[count]
+  console.log(count)
   count++;
-pallets.forEach((pallet)=>{
-console.log(count)
+if(count==pallets.length){
+  count=0;
+}
 })
-})
+
 
 
