@@ -362,10 +362,9 @@ let rootElement = document.documentElement;
 console.log(rootElement)
 let count =0;
 theme.addEventListener("click",()=>{
-  // allelem.style.backgroundColor=pallets[count]
-  // nav.style.backgroundColor=pallets[count]
 rootElement.style.setProperty("--sec",pallets[count])
 rootElement.style.setProperty("--tri2",pallets[count < pallets.length - 1 ? count + 1 : 0])
+rootElement.style.setProperty("--tri",pallets[count < pallets.length - 1 ? count + 1 : 0])
 console.log("tri2"+pallets[count < pallets.length - 1 ? count + 1 : 0])
   // console.log(count)
   count++;
