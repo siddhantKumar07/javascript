@@ -658,3 +658,252 @@ gap: 10px;
   font-weight: 800;
 
 }
+
+
+
+/* ====================================
+   TABLET + MOBILE RESPONSIVE
+==================================== */
+
+@media (max-width: 768px) {
+
+  /* Main Layout */
+  section.allElems {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  /* Header */
+  section.allElems .header {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  section.allElems .header .first {
+    width: 100%;
+  }
+
+  .header .first h3 {
+    font-size: 2rem;
+  }
+
+  .header .right {
+    width: 100%;
+  }
+
+  section.allElems .header .right img {
+    height: 60px;
+    width: 60px;
+  }
+
+  /* Feature Cards */
+  section.allElems .allFeature {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .elem {
+    width: 100%;
+    max-width: 450px;
+    height: 220px;
+  }
+
+  /* Back Button */
+  .back {
+    width: auto;
+    min-width: 80px;
+    height: 40px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  /* ===================
+      TODO APP
+  ==================== */
+
+  .todo-fullpage {
+    padding: 10px;
+  }
+
+  .todo-fullpage .todoContainer {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .todo-fullpage .todoContainer .addTask,
+  .todo-fullpage .todoContainer .allTask {
+    width: 100%;
+  }
+
+  .todoContainer .addTask form {
+    padding: 15px;
+  }
+
+  .todoContainer .addTask form input#taskName,
+  .todoContainer .addTask form textarea {
+    font-size: 18px;
+  }
+
+  .todoContainer .addTask form textarea {
+    height: 200px;
+  }
+
+  .todoContainer .allTask .tasks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .todoContainer .allTask .tasks h2,
+  .allTask .tasks p {
+    font-size: 18px;
+  }
+
+  /* ===================
+      DAILY PLANNER
+  ==================== */
+
+  .dailyPlanner-fullpage {
+    padding: 10px;
+  }
+
+  .planner-time {
+    width: 100%;
+    height: auto;
+  }
+
+  .planner-time input {
+    font-size: 18px;
+  }
+
+  .planner-time p {
+    font-size: 18px;
+  }
+
+  /* ===================
+      MOTIVATION
+  ==================== */
+
+  .motivation-fullpage {
+    padding: 10px;
+  }
+
+  .motivation-fullpage .container .card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .container .card .quotesContainer p {
+    font-size: 22px;
+  }
+
+  .motivation-fullpage .container .card img {
+    right: 20px;
+    height: 35px;
+  }
+
+  /* ===================
+      POMODORO
+  ==================== */
+
+  .pomodoro-fullpage {
+    padding: 10px;
+  }
+
+  .pomodoro-fullpage .pomo-timer {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    gap: 40px;
+    height: auto;
+  }
+
+  .pomodoro-fullpage .pomo-timer .timer h2 {
+    font-size: 40px;
+  }
+
+  .pomodoro-fullpage .pomo-timer .controls {
+    flex-wrap: wrap;
+  }
+
+  .pomodoro-fullpage .pomo-timer .optionsBtn {
+    flex-wrap: wrap;
+  }
+
+  /* ===================
+      DAILY GOALS
+  ==================== */
+
+  .dailyGoals-fullpage .inputsec {
+    margin-top: 20px;
+  }
+
+  .dailyGoals-fullpage .inputsec input {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .dailyGoals-fullpage .outputSec {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .dailyGoals-fullpage .outputSec .taskCont {
+    padding: 15px;
+  }
+
+  .outputSec .taskCont .task label {
+    font-size: 18px;
+  }
+
+}
+
+
+/* ====================================
+   SMALL MOBILE DEVICES
+==================================== */
+
+@media (max-width: 480px) {
+
+  nav h2 {
+    font-size: 18px;
+  }
+
+  nav button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header .first h3 {
+    font-size: 1.7rem;
+  }
+
+  section.allElems .header h2,
+  section.allElems .header h3,
+  section.allElems .header sup {
+    font-size: 20px;
+  }
+
+  .elem {
+    height: 200px;
+  }
+
+  .container .card .quotesContainer p {
+    font-size: 18px;
+  }
+
+  .pomodoro-fullpage .pomo-timer .timer h2 {
+    font-size: 32px;
+  }
+}
