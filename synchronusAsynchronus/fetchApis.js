@@ -4,19 +4,19 @@
 //     console.log(data);
 // })
 
-// fetch('https://dummyjson.com/products?limit=10&skip=5&select=id,title,price')
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! status: ${response.status}`);
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.error('Fetch failed:', error);
-//   });
+fetch('https://dummyjson.com/products?limit=10&skip=5&select=id,title,price')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Fetch failed:', error);
+  });
 
 // fetch('https://fakestoreapi.com/products')
 //   .then(response => response.json())
