@@ -28,3 +28,39 @@ const {name,age,mobileNo}=obj
 
 
 console.log(name,age,mobileNo)
+
+
+// closers 
+
+console.log("counting starts ")
+function outer(){
+    let count =0;
+    return function(){
+        return count++;
+    }   
+}
+
+const count = outer();
+count()
+console.log(count())
+
+
+
+
+// aysnc await
+
+
+console.log("learning aync and await ")
+async function someHandling(){
+    try{
+const response = await fetch('https://dummyjson.com/products?limit=10&skip=5&select=id,title,price')
+
+
+const data = await response.json()
+
+console.log(data)
+    }catch(error){
+        console.log(error?.message);
+    }
+}
+someHandling()
