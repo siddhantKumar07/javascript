@@ -1,1 +1,1 @@
-ey, marks[key]);
+console.log({...obj})

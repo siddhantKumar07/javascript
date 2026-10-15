@@ -64,3 +64,12 @@ console.log(data)
     }
 }
 someHandling()
+
+
+
+
+
+// filter 
+let arrrrr = [1,2,3,4,6,6,7,9,4,1,5,7,6,3,6,7]
+let filtered = arrrrr.filter((elem)=> elem>5)
+console.log(filtered)
