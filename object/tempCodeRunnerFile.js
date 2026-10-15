@@ -1,1 +1,1 @@
-console.log({...obj})
+value
